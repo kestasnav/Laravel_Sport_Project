@@ -1,0 +1,46 @@
+// Fonts
+@import url('https://fonts.bunny.net/css?family=Nunito');
+
+// Variables
+@import 'variables';
+
+// Bootstrap
+@import 'bootstrap/scss/bootstrap';
+
+
+.navbackground, .navfooter {
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,104,121,1) 43%, rgba(0,212,255,1) 100%);
+}
+.navfooter {
+    box-shadow: 1px -11px 20px 0px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 1px -11px 20px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 1px -11px 20px 0px rgba(0,0,0,0.75);
+}
+
+body {
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,104,121,1) 43%, rgba(0,212,255,1) 100%);
+}
+
+.containerbg {
+    background: rgb(174,238,219);
+    background: radial-gradient(circle, rgba(174,238,219,1) 0%, rgba(255,255,255,1) 100%);
+    box-shadow: -2px 3px 33px 2px rgba(0,0,0,0.75);
+    -webkit-box-shadow: -2px 3px 33px 2px rgba(0,0,0,0.75);
+    -moz-box-shadow: -2px 3px 33px 2px rgba(0,0,0,0.75);
+}
+
+.cardbg {
+    background: rgb(174,238,219);
+    background: radial-gradient(circle, rgba(174,238,219,1) 0%, rgba(255,255,255,1) 100%);
+    box-shadow: -2px 3px 33px 2px rgba(0,0,0,0.75);
+    -webkit-box-shadow: -2px 3px 33px 2px rgba(0,0,0,0.75);
+    -moz-box-shadow: -2px 3px 33px 2px rgba(0,0,0,0.75);
+    height: 380px;
+}
+
+
+.btn {
+    outline: none !important;
+}
