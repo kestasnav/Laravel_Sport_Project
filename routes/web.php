@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AdminController;
 use App\Http\Controllers\BasketballController;
 use App\Http\Controllers\CommentController;
 use App\Http\Controllers\FootballController;
@@ -51,6 +52,14 @@ Route::post('posts/search',[PostController::class, 'findPost'])->name('find.post
 
 Route::put('like/{comment}', [LikeController::class, 'like'])->name('like');
 Route::delete('unlike/{comment}', [LikeController::class, 'unlike'])->name('unlike');
+
+Route::get('admin', [AdminController::class, 'posts'])->name('admin.posts');
+Route::get('users', [AdminController::class, 'users'])->name('admin.users');
+Route::delete('destroy/{id}', [AdminController::class, 'destroy'])->name('users.destroy');
+
+Route::put('role/{id}', [AdminController::class, 'role'])->name('users.role');
+
+Route::put('hide/{id}', [AdminController::class, 'hide'])->name('hide.post');
 
 Auth::routes();
 

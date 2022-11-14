@@ -22,74 +22,74 @@ class PostController extends Controller
 
       //  dd($find);
 
-        $posts=Post::findPosts($find)->latest()->paginate(4);
-        $postai=Post::latest()->paginate(20);
+        $posts=Post::where('type','unhide')->findPosts($find)->latest()->paginate(4);
+        $postai=Post::where('type','unhide')->latest()->paginate(20);
 
         return view('posts.index',['posts'=>$posts, 'postai'=>$postai, 'find'=>$find]);
     }
 
     public function basketball()
     {
-        $posts=Post::where('category_id', 1)->latest()->paginate();
-        $postai=Post::where('category_id', 1)->latest()->paginate();
+        $posts=Post::where('category_id', 1)->where('type','unhide')->latest()->paginate();
+        $postai=Post::where('category_id', 1)->where('type','unhide')->latest()->paginate();
 
         return view('posts.index',['posts'=>$posts, 'postai'=>$postai]);
     }
     public function euroleague()
     {
-        $posts=Post::where('subcategory_id', 1)->latest()->paginate();
-        $postai=Post::where('subcategory_id', 1)->latest()->paginate();
+        $posts=Post::where('subcategory_id', 1)->where('type','unhide')->latest()->paginate();
+        $postai=Post::where('subcategory_id', 1)->where('type','unhide')->latest()->paginate();
 
         return view('posts.index',['posts'=>$posts, 'postai'=>$postai]);
     }
     public function lkl()
     {
-        $posts=Post::where('subcategory_id', 2)->latest()->paginate();
-        $postai=Post::where('subcategory_id', 2)->latest()->paginate();
+        $posts=Post::where('subcategory_id', 2)->where('type','unhide')->latest()->paginate();
+        $postai=Post::where('subcategory_id', 2)->where('type','unhide')->latest()->paginate();
 
         return view('posts.index',['posts'=>$posts, 'postai'=>$postai]);
     }
     public function nba()
     {
-        $posts=Post::where('subcategory_id', 3)->latest()->paginate();
-        $postai=Post::where('subcategory_id', 3)->latest()->paginate();
+        $posts=Post::where('subcategory_id', 3)->where('type','unhide')->latest()->paginate();
+        $postai=Post::where('subcategory_id', 3)->where('type','unhide')->latest()->paginate();
 
         return view('posts.index',['posts'=>$posts, 'postai'=>$postai]);
     }
 
     public function football()
     {
-        $posts=Post::where('category_id', 2)->latest()->paginate();
-        $postai=Post::where('category_id', 2)->latest()->paginate();
+        $posts=Post::where('category_id', 2)->where('type','unhide')->latest()->paginate();
+        $postai=Post::where('category_id', 2)->where('type','unhide')->latest()->paginate();
 
         return view('posts.index',['posts'=>$posts, 'postai'=>$postai]);
     }
 
     public function premier()
     {
-        $posts=Post::where('subcategory_id', 4)->latest()->paginate();
-        $postai=Post::where('subcategory_id', 4)->latest()->paginate();
+        $posts=Post::where('subcategory_id', 4)->where('type','unhide')->latest()->paginate();
+        $postai=Post::where('subcategory_id', 4)->where('type','unhide')->latest()->paginate();
 
         return view('posts.index',['posts'=>$posts, 'postai'=>$postai]);
     }
     public function alyga()
     {
-        $posts=Post::where('subcategory_id', 5)->latest()->paginate();
-        $postai=Post::where('subcategory_id', 5)->latest()->paginate();
+        $posts=Post::where('subcategory_id', 5)->where('type','unhide')->latest()->paginate();
+        $postai=Post::where('subcategory_id', 5)->where('type','unhide')->latest()->paginate();
 
         return view('posts.index',['posts'=>$posts, 'postai'=>$postai]);
     }
     public function champions()
     {
-        $posts=Post::where('subcategory_id', 6)->latest()->paginate();
-        $postai=Post::where('subcategory_id', 6)->latest()->paginate();
+        $posts=Post::where('subcategory_id', 6)->where('type','unhide')->latest()->paginate();
+        $postai=Post::where('subcategory_id', 6)->where('type','unhide')->latest()->paginate();
 
         return view('posts.index',['posts'=>$posts, 'postai'=>$postai]);
     }
     public function wc2022()
     {
-        $posts=Post::where('subcategory_id', 7)->latest()->paginate();
-        $postai=Post::where('subcategory_id', 7)->latest()->paginate();
+        $posts=Post::where('subcategory_id', 7)->where('type','unhide')->latest()->paginate();
+        $postai=Post::where('subcategory_id', 7)->where('type','unhide')->latest()->paginate();
 
         return view('posts.index',['posts'=>$posts, 'postai'=>$postai]);
     }

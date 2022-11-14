@@ -21,7 +21,7 @@
                             <div class="mx-auto mt-3">
                                 <a class="text-decoration-none text-black"
                                    href="{{ route('posts.show', $post->id) }}">
-                                    <img src="{{ route('images',$post->img)}}" style=" width: 324px; height: 216px;">
+                                    <img class="img-fluid" src="{{ route('images',$post->img)}}" style=" width: 324px; height: 216px;">
                                 </a>
                             </div>
 
@@ -65,7 +65,7 @@
 
         </div>
 
-        <div class="col-md-4">
+        <div class="col-md-4 d-none d-sm-block">
             <h5>{{__('Naujausios naujienos')}}</h5>
             @foreach($postai as $post)
                 </p> <b>{{$post->created_at}}</b> <a class="text-decoration-none text-black"

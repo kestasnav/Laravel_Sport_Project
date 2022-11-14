@@ -38,6 +38,11 @@
     "El. Paštas": "Email",
     "Senas slaptažodis": "Old password",
     "Naujas slaptažodis": "New password",
-    "Patvirtinti naują slaptažodį": "Confirm new password"
+    "Patvirtinti naują slaptažodį": "Confirm new password",
+    "Administratoriaus panelė": "Admin dashboard",
+    "Visos naujienos": "All posts",
+    "Straipsnis": "Post title",
+    "Vartotojai": "Users",
+    "Rolė": "User role"
 
 }
