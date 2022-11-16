@@ -26,7 +26,7 @@
         <div class="container">
             <a class="navbar-brand" href="{{ url('/') }}">
                 {{--                    {{ config('app.name', 'Laravel') }}--}}
-                <h5>Admin menu</h5>
+                <h5>Admin dashboard</h5>
 
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
@@ -45,6 +45,8 @@
 
                             <li><a class="nav-link" href="{{ route('admin.users') }}">{{__('Vartotojai')}}</a></li>
 
+                            <li><a class="nav-link" href="{{ route('admin.comments') }}">{{__('Komentarai')}}</a></li>
+
                     </li>
 
 
@@ -55,6 +57,11 @@
                 <ul class="navbar-nav ms-auto">
 
                     <li class="nav-item">
+                        <a class="nav-link text-white" href="{{ route('setLanguage', 'lt') }}"><i class="flag flag-lithuania"></i></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="{{ route('setLanguage', 'en') }}"><i class="flag flag-united-kingdom"></i></a>
+                    </li>
 
                     <!-- Authentication Links -->
                     @guest
@@ -78,7 +85,7 @@
 
                             <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
 
-                                @if(Auth::user()->type == 'admin')
+                                @if(Auth::user()->type == 'superadmin')
                                     <a class="dropdown-item" href="{{ route('admin.posts') }}">{{ __('Administratoriaus panelė') }}</a>
                                 @endif
                                 <a class="dropdown-item" href="{{ route('profileEdit', Auth::user()->id) }}">{{ __('Profilio redagavimas') }}</a>

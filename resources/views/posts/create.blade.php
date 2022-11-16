@@ -1,8 +1,8 @@
-@extends('layouts.app')
+@extends('layouts.adminlayout')
 @section('content')
 
     <div class="row">
-        <div class="col-md-12 mt-5">
+        <div class="col-md-12 mt-5 mb-5">
             <div class="card">
                 <div class="card-header">Straipsnio sukūrimo forma</div>
                 <div class="card-body">

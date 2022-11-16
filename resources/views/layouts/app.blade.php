@@ -110,9 +110,9 @@
 
                                 <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
 
-                                    @if(Auth::user()->type == 'superadmin')
-                                    <a class="dropdown-item" href="{{ route('admin.posts') }}">{{ __('Administratoriaus panelė') }}</a>
-                                    @endif
+                                    @can('admin_user')
+                                    <a class="dropdown-item" href="{{ route('admin') }}">{{ __('Administratoriaus panelė') }}</a>
+                                    @endcan
                                 <a class="dropdown-item" href="{{ route('profileEdit', Auth::user()->id) }}">{{ __('Profilio redagavimas') }}</a>
 
                                     <a class="dropdown-item" href="{{ route('logout') }}"

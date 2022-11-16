@@ -13,6 +13,7 @@
     "Prisijungti": "Login",
     "Registruotis": "Register",
     "Straipsnio autorius:": "Author:",
+    "Autorius": "Author",
     "Straipsnio redagavimas": "Post Update",
     "Naujienos antraštė": "Post title",
     "Visas straipsnis": "Post",
@@ -27,6 +28,8 @@
     "Pasaulio čempionatas 2022": "World Cup 2022",
     "Visos futbolo naujienos": "All football news",
     "Visi komentarai": "All comments",
+    "Komentarai": "Comments",
+    "Komentaras": "Comment",
     "Norėdami rašyti komentarą turite prisijungti": "You must log in to post a comment",
     "Rašyti komentarą": "Write a comment",
     "Komentaras (ne daugiau 160 simbolių)": "Comment (max 160 symbols)",
@@ -43,6 +46,13 @@
     "Visos naujienos": "All posts",
     "Straipsnis": "Post title",
     "Vartotojai": "Users",
-    "Rolė": "User role"
+    "Rolė": "User role",
+    "Veiksmai": "Actions",
+    "Statusas": "Status",
+    "Nepaslėptas": "Not hidden",
+    "Paslėptas": "Hidden",
+    "Data": "Date",
+    "Kiekis": "Sum",
+    "Patiktukai": "Likes"
 
 }

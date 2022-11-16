@@ -20,4 +20,8 @@ class Comment extends Model
     public function likes() {
         return $this->hasMany(Like::class);
     }
+
+    public function post(){
+        return $this->belongsTo(Post::class);
+    }
 }

@@ -53,13 +53,17 @@ Route::post('posts/search',[PostController::class, 'findPost'])->name('find.post
 Route::put('like/{comment}', [LikeController::class, 'like'])->name('like');
 Route::delete('unlike/{comment}', [LikeController::class, 'unlike'])->name('unlike');
 
-Route::get('admin', [AdminController::class, 'posts'])->name('admin.posts');
-Route::get('users', [AdminController::class, 'users'])->name('admin.users');
-Route::delete('destroy/{id}', [AdminController::class, 'destroy'])->name('users.destroy');
+Route::get('admin', [AdminController::class, 'posts'])->name('admin')->middleware('can:admin_user');
 
-Route::put('role/{id}', [AdminController::class, 'role'])->name('users.role');
+Route::get('admin/posts', [AdminController::class, 'posts'])->name('admin.posts')->middleware('can:admin_user');
+Route::get('admin/users', [AdminController::class, 'users'])->name('admin.users')->middleware('can:admin_user');
+Route::get('admin/comments', [AdminController::class, 'comments'])->name('admin.comments')->middleware('can:admin_user');
 
-Route::put('hide/{id}', [AdminController::class, 'hide'])->name('hide.post');
+Route::delete('destroy/{id}', [AdminController::class, 'destroyUser'])->name('users.destroy')->middleware('can:admin_user');
+
+Route::put('role/{id}', [AdminController::class, 'role'])->name('users.role')->middleware('can:admin_user');
+
+Route::put('hide/{id}', [AdminController::class, 'hide'])->name('hide.post')->middleware('can:admin_user');
 
 Auth::routes();
 
