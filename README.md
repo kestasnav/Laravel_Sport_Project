@@ -7,9 +7,9 @@
 # Comments:
 # ![screencapture-localhost-Laravel-sport-public-admin-comments-2022-11-17-14_41_31](https://user-images.githubusercontent.com/107037107/202449316-18ffcd23-9b30-4624-9f91-1254328032c0.png)
 # Post update:
-# ![screencapture-localhost-Laravel-sport-public-posts-6-edit-2022-11-17-14_42_45](https://user-images.githubusercontent.com/107037107/202449515-d0e23475-9a4e-41a3-ad60-34450665f703.png)
+# ![screencapture-localhost-Laravel-sport-public-posts-3-edit-2022-11-17-19_46_32](https://user-images.githubusercontent.com/107037107/202519792-ceaea88c-a13c-43ad-9266-342e7180d529.png)
 # New post:
-# ![screencapture-localhost-Laravel-sport-public-posts-create-2022-11-17-14_43_25](https://user-images.githubusercontent.com/107037107/202449659-49b462f6-fd2a-48c7-82ef-949d5cb7e029.png)
+# ![screencapture-localhost-Laravel-sport-public-posts-create-2022-11-17-19_51_19](https://user-images.githubusercontent.com/107037107/202520637-7ad3ba75-0a29-4f39-840b-41e6b4123908.png)
 # All posts:
 # ![screencapture-localhost-Laravel-sport-public-2022-11-17-14_35_39](https://user-images.githubusercontent.com/107037107/202448314-a745d003-bbed-4af3-a237-42ca5b7f8e74.png)
 # All posts (logged out) in lithuanian language:
