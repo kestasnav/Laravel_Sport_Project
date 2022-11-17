@@ -18,6 +18,8 @@
 # ![screencapture-localhost-Laravel-sport-public-posts-8-2022-11-14-10_54_02](https://user-images.githubusercontent.com/107037107/201618739-071c1339-875a-4bb2-a32a-9ac1345d2de6.png)
 # One post (logged out) in lt:
 # ![screencapture-localhost-Laravel-sport-public-posts-8-2022-11-14-11_03_14](https://user-images.githubusercontent.com/107037107/201618963-7c9f7b2b-6c73-49e3-84ce-33573627a1d0.png)
+# User comments:
+# ![screencapture-localhost-Laravel-sport-public-comments-2022-11-17-20_35_40](https://user-images.githubusercontent.com/107037107/202530082-0479ddf2-cffe-491f-bf28-bf5634ecca9c.png)
 # Responsive all posts:
 # ![screencapture-localhost-Laravel-sport-public-2022-11-17-14_38_16](https://user-images.githubusercontent.com/107037107/202448632-014339c7-48db-4ff9-a51e-86a310529803.png)
 # Responsive one post:
