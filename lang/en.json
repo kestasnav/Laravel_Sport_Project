@@ -5,7 +5,7 @@
     "Eurolyga": "Euroleague",
     "Anglijos Premier lyga": "England Premier League",
     "Čempionų lyga": "Champions league",
-    "Lietuvos A lyga": "Lithuania A league",
+    "Lietuvos futbolas": "Lithuania football news",
     "Atnaujinti": "Update",
     "Trinti": "Delete",
     "Profilio redagavimas": "Profile edit",
@@ -30,6 +30,7 @@
     "Visi komentarai": "All comments",
     "Komentarai": "Comments",
     "Komentaras": "Comment",
+    "Tavo parašyti komentarai": "Your comments",
     "Norėdami rašyti komentarą turite prisijungti": "You must log in to post a comment",
     "Rašyti komentarą": "Write a comment",
     "Komentaras (ne daugiau 160 simbolių)": "Comment (max 160 symbols)",
@@ -53,6 +54,9 @@
     "Paslėptas": "Hidden",
     "Data": "Date",
     "Kiekis": "Sum",
-    "Patiktukai": "Likes"
+    "Patiktukai": "Likes",
+    "Straipsnio sukūrimo forma": "New post form",
+    "Pasirinkti": "Choose",
+    "Eiti į straipsnį": "Go to post"
 
 }

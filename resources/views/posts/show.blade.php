@@ -33,7 +33,7 @@
                         <input type="hidden" name="user_id" value="{{Auth::user()->id}}">
                         <input type="hidden" name="post_id" value="{{$post->id}}">
                         <textarea rows="6" class="form-control" type="text" name="comment" placeholder="{{ __('Komentaras (ne daugiau 160 simbolių)') }}"></textarea>
-                        <button class="btn bg-success mt-1">{{ __('Komentuoti') }}</button>
+                        <button class="mx-1 mt-2 btn btn-link px-1 py-1 border-0 text-decoration-none text-white commentbutton"><i class="fa-regular fa-comment"></i> {{ __('Komentuoti') }}</button>
                     </div>
                 </form>
                     @else

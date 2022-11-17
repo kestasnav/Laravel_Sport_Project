@@ -61,7 +61,7 @@
 
                                 <li><a class="dropdown-item" href="{{ route('wc2022') }}">{{__('Pasaulio čempionatas 2022')}}</a></li>
                                 <li><a class="dropdown-item" href="{{ route('premier') }}">{{__('Anglijos Premier lyga')}}</a></li>
-                                <li><a class="dropdown-item" href="{{ route('alyga') }}">{{__('Lietuvos A lyga')}}</a></li>
+                                <li><a class="dropdown-item" href="{{ route('lithuania') }}">{{__('Lietuvos futbolas')}}</a></li>
 
                                 <li><a class="dropdown-item"  href="{{ route('champions') }}">{{__('Čempionų lyga')}}</a></li>
                             </ul>
@@ -113,6 +113,8 @@
                                     @can('admin_user')
                                     <a class="dropdown-item" href="{{ route('admin') }}">{{ __('Administratoriaus panelė') }}</a>
                                     @endcan
+                                        <a class="dropdown-item" href="{{ route('comments.index') }}">{{ __('Komentarai') }}</a>
+
                                 <a class="dropdown-item" href="{{ route('profileEdit', Auth::user()->id) }}">{{ __('Profilio redagavimas') }}</a>
 
                                     <a class="dropdown-item" href="{{ route('logout') }}"

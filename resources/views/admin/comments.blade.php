@@ -8,16 +8,16 @@
                 <div class="card-header"> {{ __('Komentarai') }} </div>
 
                 <div class="card-body">
-
+                    <div class="table-responsive-md">
                     <table class="table" id="myTable">
                         <thead>
                         <tr>
-                            <th>{{ __('Data') }}</th>
-                            <th>{{ __('Komentaras') }}</th>
-                            <th>{{ __('Autorius') }}</th>
-                            <th>{{ __('Straipsnis') }}</th>
-                            <th>{{ __('Patiktukai') }}</th>
-                            <th class="d-flex justify-content-center">{{ __('Actions') }}</th>
+                            <th class="text-center">{{ __('Data') }}</th>
+                            <th class="text-center">{{ __('Komentaras') }}</th>
+                            <th class="text-center">{{ __('Autorius') }}</th>
+                            <th class="text-center">{{ __('Straipsnis') }}</th>
+                            <th class="text-center">{{ __('Patiktukai') }}</th>
+                            <th class="text-center">{{ __('Actions') }}</th>
 
                         </tr>
                         </thead>
@@ -26,13 +26,13 @@
 
                             @foreach($comments as $comment)
 
-                                <td> {{ $comment->created_at}}  </td>
-                                <td> {{ $comment->comment}}  </td>
-                                <td>{{ $comment->user->name}} {{ $comment->user->surname}}</td>
-                                <td>  {{ $comment->post->title}}  </td>
-                                <td>  {{ $comment->likes->count()}}  </td>
+                                <td class="text-center"> {{ $comment->created_at}}  </td>
+                                <td class="text-center"> {{ $comment->comment}}  </td>
+                                <td class="text-center">{{ $comment->user->name}} {{ $comment->user->surname}}</td>
+                                <td class="text-center">  {{ $comment->post->title}}  </td>
+                                <td class="text-center">  {{ $comment->likes->count()}}  </td>
 
-                                    <td class="d-flex justify-content-center">
+                                    <td class="text-center">
 
                                         <a class="dropdown-toggle hidden-arrow" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                             <i class="fas fa-ellipsis-v fa-lg text-black"></i>
@@ -49,8 +49,6 @@
                                         </ul>
 
                                     </td>
-
-
                         </tr>
 
 
@@ -58,7 +56,7 @@
 
                         </tbody>
                     </table>
-
+                    </div>
 
                 </div>
             </div>

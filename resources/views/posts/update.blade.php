@@ -19,7 +19,7 @@
 
                         <div class="mb-3">
                             <label class="form-label">{{ __('Visas straipsnis') }}</label>
-                            <textarea rows="10" class="form-control" type="text" name="post" >{{{ $post->post }}}</textarea>
+                            <textarea rows="10" class="form-control tinymce-editor" type="text" name="post" >{{{ $post->post }}}</textarea>
                         </div>
 
                         <div class="mb-3">
@@ -30,7 +30,7 @@
                         <div class="mb-3">
                             <label for="" class="form-label">{{ __('Kategorija') }}</label>
                             <select class="form-control @error('category_id') is-invalid @enderror" name="category_id" >
-                                <option selected>Pasirinkti</option>
+                                <option selected>{{ __('Pasirinkti') }}</option>
                                 @foreach($categories as $category)
                                     <option value="{{$category->id}}" @selected($post->category_id==$category->id) )> {{$category->name}} </option>
                                 @endforeach
@@ -45,7 +45,7 @@
                         <div class="mb-3">
                             <label for="" class="form-label">{{ __('Subkategorija') }}</label>
                             <select class="form-control @error('subcategory_id') is-invalid @enderror" name="subcategory_id" >
-                                <option selected>Pasirinkti</option>
+                                <option selected>{{ __('Pasirinkti') }}</option>
                                 @foreach($subcategories as $subcategory)
                                     <option value="{{$subcategory->id}}" @selected($post->subcategory_id==$subcategory->id) )> {{$subcategory->name}} </option>
                                 @endforeach
@@ -59,7 +59,7 @@
 
 
                         <button class="btn btn-primary">{{ __('Atnaujinti') }}</button>
-                        <a class="btn btn-success mx-3 float-end" href="{{ route('posts.index') }}">{{ __('Grįžti atgal') }}</a>
+                        <a class="btn btn-success mx-3 float-end" href="{{ route('admin.posts') }}">{{ __('Grįžti atgal') }}</a>
                     </form>
                 </div>
             </div>

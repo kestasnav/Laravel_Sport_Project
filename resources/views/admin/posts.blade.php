@@ -11,16 +11,16 @@
                 </div>
 
                 <div class="card-body">
-                    <div class="table-responsive-lg">
+                    <div class="table-responsive-md">
                     <table class="table" id="myTable">
                         <thead>
                         <tr>
-                            <th><b>{{ __('Data') }}</b></th>
-                            <th><b>{{ __('Straipsnis') }}</b></th>
-                            <th><b>{{ __('Straipsnio autorius:') }}</b></th>
-                            <th><b>{{ __('Statusas') }}</b></th>
-                            <th><b>{{ __('Komentarai') }}</b></th>
-                            <th><b>{{ __('Veiksmai') }}</b></th>
+                            <th class="text-center"><b>{{ __('Data') }}</b></th>
+                            <th class="text-center"><b>{{ __('Straipsnis') }}</b></th>
+                            <th class="text-center"><b>{{ __('Straipsnio autorius:') }}</b></th>
+                            <th class="text-center"><b>{{ __('Statusas') }}</b></th>
+                            <th class="text-center"><b>{{ __('Komentarai') }}</b></th>
+                            <th class="text-center"><b>{{ __('Veiksmai') }}</b></th>
 
 
                         </tr>
@@ -30,19 +30,19 @@
 
                             @foreach($posts as $post)
 
-                                <td> {{ $post->created_at }}  </td>
-                                <td> {{ $post->title }}  </td>
-                                <td> {{ $post->user->name }} {{ $post->user->surname }}  </td>
-                                <td>
+                                <td class="text-center"> {{ $post->created_at }}  </td>
+                                <td class="text-center"> {{ $post->title }}  </td>
+                                <td class="text-center"> {{ $post->user->name }} {{ $post->user->surname }}  </td>
+                                <td class="text-center">
                                      @if($post->type == 'unhide')
                                         {{ __('Nepaslėptas') }}
                                     @else
                                     <b>{{ __('Paslėptas') }}</b>
                                          @endif
                                 </td>
-                                <td> {{ $post->comments->count() }}  </td>
+                                <td class="text-center"> {{ $post->comments->count() }}  </td>
 
-                                <td>
+                                <td class="text-center">
 
                                     <a class="dropdown-toggle hidden-arrow" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                         <i class="fas fa-ellipsis-v fa-lg text-black"></i>

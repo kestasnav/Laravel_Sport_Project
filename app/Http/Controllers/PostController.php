@@ -76,7 +76,7 @@ class PostController extends Controller
 
         return view('posts.index',['posts'=>$posts, 'postai'=>$postai]);
     }
-    public function alyga(Request $request)
+    public function lithuania(Request $request)
     {
         $find=$request->session()->get('find_post',$request->search);
         $posts=Post::where('subcategory_id', 5)->where('type','unhide')->findPosts($find)->latest()->paginate();

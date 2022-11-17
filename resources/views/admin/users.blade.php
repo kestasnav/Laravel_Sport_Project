@@ -8,15 +8,16 @@
                 <div class="card-header"> {{ __('Vartotojai') }} </div>
 
                 <div class="card-body">
-
+                    <div class="table-responsive-md">
                     <table class="table" id="myTable">
                         <thead>
                         <tr>
-                            <th>{{ __('Vardas') }}</th>
-                            <th>{{ __('Pavardė') }}</th>
-                            <th>{{ __('Rolė') }}</th>
+                            <th class="text-center">{{ __('Vardas') }}</th>
+                            <th class="text-center">{{ __('Pavardė') }}</th>
+                            <th class="text-center">{{ __('El. Paštas') }}</th>
+                            <th class="text-center">{{ __('Rolė') }}</th>
                             @can('edit_user_role')
-                            <th class="d-flex justify-content-center">{{ __('Actions') }}</th>
+                            <th class="text-center">{{ __('Actions') }}</th>
                             @endcan
                         </tr>
                         </thead>
@@ -25,14 +26,15 @@
 
                             @foreach($users as $user)
 
-                                <td> {{ $user->name }}  </td>
-                                <td> {{ $user->surname }}  </td>
-                                <td> {{ $user->type }}  </td>
+                                <td class="text-center"> {{ $user->name }}  </td>
+                                <td class="text-center"> {{ $user->surname }}  </td>
+                                <td class="text-center"> {{ $user->email }}  </td>
+                                <td class="text-center"> {{ $user->type }}  </td>
                                 @if($user->type == 'superadmin')
                                     <td></td>
                                 @else
                                     @can('edit_user_role')
-                            <td class="d-flex justify-content-center">
+                            <td class="text-center">
 
                                 <a class="dropdown-toggle hidden-arrow" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                     <i class="fas fa-ellipsis-v fa-lg text-black"></i>
@@ -81,7 +83,7 @@
 
                         </tbody>
                     </table>
-
+                    </div>
 
                 </div>
             </div>

@@ -36,7 +36,7 @@ Route::get('basketball',[PostController::class, 'basketball'])->name('basketball
 
 Route::get('football',[PostController::class, 'football'])->name('football');
 Route::get('premierleague',[PostController::class, 'premier'])->name('premier');
-Route::get('alyga',[PostController::class, 'alyga'])->name('alyga');
+Route::get('lithuania',[PostController::class, 'lithuania'])->name('lithuania');
 Route::get('championsleague',[PostController::class, 'champions'])->name('champions');
 Route::get('wc2022',[PostController::class, 'wc2022'])->name('wc2022');
 

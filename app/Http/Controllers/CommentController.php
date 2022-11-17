@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Comment;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class CommentController extends Controller
 {
@@ -14,7 +15,9 @@ class CommentController extends Controller
      */
     public function index()
     {
+        $comments=Comment::where('user_id',Auth::user()->id)->latest()->paginate(20);
 
+        return view('comments.index',['comments'=>$comments]);
     }
 
     /**
