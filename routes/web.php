@@ -29,6 +29,9 @@ Route::resource('basketball', BasketballController::class);
 Route::resource('football', FootballController::class);
 Route::resource('comments', CommentController::class);
 
+Route::get('latest',[PostController::class, 'index'])->name('posts.newest');
+Route::get('mostread', [PostController::class, 'mostReadPosts'])->name('posts.mostread');
+
 Route::get('euroleague',[PostController::class, 'euroleague'])->name('euroleague');
 Route::get('nba',[PostController::class, 'nba'])->name('nba');
 Route::get('lkl',[PostController::class, 'lkl'])->name('lkl');

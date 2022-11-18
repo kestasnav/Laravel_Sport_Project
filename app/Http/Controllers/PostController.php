@@ -8,6 +8,8 @@ use App\Models\Like;
 use App\Models\Post;
 use App\Models\Subcategory;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Cookie;
 
 class PostController extends Controller
 {
@@ -20,7 +22,15 @@ class PostController extends Controller
     {
         $find=$request->session()->get('find_post',$request->search);
 
-        $posts=Post::where('type','unhide')->findPosts($find)->latest()->paginate(4);
+        $posts=Post::where('type','unhide')->findPosts($find)->latest()->paginate(6);
+        $postai=Post::where('type','unhide')->latest()->paginate(20);
+
+        return view('posts.index',['posts'=>$posts, 'postai'=>$postai]);
+    }
+
+    public function mostReadPosts(Request $request) {
+        $find=$request->session()->get('find_post',$request->search);
+        $posts=Post::where('type','unhide')->findPosts($find)->orderBy('reads', 'desc')->latest()->paginate(10);
         $postai=Post::where('type','unhide')->latest()->paginate(20);
 
         return view('posts.index',['posts'=>$posts, 'postai'=>$postai]);
@@ -147,13 +157,26 @@ class PostController extends Controller
      * @param  \App\Models\Post  $post
      * @return \Illuminate\Http\Response
      */
-    public function show(Post $post)
+
+    public function show(Post $post, Request $request )
     {
-
         $comments=Comment::where('post_id', $post->id)->withCount('likes')->orderBy('likes_count', 'desc')->paginate();
-
-        return view("posts.show",['post'=>$post, 'comments'=>$comments]);
-
+        if(! Auth::check()){//guest user identified by ip
+            $cookie_name = (Str::replace('.','',($request->ip())).'-'. $post->id);
+        } else {
+            $cookie_name = (Auth::user()->id.'-'. $post->id);//logged in user
+        }
+        if(Cookie::get($cookie_name) == ''){//check if cookie is set
+            $cookie = cookie($cookie_name, '1', 60);//set the cookie
+            $post->incrementReadCount();//count the view
+            return response()
+                ->view('posts.show',[
+                    'post' => $post, 'comments'=>$comments])
+                ->withCookie($cookie);//store the cookie
+        } else {
+            return  view('posts.show',[
+                'post' => $post, 'comments'=>$comments]);//this view is not counted
+        }
     }
 
     /**

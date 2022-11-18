@@ -8,7 +8,16 @@
     <div class="row mt-1 mb-3 mx-1">
 
         <div class="col-md-8">
+
+            <ul class="nav-item d-inline-flex">
+                <li class="nav-link mx-3"><a class="text-decoration-none text-black"
+                                             href="{{ route('posts.newest') }}">{{__('Naujausios')}}</a></li>
+                <li class="nav-link mx-3"><a class="text-decoration-none text-black"
+                                             href="{{ route('posts.mostread') }}">{{__('Skaitomiausios')}}</a></li>
+            </ul>
+
             <div class="row">
+
                 @foreach($posts as $post)
 
                     <div class="col-md-6">
@@ -45,7 +54,7 @@
 
         <div class="col-md-4 d-none d-sm-block">
             <img id="morebutton-pics" alt="Reklama" src="{{ asset('storage/images/'.'reklamas.jpg')}}" style=" width:100% ;height: 200px;">
-            <h5 class="mt-3">{{__('Naujausios naujienos')}}</h5>
+            <h5 class="mt-3"><b>{{__('Naujausios naujienos')}}</b></h5>
             @foreach($postai as $post)
                 </p> <b>{{$post->created_at}}</b> <a class="text-decoration-none text-black"
                                                      href="{{ route('posts.show', $post->id) }}">{{ $post->title}}
