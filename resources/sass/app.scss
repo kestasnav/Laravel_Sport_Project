@@ -53,3 +53,16 @@ body {
     background: rgb(2,0,36);
     background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,104,121,1) 43%, rgba(0,212,255,1) 100%);
 }
+
+#morebutton-pics {
+    animation: pulse 1s alternate infinite;
+    -webkit-animation: pulse 1s alternate infinite;
+}
+@keyframes pulse {
+    from {opacity:1}
+    to {opacity:0}
+}
+@-webkit-keyframes pulse {
+    from {opacity:1}
+    to {opacity:0}
+}

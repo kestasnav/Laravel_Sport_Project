@@ -44,7 +44,8 @@
         </div>
 
         <div class="col-md-4 d-none d-sm-block">
-            <h5>{{__('Naujausios naujienos')}}</h5>
+            <img id="morebutton-pics" alt="Reklama" src="{{ asset('storage/images/'.'reklamas.jpg')}}" style=" width:100% ;height: 200px;">
+            <h5 class="mt-3">{{__('Naujausios naujienos')}}</h5>
             @foreach($postai as $post)
                 </p> <b>{{$post->created_at}}</b> <a class="text-decoration-none text-black"
                                                      href="{{ route('posts.show', $post->id) }}">{{ $post->title}}

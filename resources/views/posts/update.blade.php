@@ -57,9 +57,8 @@
                             @enderror
                         </div>
 
-
                         <button class="btn btn-primary">{{ __('Atnaujinti') }}</button>
-                        <a class="btn btn-success mx-3 float-end" href="{{ route('admin.posts') }}">{{ __('Grįžti atgal') }}</a>
+
                     </form>
                 </div>
             </div>
