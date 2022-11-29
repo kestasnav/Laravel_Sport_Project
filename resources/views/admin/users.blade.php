@@ -1,7 +1,12 @@
 @extends('layouts.adminlayout')
 @section('content')
 
-
+    @if(session()->has('message'))
+        <div class="alert alert-success mt-3">
+            <button type="button" class="btn-close float-end" data-bs-dismiss="alert" aria-label="Close"></button>
+            {{session()->get('message')}}
+        </div>
+    @endif
     <div class="row">
         <div class="col-md-12 mt-5 mb-5">
             <div class="card">

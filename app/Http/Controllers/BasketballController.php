@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Basketball;
+use App\Models\Fixture;
 use App\Models\Post;
 use Illuminate\Http\Request;
 
@@ -19,6 +20,14 @@ class BasketballController extends Controller
 
         return view('basketball.index',['posts'=>$posts]);
     }
+
+    public function fixtures(){
+
+        $fixtures=Fixture::all();
+
+        return view('basketball.nba',['fixtures'=>$fixtures]);
+    }
+
     public function euroleague()
     {
         return view('basketball.index',['posts'=>Post::where('subcategory_id',1)->get()]);

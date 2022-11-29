@@ -39,7 +39,7 @@ class AdminController extends Controller
     {
         $user = User::find($id);
         $user->delete();
-        return redirect()->back();
+        return redirect()->back()->with('message','User deleted successfully');
     }
 
     public  function role(Request $request, $id)
@@ -47,7 +47,7 @@ class AdminController extends Controller
         $user = User::find($id);
         $user->type=$request->type;
         $user->save();
-        return redirect()->back();
+        return redirect()->back()->with('message','User role changed successfully');
     }
 
     public  function hide(Request $request, $id)
@@ -55,7 +55,7 @@ class AdminController extends Controller
         $post = Post::find($id);
         $post->type=$request->type;
         $post->save();
-        return redirect()->back();
+        return redirect()->back()->with('message','Post visibility changed successfully');
     }
 
     public function comments(Request $request)
