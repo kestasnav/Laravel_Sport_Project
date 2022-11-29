@@ -1,7 +1,7 @@
 # Sport Project
 # Admin dashboard:
 # Posts:
-# ![screencapture-localhost-Laravel-sport-public-admin-2022-11-17-14_39_32](https://user-images.githubusercontent.com/107037107/202448893-caea9b14-0cbc-412d-989f-c17176646afa.png)
+# ![screencapture-localhost-Laravel-sport-public-admin-posts-2022-11-29-12_00_25](https://user-images.githubusercontent.com/107037107/204499021-892a49c6-9f3c-48d9-a20e-341854f81b50.png)
 # Users:
 # ![screencapture-localhost-Laravel-sport-public-admin-users-2022-11-17-14_40_36](https://user-images.githubusercontent.com/107037107/202449090-1a170dc9-47fe-40b0-8805-c80a0f77abb9.png)
 # Comments:
@@ -11,7 +11,7 @@
 # New post:
 # ![screencapture-localhost-Laravel-sport-public-posts-create-2022-11-17-19_51_19](https://user-images.githubusercontent.com/107037107/202520637-7ad3ba75-0a29-4f39-840b-41e6b4123908.png)
 # All posts (logged out) in lithuanian language:
-# ![screencapture-localhost-Laravel-sport-public-2022-11-18-12_05_05](https://user-images.githubusercontent.com/107037107/202676183-0ae5f3be-6928-49f7-813b-0677fc644870.png)
+# ![screencapture-localhost-Laravel-sport-public-2022-11-29-12_02_11](https://user-images.githubusercontent.com/107037107/204499310-92698897-98ad-4d96-b5b3-f86b8d6a0376.png)
 # One post (logged in):
 # ![screencapture-localhost-Laravel-sport-public-posts-8-2022-11-17-20_52_41](https://user-images.githubusercontent.com/107037107/202533408-3e2ba3f3-043a-47f7-8cbd-d9a33ee09a54.png)
 # One post (logged out) in lt:
