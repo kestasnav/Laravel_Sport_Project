@@ -5,7 +5,7 @@
 # Users:
 # ![screencapture-localhost-Laravel-sport-public-admin-users-2022-11-17-14_40_36](https://user-images.githubusercontent.com/107037107/202449090-1a170dc9-47fe-40b0-8805-c80a0f77abb9.png)
 # Comments:
-# ![screencapture-localhost-Laravel-sport-public-admin-comments-2022-11-17-14_41_31](https://user-images.githubusercontent.com/107037107/202449316-18ffcd23-9b30-4624-9f91-1254328032c0.png)
+# ![comments](https://user-images.githubusercontent.com/107037107/204511393-227d3678-4ac7-4b86-8bfd-ec885d0ce4f2.png)
 # Post update:
 # ![screencapture-localhost-Laravel-sport-public-posts-3-edit-2022-11-17-19_46_32](https://user-images.githubusercontent.com/107037107/202519792-ceaea88c-a13c-43ad-9266-342e7180d529.png)
 # New post:
