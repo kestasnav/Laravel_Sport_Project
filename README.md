@@ -11,7 +11,8 @@
 <li> Atlikti paiešką pagal raktinį žodį straipsnio pavadinime, bei pačiame straipsnyje.
 <li> Straipsniai suskirstyti į kategorijas ( krepšinis, futbolas ), bei subkategorijas ( eurolyga, nba, pasaulio čempionatas, anglijos premier lyga ir kt. )
 <li> Puslapio meniu punktai turi dvikalbiškumą (LT, EN).
-    </ul>
+ </ul>
+ <hr>
 # Toliau pateikiu keletą ekranvaizdžių:
 # Posts:
 # ![screencapture-localhost-Laravel-sport-public-admin-posts-2022-11-29-12_00_25](https://user-images.githubusercontent.com/107037107/204499021-892a49c6-9f3c-48d9-a20e-341854f81b50.png)
