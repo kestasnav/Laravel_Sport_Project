@@ -1,7 +1,7 @@
 # Sport Project
 # Admin dashboard:
-# Įgyvendintos funkcijos:
- Straipsnių redagavimas, ištrinimas, pridėjimas, paslėpimas nuo vartotojų.
+<br> Įgyvendintos funkcijos:
+<br>Straipsnių redagavimas, ištrinimas, pridėjimas, paslėpimas nuo vartotojų.
  Komentarų trynimas.
  Super administratorius gali keisti vartotojų roles į administratorių ir paprastą vartotoją.
  Vartotojas gali rašyti komentarus, ištrinti savo parašytą komentarą, 'like`inti' ir 'atlike`inti' komentarus.
