@@ -1,15 +1,17 @@
 # Sport Project
 # Admin dashboard:
 # Įgyvendintos funkcijos:
+<ul>
 <li> Straipsnių redagavimas, ištrinimas, pridėjimas, paslėpimas nuo vartotojų.
 <li> Komentarų trynimas.
-<br> Super administratorius gali keisti vartotojų roles į administratorių ir paprastą vartotoją.
-<br> Vartotojas gali rašyti komentarus, ištrinti savo parašytą komentarą, 'like`inti' ir 'atlike`inti' komentarus.
-<br> Kitos funkcijos:
-<br> Rūšiuoti naujienas pagal naujumą ir skaitomumą.
-<br> Atlikti paiešką pagal raktinį žodį straipsnio pavadinime, bei pačiame straipsnyje.
-<br> Straipsniai suskirstyti į kategorijas ( krepšinis, futbolas ), bei subkategorijas ( eurolyga, nba, pasaulio čempionatas, anglijos premier lyga ir kt. )
-<br> Puslapio meniu punktai turi dvikalbiškumą (LT, EN).
+<li> Super administratorius gali keisti vartotojų roles į administratorių ir paprastą vartotoją.
+<li> Vartotojas gali rašyti komentarus, ištrinti savo parašytą komentarą, 'like`inti' ir 'atlike`inti' komentarus.
+<li> Kitos funkcijos:
+<li> Rūšiuoti naujienas pagal naujumą ir skaitomumą.
+<li> Atlikti paiešką pagal raktinį žodį straipsnio pavadinime, bei pačiame straipsnyje.
+<li> Straipsniai suskirstyti į kategorijas ( krepšinis, futbolas ), bei subkategorijas ( eurolyga, nba, pasaulio čempionatas, anglijos premier lyga ir kt. )
+<li> Puslapio meniu punktai turi dvikalbiškumą (LT, EN).
+    </ul>
 # Toliau pateikiu keletą ekranvaizdžių:
 # Posts:
 # ![screencapture-localhost-Laravel-sport-public-admin-posts-2022-11-29-12_00_25](https://user-images.githubusercontent.com/107037107/204499021-892a49c6-9f3c-48d9-a20e-341854f81b50.png)
