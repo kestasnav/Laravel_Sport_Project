@@ -1,5 +1,3 @@
-# Sport Project
-# Admin dashboard:
 # Įgyvendintos funkcijos:
 
 <li> Straipsnių redagavimas, ištrinimas, pridėjimas, paslėpimas nuo vartotojų.
@@ -15,6 +13,7 @@
  <hr>
 
 # Toliau pateikiu keletą ekranvaizdžių:
+# Admin dashboard:
 # Posts:
 # ![screencapture-localhost-Laravel-sport-public-admin-posts-2022-11-29-12_00_25](https://user-images.githubusercontent.com/107037107/204499021-892a49c6-9f3c-48d9-a20e-341854f81b50.png)
 # Users:
