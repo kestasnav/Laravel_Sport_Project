@@ -6,6 +6,7 @@
 <li> Vartotojas gali rašyti komentarus, ištrinti savo parašytą komentarą, 'like`inti' ir 'atlike`inti' komentarus.
 <li> Kitos funkcijos:
 <li> Rūšiuoti naujienas pagal naujumą ir skaitomumą.
+<li> Komentarai išrykiuoti pagal populiarumą (like`ų skaičių).
 <li> Atlikti paiešką pagal raktinį žodį straipsnio pavadinime, bei pačiame straipsnyje.
 <li> Straipsniai suskirstyti į kategorijas ( krepšinis, futbolas ), bei subkategorijas ( eurolyga, nba, pasaulio čempionatas, anglijos premier lyga ir kt. )
 <li> Puslapio meniu punktai turi dvikalbiškumą (LT, EN).
