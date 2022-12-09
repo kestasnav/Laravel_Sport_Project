@@ -2,6 +2,7 @@
 
 <li> Straipsnių redagavimas, ištrinimas, pridėjimas, paslėpimas nuo vartotojų.
 <li> Komentarų trynimas.
+<li> Sukurti produktų kategorijas.
 <li> Super administratorius gali keisti vartotojų roles į administratorių ir paprastą vartotoją.
 <li> Vartotojas gali rašyti komentarus, ištrinti savo parašytą komentarą, 'like`inti' ir 'atlike`inti' komentarus.
 <li> Kitos funkcijos:
@@ -9,6 +10,7 @@
 <li> Komentarai išrikiuoti pagal populiarumą (like`ų skaičių).
 <li> Atlikti paiešką pagal raktinį žodį straipsnio pavadinime, bei pačiame straipsnyje.
 <li> Straipsniai suskirstyti į kategorijas ( krepšinis, futbolas ), bei subkategorijas ( eurolyga, nba, pasaulio čempionatas, anglijos premier lyga ir kt. )
+<li> 
 <li> Puslapio meniu punktai turi dvikalbiškumą (LT, EN).
 
  <hr>
@@ -31,6 +33,10 @@
 # ![screencapture-localhost-Laravel-sport-public-posts-8-2022-11-17-20_52_41](https://user-images.githubusercontent.com/107037107/202533408-3e2ba3f3-043a-47f7-8cbd-d9a33ee09a54.png)
 # One post (logged out) in lt:
 # ![screencapture-localhost-Laravel-sport-public-posts-8-2022-11-14-11_03_14](https://user-images.githubusercontent.com/107037107/201618963-7c9f7b2b-6c73-49e3-84ce-33573627a1d0.png)
+# E-Shop all products :
+# ![Screenshot 2022-12-09 111918](https://user-images.githubusercontent.com/107037107/206668437-a779d7fd-6feb-43a7-89e8-fdefe9f22e07.png)
+# E-Shop One product details :
+# ![screencapture-localhost-Laravel-sport-public-products-1-2022-12-09-11_19_46](https://user-images.githubusercontent.com/107037107/206668525-01a83e53-7104-4ed5-b69d-04725b394c73.png)
 # User comments:
 # ![screencapture-localhost-Laravel-sport-public-comments-2022-11-17-20_35_40](https://user-images.githubusercontent.com/107037107/202530082-0479ddf2-cffe-491f-bf28-bf5634ecca9c.png)
 # Responsive all posts:
