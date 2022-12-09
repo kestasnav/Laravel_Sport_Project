@@ -69,7 +69,7 @@
                                 <li><a class="dropdown-item"  href="{{ route('champions') }}">{{__('Čempionų lyga')}}</a></li>
                             </ul>
                         </li>
-
+                        <li><a class="nav-link text-white" href="{{ route('products.index') }}">{{__('El. Parduotuvė')}}</a></li>
 
                     </ul>
 

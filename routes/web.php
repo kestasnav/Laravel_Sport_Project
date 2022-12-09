@@ -7,6 +7,8 @@ use App\Http\Controllers\FootballController;
 use App\Http\Controllers\LanguageController;
 use App\Http\Controllers\LikeController;
 use App\Http\Controllers\PostController;
+use App\Http\Controllers\ProductcategoryController;
+use App\Http\Controllers\ProductController;
 use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 
@@ -28,6 +30,8 @@ Route::resource('posts', PostController::class);
 Route::resource('basketball', BasketballController::class);
 Route::resource('football', FootballController::class);
 Route::resource('comments', CommentController::class);
+Route::resource('products', ProductController::class);
+
 
 Route::get('latest',[PostController::class, 'index'])->name('posts.newest');
 Route::get('mostread', [PostController::class, 'mostReadPosts'])->name('posts.mostread');
@@ -64,9 +68,13 @@ Route::get('admin/comments', [AdminController::class, 'comments'])->name('admin.
 
 Route::delete('destroy/{id}', [AdminController::class, 'destroyUser'])->name('users.destroy')->middleware('can:admin_user');
 
-Route::put('role/{id}', [AdminController::class, 'role'])->name('users.role')->middleware('can:admin_user');
+Route::put('role/{id}', [AdminController::class, 'role'])->name('users.role')->middleware('can:edit_user_role');
 
 Route::put('hide/{id}', [AdminController::class, 'hide'])->name('hide.post')->middleware('can:admin_user');
+
+Route::resource('productcategories', ProductcategoryController::class)->middleware('can:admin_user');
+
+
 
 Auth::routes();
 

@@ -41,7 +41,7 @@ class PostPolicy
      */
     public function create(User $user)
     {
-        return $user->type=="admin";
+        return $user->type=="books";
     }
 
     /**

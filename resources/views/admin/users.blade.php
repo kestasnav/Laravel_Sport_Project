@@ -52,7 +52,7 @@
                                                 <form  action="{{ route('users.destroy', $user->id) }}" method="post">
                                                     @csrf
                                                     @method('DELETE')
-                                                    <button class="dropdown-item border-bottom"><i class="fa-solid fa-trash"></i> {{ __('Trinti') }}</button>
+                                                    <button onclick="return confirm('Are You Sure To Delete This')" class="dropdown-item border-bottom"><i class="fa-solid fa-trash"></i> {{ __('Trinti') }}</button>
                                                 </form>
                                             @endif
                                         </li>
@@ -65,7 +65,7 @@
                                                     <input type="hidden" value="admin" name="type">
                                                     <button class="dropdown-item"><i class="fa fa-lock" aria-hidden="true"></i> Add Admin</button>
                                                 </form>
-                                            @elseif($user->type == 'admin')
+                                            @elseif($user->type == 'books')
                                                 <form action="{{ route('users.role', $user->id) }}" method="post">
                                                     @csrf
                                                     @method('PUT')

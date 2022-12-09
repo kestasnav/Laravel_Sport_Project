@@ -45,7 +45,13 @@
 
                             <li><a class="nav-link" href="{{ route('admin.users') }}">{{__('Vartotojai')}}</a></li>
 
-                            <li><a class="nav-link" href="{{ route('admin.comments') }}">{{__('Komentarai')}}</a></li>
+                            <li><a class="nav-link" href="{{ route('admin.comments') }}">{{__('Komentarai')}}</a>
+
+                            <li><a class="nav-link" href="{{ route('productcategories.index') }}">{{__('Produktų kategorijos')}}</a></li>
+
+                    <li><a class="nav-link text-white" href="{{ route('productcategories.index') }}">{{__('Produktai')}}</a></li>
+
+
 
                     </li>
 

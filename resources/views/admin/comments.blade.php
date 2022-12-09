@@ -48,7 +48,7 @@
                                                     <form  action="{{ route('comments.destroy', $comment->id) }}" method="post">
                                                         @csrf
                                                         @method('DELETE')
-                                                        <button class="dropdown-item border-bottom"><i class="fa-solid fa-trash"></i> {{ __('Trinti') }}</button>
+                                                        <button onclick="return confirm('Are You Sure To Delete This')" class="dropdown-item border-bottom"><i class="fa-solid fa-trash"></i> {{ __('Trinti') }}</button>
                                                     </form>
                                             </li>
                                         </ul>
