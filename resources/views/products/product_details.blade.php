@@ -25,11 +25,11 @@
             </h6>
         @endif
 
-        <h6>Product Category : {{$product->productcategory->name}}</h6>
-        <h6>Product Details : {{$product->description}}</h6>
-        <h6>Available Quantity : {{$product->quantity}}</h6>
+        <h6>{{__('Produkto Kategorija')}} : {{$product->productcategory->name}}</h6>
+        <h6>{{__('Produkto Aprašas')}} : {{$product->description}}</h6>
+        <h6>{{__('Prekių likutis')}} : {{$product->quantity}}</h6>
 
-        <a class="text-decoration-none btn btn-primary" href="">Add to Cart</a>
+        <a class="text-decoration-none btn btn-primary" href="">{{__('Į krepšelį')}}</a>
 
     </div>
 </div>

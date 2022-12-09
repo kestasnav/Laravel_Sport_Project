@@ -49,7 +49,7 @@
 
                             <li><a class="nav-link" href="{{ route('productcategories.index') }}">{{__('Produktų kategorijos')}}</a></li>
 
-                    <li><a class="nav-link text-white" href="{{ route('productcategories.index') }}">{{__('Produktai')}}</a></li>
+                    <li><a class="nav-link" href="{{ route('products') }}">{{__('Produktai')}}</a></li>
 
 
 

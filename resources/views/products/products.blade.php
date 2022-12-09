@@ -11,10 +11,10 @@
                         <div class="option_container">
                             <div class="options">
                                 <a href="{{route('products.show',$product->id)}}" class="option1">
-                                    Product Details
+                                    {{__('Produkto Aprašas')}}
                                 </a>
                                 <a href="" class="option2">
-                                    Buy Now
+                                    {{__('Pirkti dabar')}}
                                 </a>
                             </div>
                         </div>

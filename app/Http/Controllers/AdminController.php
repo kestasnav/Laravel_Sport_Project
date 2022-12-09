@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Comment;
 use App\Models\Post;
+use App\Models\Product;
 use App\Models\User;
 use Illuminate\Http\Request;
 
@@ -64,6 +65,11 @@ class AdminController extends Controller
         $comments=Comment::latest()->paginate();
 
         return view('admin.comments',['comments'=>$comments]);
+    }
+
+    public function products() {
+        $products = Product::all();
+        return view('admin.products',compact('products'));
     }
 
 }

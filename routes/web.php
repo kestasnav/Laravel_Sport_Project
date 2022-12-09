@@ -74,6 +74,8 @@ Route::put('hide/{id}', [AdminController::class, 'hide'])->name('hide.post')->mi
 
 Route::resource('productcategories', ProductcategoryController::class)->middleware('can:admin_user');
 
+Route::get('allproducts', [AdminController::class, 'products'])->name('products')->middleware('can:admin_user');
+
 
 
 Auth::routes();

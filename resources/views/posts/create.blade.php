@@ -69,7 +69,7 @@
 
 
                         <button class="btn btn-primary">Post</button>
-                        <a class="btn btn-success mx-3 float-end" href="{{ route('books.posts') }}">Go Back</a>
+                        <a class="btn btn-success mx-3 float-end" href="{{ route('admin.posts') }}">Go Back</a>
                     </form>
                 </div>
             </div>
