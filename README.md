@@ -10,7 +10,6 @@
 <li> Komentarai išrikiuoti pagal populiarumą (like`ų skaičių).
 <li> Atlikti paiešką pagal raktinį žodį straipsnio pavadinime, bei pačiame straipsnyje.
 <li> Straipsniai suskirstyti į kategorijas ( krepšinis, futbolas ), bei subkategorijas ( eurolyga, nba, pasaulio čempionatas, anglijos premier lyga ir kt. )
-<li> 
 <li> Puslapio meniu punktai turi dvikalbiškumą (LT, EN).
 
  <hr>
