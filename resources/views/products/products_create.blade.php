@@ -10,7 +10,7 @@
                         @csrf
 
                         <div class="mb-3">
-                            <label class="form-label">{{ __('Produkto pavadinimas') }}</label>
+                            <label class="form-label">{{ __('Pavadinimas') }}</label>
                             <input class="form-control @error('title') is-invalid @enderror" type="text" name="title" value="{{old('title')}}">
                             @error('title')
                             @foreach( $errors->get('title') as $error)
@@ -20,7 +20,7 @@
                         </div>
 
                         <div class="mb-3">
-                            <label class="form-label">{{ __('Produkto aprašas') }}</label>
+                            <label class="form-label">{{ __('Aprašas') }}</label>
 
                             <textarea rows="10" class="form-control @error('description') is-invalid @enderror" type="text" name="description" value="{{old('description')}}"></textarea>
                             @error('description')
@@ -31,12 +31,12 @@
                         </div>
 
                         <div class="mb-3">
-                            <label for="" class="form-label mx-2">{{ __('Produkto nuotrauka') }}</label>
+                            <label for="" class="form-label mx-2">{{ __('Nuotrauka') }}</label>
                             <input type="file" class="form-control" name="img">
                         </div>
 
                         <div class="mb-3">
-                            <label for="" class="form-label">{{ __('Produkto Kategorija') }}</label>
+                            <label for="" class="form-label">{{ __('Kategorija') }}</label>
                             <select class="form-control @error('productcategory_id') is-invalid @enderror" name="productcategory_id" >
                                 <option selected>{{ __('Pasirinkti') }}</option>
                                 @foreach($categories as $category)
@@ -51,7 +51,7 @@
                         </div>
 
                         <div class="mb-3">
-                            <label class="form-label">{{ __('Produkto kaina') }}</label>
+                            <label class="form-label">{{ __('Kaina') }}</label>
                             <input class="form-control @error('price') is-invalid @enderror" type="number" name="price" value="{{old('price')}}">
                             @error('price')
                             @foreach( $errors->get('price') as $error)
@@ -61,7 +61,7 @@
                         </div>
 
                         <div class="mb-3">
-                            <label class="form-label">{{ __('Produkto kaina po nukainavimo') }}</label>
+                            <label class="form-label">{{ __('Kaina po nukainavimo') }}</label>
                             <input class="form-control @error('discount_price') is-invalid @enderror" type="number" name="discount_price" value="{{old('discount_price')}}">
                             @error('discount_price')
                             @foreach( $errors->get('discount_price') as $error)
@@ -71,7 +71,7 @@
                         </div>
 
                         <div class="mb-3">
-                            <label class="form-label">{{ __('Produkto kiekis') }}</label>
+                            <label class="form-label">{{ __('Kiekis') }}</label>
                             <input class="form-control @error('quantity') is-invalid @enderror" type="text" name="quantity" value="{{old('quantity')}}">
                             @error('quantity')
                             @foreach( $errors->get('quantity') as $error)

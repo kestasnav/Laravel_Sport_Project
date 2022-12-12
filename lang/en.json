@@ -53,7 +53,9 @@
     "Nepaslėptas": "Not hidden",
     "Paslėptas": "Hidden",
     "Data": "Date",
-    "Kiekis": "Sum",
+    "Kiekis": "Quantity",
+    "Kaina": "Price",
+    "Kaina po nukainavimo": "Discount price",
     "Patiktukai": "Likes",
     "Straipsnio sukūrimo forma": "New post form",
     "Pasirinkti": "Choose",
@@ -66,14 +68,19 @@
     "Produktai": "Products",
     "Kategorijos sukūrimo forma": "Category create form",
     "Sukurti": "Create",
-    "Pavadinimas": "Name",
+    "Pavadinimas": "Title",
     "Pridėti kategoriją": "Create category",
     "Kategorijos redagavimo forma": "Category update form",
     "Atgal": "Go Back",
     "Produkto Aprašas": "Product Details",
     "Pirkti dabar": "Buy now",
-    "Produkto Kategorija": "Product Category",
     "Prekių likutis": "Available Quantity",
-    "Į krepšelį": "Add to Cart"
+    "Į krepšelį": "Add to Cart",
+    "Dabartinė nuotrauka": "Current photo",
+    "Produkto atnaujinimo forma": "Product update form",
+    "Produkto sukūrimo forma": "Product create form",
+    "Aprašas": "Description",
+    "Pakeisti nuotrauką": "Change photo",
+    "Nuotrauka": "Photo"
 
 }
