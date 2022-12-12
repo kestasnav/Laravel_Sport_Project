@@ -38,7 +38,25 @@ class ProductController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $product = new Product();
+
+        $foto=$request->file('img');
+
+        $fotoname = rand().'.'.$foto->extension();
+
+        $product->title=$request->title;
+        $product->description=$request->description;
+        $product->img=$fotoname;
+        $product->price=$request->price;
+        $product->quantity=$request->quantity;
+        $product->discount_price=$request->discount_price;
+        $product->productcategory_id=$request->productcategory_id;
+
+
+        $foto->storeAs('images',$fotoname);
+        $product->save();
+
+        return redirect()->route('products')->with('message','Product created successfully.');
     }
 
     /**
@@ -83,6 +101,7 @@ class ProductController extends Controller
      */
     public function destroy(Product $product)
     {
-        //
+        $product->delete();
+        return redirect()->back()->with('message', 'Product deleted successfully.');
     }
 }

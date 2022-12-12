@@ -22,7 +22,7 @@
                         <div class="mb-3">
                             <label class="form-label">{{ __('Produkto aprašas') }}</label>
 
-                            <textarea rows="10" class="form-control tinymce-editor @error('description') is-invalid @enderror" type="text" name="description" value="{{old('description')}}"></textarea>
+                            <textarea rows="10" class="form-control @error('description') is-invalid @enderror" type="text" name="description" value="{{old('description')}}"></textarea>
                             @error('description')
                             @foreach( $errors->get('description') as $error)
                                 <div class="alert alert-danger"> {{ $error }} </div>
@@ -52,7 +52,7 @@
 
                         <div class="mb-3">
                             <label class="form-label">{{ __('Produkto kaina') }}</label>
-                            <input class="form-control @error('price') is-invalid @enderror" type="text" name="price" value="{{old('price')}}">
+                            <input class="form-control @error('price') is-invalid @enderror" type="number" name="price" value="{{old('price')}}">
                             @error('price')
                             @foreach( $errors->get('price') as $error)
                                 <div class="alert alert-danger"> {{ $error }} </div>
@@ -62,7 +62,7 @@
 
                         <div class="mb-3">
                             <label class="form-label">{{ __('Produkto kaina po nukainavimo') }}</label>
-                            <input class="form-control @error('discount_price') is-invalid @enderror" type="text" name="discount_price" value="{{old('discount_price')}}">
+                            <input class="form-control @error('discount_price') is-invalid @enderror" type="number" name="discount_price" value="{{old('discount_price')}}">
                             @error('discount_price')
                             @foreach( $errors->get('discount_price') as $error)
                                 <div class="alert alert-danger"> {{ $error }} </div>
