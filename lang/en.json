@@ -81,6 +81,12 @@
     "Produkto sukūrimo forma": "Product create form",
     "Aprašas": "Description",
     "Pakeisti nuotrauką": "Change photo",
-    "Nuotrauka": "Photo"
+    "Nuotrauka": "Photo",
+    "Krepšelis": "Cart",
+    "Pašalinti": "Remove",
+    "Bendra suma": "Total price",
+    "Nuolaida": "Discount",
+    "Suma su nuolaida": "Price after discount",
+    "vnt.": "pcs."
 
 }

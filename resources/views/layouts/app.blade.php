@@ -70,6 +70,8 @@
                             </ul>
                         </li>
                         <li><a class="nav-link text-white" href="{{ route('products.index') }}">{{__('El. Parduotuvė')}}</a></li>
+                        <li><a class="nav-link text-white float-end" href="{{ route('cart') }}"><i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                                {{__('Krepšelis')}}</a></li>
 
                     </ul>
 

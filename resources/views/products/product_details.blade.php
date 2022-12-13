@@ -29,7 +29,19 @@
         <h6>{{__('Produkto Aprašas')}} : {{$product->description}}</h6>
         <h6>{{__('Prekių likutis')}} : {{$product->quantity}}</h6>
 
-        <a class="text-decoration-none btn btn-primary" href="">{{__('Į krepšelį')}}</a>
+        <form action="{{route('add_cart',$product->id)}}" method="post">
+            @csrf
+            <div class="row">
+
+                <div class="col-md-2">
+                    <input class="p-2" type="number" name="quantity" value="1" min="1" max="{{$product->quantity}}" style="width: 50px;">
+                </div>
+                <div class="col-md-10">
+                    <input class="btn btn-primary" value="Add to Cart" type="submit">
+                </div>
+
+            </div>
+        </form>
 
     </div>
 </div>

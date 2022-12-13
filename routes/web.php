@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\BasketballController;
+use App\Http\Controllers\CartController;
 use App\Http\Controllers\CommentController;
 use App\Http\Controllers\FootballController;
 use App\Http\Controllers\LanguageController;
@@ -75,6 +76,12 @@ Route::put('hide/{id}', [AdminController::class, 'hide'])->name('hide.post')->mi
 Route::resource('productcategories', ProductcategoryController::class)->middleware('can:admin_user');
 
 Route::get('allproducts', [AdminController::class, 'products'])->name('products')->middleware('can:admin_user');
+
+Route::get('cart', [CartController::class, 'cart'])->name('cart');
+Route::get('remove_item/{id}', [CartController::class, 'remove_item'])->name('remove_item');
+Route::post('add_cart/{id}', [CartController::class, 'add_cart'])->name('add_cart');
+
+
 
 
 
