@@ -2,9 +2,11 @@
 
 <li> Straipsnių redagavimas, ištrinimas, pridėjimas, paslėpimas nuo vartotojų.
 <li> Komentarų trynimas.
-<li> Sukurti produktų kategorijas.
+<li> Produktų ir jų kategorijų kūrimas, redagavimas, ištrinimas.
 <li> Super administratorius gali keisti vartotojų roles į administratorių ir paprastą vartotoją.
 <li> Vartotojas gali rašyti komentarus, ištrinti savo parašytą komentarą, 'like`inti' ir 'atlike`inti' komentarus.
+<li> Vartotojas gali redaguoti savo profilį.
+<li> Vartotojas gali įsidėti prekes į krepšelį.
 <li> Kitos funkcijos:
 <li> Rūšiuoti naujienas pagal naujumą ir skaitomumą.
 <li> Komentarai išrikiuoti pagal populiarumą (like`ų skaičių).
@@ -26,6 +28,10 @@
 # ![screencapture-localhost-Laravel-sport-public-posts-3-edit-2022-11-17-19_46_32](https://user-images.githubusercontent.com/107037107/202519792-ceaea88c-a13c-43ad-9266-342e7180d529.png)
 # New post:
 # ![screencapture-localhost-Laravel-sport-public-posts-create-2022-11-17-19_51_19](https://user-images.githubusercontent.com/107037107/202520637-7ad3ba75-0a29-4f39-840b-41e6b4123908.png)
+# Product update:
+# ![screencapture-localhost-Laravel-sport-public-products-2-edit-2022-12-12-10_44_29](https://user-images.githubusercontent.com/107037107/207000673-efe68c08-46ce-411e-a893-adb2da880d42.png)
+# Profile update:
+# ![screencapture-localhost-Laravel-sport-public-profilis-1-2022-12-13-10_13_31](https://user-images.githubusercontent.com/107037107/207261919-800d86d9-589e-4c63-986b-5e234b9d9290.png)
 # All posts (logged out) in lithuanian language:
 # ![screencapture-localhost-Laravel-sport-public-2022-11-29-12_02_11](https://user-images.githubusercontent.com/107037107/204499310-92698897-98ad-4d96-b5b3-f86b8d6a0376.png)
 # One post (logged in):
@@ -33,9 +39,11 @@
 # One post (logged out) in lt:
 # ![screencapture-localhost-Laravel-sport-public-posts-8-2022-11-14-11_03_14](https://user-images.githubusercontent.com/107037107/201618963-7c9f7b2b-6c73-49e3-84ce-33573627a1d0.png)
 # E-Shop all products :
-# ![Screenshot 2022-12-09 111918](https://user-images.githubusercontent.com/107037107/206668437-a779d7fd-6feb-43a7-89e8-fdefe9f22e07.png)
+# ![Screenshot 2022-12-13 193610](https://user-images.githubusercontent.com/107037107/207404900-1459847a-4d17-463e-baa1-df06b1ff65ba.png)
 # E-Shop One product details :
 # ![screencapture-localhost-Laravel-sport-public-products-1-2022-12-09-11_19_46](https://user-images.githubusercontent.com/107037107/206668525-01a83e53-7104-4ed5-b69d-04725b394c73.png)
+# E-Shop cart:
+# ![screencapture-localhost-Laravel-sport-public-cart-2022-12-13-19_33_02](https://user-images.githubusercontent.com/107037107/207404211-b8240661-e2d2-4203-921f-121d0cc26227.png)
 # User comments:
 # ![screencapture-localhost-Laravel-sport-public-comments-2022-11-17-20_35_40](https://user-images.githubusercontent.com/107037107/202530082-0479ddf2-cffe-491f-bf28-bf5634ecca9c.png)
 # Responsive all posts:
