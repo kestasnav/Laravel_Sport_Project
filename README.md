@@ -5,6 +5,7 @@
 <li> Produktų ir jų kategorijų kūrimas, redagavimas, ištrinimas.
 <li> Super administratorius gali keisti vartotojų roles į administratorių ir paprastą vartotoją.
 <li> Vartotojas gali rašyti komentarus, ištrinti savo parašytą komentarą, 'like`inti' ir 'atlike`inti' komentarus.
+<li> Vartotojas gali redaguoti savo profilį.
 <li> Kitos funkcijos:
 <li> Rūšiuoti naujienas pagal naujumą ir skaitomumą.
 <li> Komentarai išrikiuoti pagal populiarumą (like`ų skaičių).
@@ -28,6 +29,8 @@
 # ![screencapture-localhost-Laravel-sport-public-posts-create-2022-11-17-19_51_19](https://user-images.githubusercontent.com/107037107/202520637-7ad3ba75-0a29-4f39-840b-41e6b4123908.png)
 # Product update:
 # ![screencapture-localhost-Laravel-sport-public-products-2-edit-2022-12-12-10_44_29](https://user-images.githubusercontent.com/107037107/207000673-efe68c08-46ce-411e-a893-adb2da880d42.png)
+# Profile update:
+# ![screencapture-localhost-Laravel-sport-public-profilis-1-2022-12-13-10_13_31](https://user-images.githubusercontent.com/107037107/207261919-800d86d9-589e-4c63-986b-5e234b9d9290.png)
 # All posts (logged out) in lithuanian language:
 # ![screencapture-localhost-Laravel-sport-public-2022-11-29-12_02_11](https://user-images.githubusercontent.com/107037107/204499310-92698897-98ad-4d96-b5b3-f86b8d6a0376.png)
 # One post (logged in):
