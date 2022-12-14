@@ -26,8 +26,8 @@
                             </thead>
                             <tbody>
 
-                               <div class="d-none" {{ $totalprice = 0 }}</div>
-                    <div class="d-none" {{ $totalpricewithoutdiscount = 0 }}</div>
+                               <div class="d-none" {{ $totalPrice = 0 }}</div>
+                    <div class="d-none" {{ $totalPriceDiscount = 0 }}</div>
                                 @foreach($cart as $cart)
                                     <tr>
                                     <td class="text-center"> {{ $cart->product->title }}  </td>
@@ -55,8 +55,8 @@
 
                             </tr>
 
-                                    <div class="d-none"> {{  $totalprice = $totalprice + $total }} </div>
-                    <div class="d-none"> {{  $totalpricewithoutdiscount = $totalpricewithoutdiscount + ($cart->product->price * $cart->quantity) }} </div>
+                                    <div class="d-none"> {{  $totalPriceDiscount = $totalPriceDiscount + $total }} </div>
+                    <div class="d-none"> {{  $totalPrice = $totalPrice + ($cart->product->price * $cart->quantity) }} </div>
                             @endforeach
 
                             </tbody>
@@ -68,9 +68,9 @@
 
                 <div class="d-flex justify-content-end">
                     <div class="row">
-                    <h6>{{ __('Bendra suma') }}: {{$totalpricewithoutdiscount}} EU</h6>
-                    <h6>{{ __('Nuolaida') }}: -{{$totalpricewithoutdiscount - $totalprice}} EU</h6>
-                    <h6>{{ __('Suma su nuolaida') }}: {{$totalprice}} EU</h6>
+                    <h6>{{ __('Bendra suma') }}: {{$totalPrice}} EU</h6>
+                    <h6>{{ __('Nuolaida') }}: -{{$totalPrice - $totalPriceDiscount}} EU</h6>
+                    <h6>{{ __('Suma su nuolaida') }}: {{$totalPriceDiscount}} EU</h6>
                     </div>
                 </div>
              </div>
