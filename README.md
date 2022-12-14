@@ -33,7 +33,7 @@
 # Profile update:
 # ![screencapture-localhost-Laravel-sport-public-profilis-1-2022-12-13-10_13_31](https://user-images.githubusercontent.com/107037107/207261919-800d86d9-589e-4c63-986b-5e234b9d9290.png)
 # All posts (logged out) in lithuanian language:
-# ![screencapture-localhost-Laravel-sport-public-2022-11-29-12_02_11](https://user-images.githubusercontent.com/107037107/204499310-92698897-98ad-4d96-b5b3-f86b8d6a0376.png)
+# ![screencapture-localhost-Laravel-sport-public-2022-12-14-10_19_12](https://user-images.githubusercontent.com/107037107/207542889-5d7cc2d1-35e0-495c-aded-7fd3c5c735fe.png)
 # One post (logged in):
 # ![screencapture-localhost-Laravel-sport-public-posts-8-2022-11-17-20_52_41](https://user-images.githubusercontent.com/107037107/202533408-3e2ba3f3-043a-47f7-8cbd-d9a33ee09a54.png)
 # One post (logged out) in lt:
