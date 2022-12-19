@@ -43,7 +43,7 @@
 # E-Shop One product details :
 # ![screencapture-localhost-Laravel-sport-public-products-1-2022-12-09-11_19_46](https://user-images.githubusercontent.com/107037107/206668525-01a83e53-7104-4ed5-b69d-04725b394c73.png)
 # E-Shop cart:
-# ![screencapture-localhost-Laravel-sport-public-cart-2022-12-13-19_33_02](https://user-images.githubusercontent.com/107037107/207404211-b8240661-e2d2-4203-921f-121d0cc26227.png)
+# ![screencapture-localhost-Laravel-sport-public-cart-2022-12-19-13_38_27](https://user-images.githubusercontent.com/107037107/208417841-5b2b603c-4b70-42ce-8f5f-40b1dd883c91.png)
 # User comments:
 # ![screencapture-localhost-Laravel-sport-public-comments-2022-11-17-20_35_40](https://user-images.githubusercontent.com/107037107/202530082-0479ddf2-cffe-491f-bf28-bf5634ecca9c.png)
 # Responsive all posts:
