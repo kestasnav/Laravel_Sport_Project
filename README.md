@@ -39,7 +39,7 @@
 # One post (logged out) in lt:
 # ![screencapture-localhost-Laravel-sport-public-posts-8-2022-12-14-10_21_05](https://user-images.githubusercontent.com/107037107/207543259-ebff275c-b702-465e-aa1e-2efdd69eba3c.png)
 # E-Shop all products :
-# ![Screenshot 2022-12-13 193610](https://user-images.githubusercontent.com/107037107/207404900-1459847a-4d17-463e-baa1-df06b1ff65ba.png)
+# ![Screenshot 2022-12-19 133632](https://user-images.githubusercontent.com/107037107/208417517-2b4db5ce-23b1-4cf9-886f-adf72081129b.png)
 # E-Shop One product details :
 # ![screencapture-localhost-Laravel-sport-public-products-1-2022-12-09-11_19_46](https://user-images.githubusercontent.com/107037107/206668525-01a83e53-7104-4ed5-b69d-04725b394c73.png)
 # E-Shop cart:
