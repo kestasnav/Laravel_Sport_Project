@@ -49,4 +49,4 @@
 # Responsive all posts:
 # ![screencapture-localhost-Laravel-sport-public-2022-11-17-14_38_16](https://user-images.githubusercontent.com/107037107/202448632-014339c7-48db-4ff9-a51e-86a310529803.png)
 # Responsive one post:
-# ![screencapture-localhost-Laravel-sport-public-posts-8-2022-11-17-20_55_19](https://user-images.githubusercontent.com/107037107/202533937-3dda0bdc-75c3-471c-a38d-ac1e270157b1.png)
+# ![screencapture-localhost-Laravel-sport-public-posts-8-2022-12-19-13_40_25](https://user-images.githubusercontent.com/107037107/208418173-9796f21a-ea1e-4d19-a85c-c7254e5612d5.png)
