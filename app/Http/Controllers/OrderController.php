@@ -40,7 +40,7 @@ class OrderController extends Controller
             $order->quantity = $cart->quantity;
             $order->product_id = $cart->product_id;
 
-            $orderis = $order->order_number = rand();
+            $orderis = $order->order_number = time();
 
             $order->payment_status = 'Paid';
             $order->delivery_status = 'processing';

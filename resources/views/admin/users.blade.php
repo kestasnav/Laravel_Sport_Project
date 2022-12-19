@@ -65,7 +65,7 @@
                                                     <input type="hidden" value="admin" name="type">
                                                     <button class="dropdown-item"><i class="fa fa-lock" aria-hidden="true"></i> Add Admin</button>
                                                 </form>
-                                            @elseif($user->type == 'books')
+                                            @elseif($user->type == 'admin')
                                                 <form action="{{ route('users.role', $user->id) }}" method="post">
                                                     @csrf
                                                     @method('PUT')
