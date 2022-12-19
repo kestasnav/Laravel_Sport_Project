@@ -66,11 +66,12 @@
 
                 </div>
 
-                <div class="d-flex justify-content-end">
+                <div class="d-flex justify-content-end mb-3 p-3">
                     <div class="row">
                     <h6>{{ __('Bendra suma') }}: {{$totalPrice}} EU</h6>
                     <h6>{{ __('Nuolaida') }}: -{{$totalPrice - $totalPriceDiscount}} EU</h6>
                     <h6>{{ __('Suma su nuolaida') }}: {{$totalPriceDiscount}} EU</h6>
+                        <h6><a class="btn btn-danger w-25" href="{{url('stripe',$totalPriceDiscount)}}">{{ __('Apmokėti') }}</a></h6>
                     </div>
                 </div>
              </div>

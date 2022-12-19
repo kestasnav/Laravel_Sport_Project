@@ -22,7 +22,7 @@
 
                     <div class="col-md-6">
 
-                        <div class="card border-0 bg bg-white mt-1 mb-1 position-relative cardbg">
+                        <div class="card border-0 bg bg-white mt-2 mb-2 position-relative cardbg">
 
                             <div class="mx-auto mt-3">
                                 <a class="text-decoration-none text-black"

@@ -7,6 +7,7 @@ use App\Http\Controllers\CommentController;
 use App\Http\Controllers\FootballController;
 use App\Http\Controllers\LanguageController;
 use App\Http\Controllers\LikeController;
+use App\Http\Controllers\OrderController;
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\ProductcategoryController;
 use App\Http\Controllers\ProductController;
@@ -81,7 +82,9 @@ Route::get('cart', [CartController::class, 'cart'])->name('cart');
 Route::get('remove_item/{id}', [CartController::class, 'remove_item'])->name('remove_item');
 Route::post('add_cart/{id}', [CartController::class, 'add_cart'])->name('add_cart');
 
+Route::get('/stripe/{totalPriceDiscount}', [OrderController::class, 'stripe']);
 
+Route::post('/stripez/{totalPriceDiscount}', [OrderController::class,'stripePost'])->name('stripe.post');
 
 
 
