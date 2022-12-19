@@ -11,6 +11,10 @@
             <div class="card">
 
                 <div class="card-body">
+                    @if ($carts->where('user_id', Auth::user()->id)->isEmpty())
+
+                                            <h5>{{ __('Jūsų krepšelis kol kas tuščias.') }}</h5>
+                    @else
                     <div class="table-responsive-md">
                         <table class="table">
                             <thead>
@@ -28,7 +32,7 @@
 
                                <div class="d-none" {{ $totalPrice = 0 }}</div>
                     <div class="d-none" {{ $totalPriceDiscount = 0 }}</div>
-                                @foreach($cart as $cart)
+                                @foreach($carts as $cart)
                                     <tr>
                                     <td class="text-center"> {{ $cart->product->title }}  </td>
                                     <td class="text-center"> {{ $cart->quantity }}  </td>
@@ -74,6 +78,7 @@
                         <h6><a class="btn btn-danger w-25" href="{{url('stripe',$totalPriceDiscount)}}">{{ __('Apmokėti') }}</a></h6>
                     </div>
                 </div>
+        @endif
              </div>
         </div>
 
