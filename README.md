@@ -7,13 +7,15 @@
 <li> Vartotojas gali rašyti komentarus, ištrinti savo parašytą komentarą, 'like`inti' ir 'atlike`inti' komentarus.
 <li> Vartotojas gali redaguoti savo profilį.
 <li> Vartotojas gali įsidėti prekes į krepšelį.
-<li> Vartotojas gali atlikti apmokėjimą kreditine kortele už prekes (įdiegta Stripe payment sistema)
+<li> Vartotojas gali atlikti apmokėjimą kreditine kortele už prekes (įdiegta Stripe payment sistema).
+<li> Po apmokėto užsakymo išsiunčiamas el. laiškas su užsakymo informacija.
 <li> Kitos funkcijos:
 <li> Rūšiuoti naujienas pagal naujumą ir skaitomumą.
 <li> Komentarai išrikiuoti pagal populiarumą (like`ų skaičių).
 <li> Atlikti paiešką pagal raktinį žodį straipsnio pavadinime, bei pačiame straipsnyje.
 <li> Straipsniai suskirstyti į kategorijas ( krepšinis, futbolas ), bei subkategorijas ( eurolyga, nba, pasaulio čempionatas, anglijos premier lyga ir kt.)
 <li> Puslapio meniu punktai turi dvikalbiškumą (LT, EN).
+
 
  <hr>
 
