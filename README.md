@@ -48,7 +48,7 @@
 # E-Shop payment:
 # ![screencapture-localhost-Laravel-sport-public-stripe-276-2022-12-19-13_42_46](https://user-images.githubusercontent.com/107037107/208427510-c391d0a3-a026-4ca3-bd15-ee945c89c91a.png)
 # Redirect after payment:
-# ![screencapture-localhost-Laravel-sport-public-stripez-98-2022-12-19-16_17_48](https://user-images.githubusercontent.com/107037107/208446134-b222068b-79bb-4815-b866-58c960185f9a.png)
+# ![screencapture-localhost-Laravel-sport-public-stripez-36-2022-12-19-16_36_45](https://user-images.githubusercontent.com/107037107/208450444-a808bc76-64b0-4af6-9e8e-60d42b60a53e.png)
 # User comments:
 # ![screencapture-localhost-Laravel-sport-public-comments-2022-11-17-20_35_40](https://user-images.githubusercontent.com/107037107/202530082-0479ddf2-cffe-491f-bf28-bf5634ecca9c.png)
 # Responsive all posts:
