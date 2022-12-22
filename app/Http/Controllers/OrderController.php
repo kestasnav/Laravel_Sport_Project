@@ -2,10 +2,12 @@
 
 namespace App\Http\Controllers;
 
+use App\Mail\MailNotify;
 use App\Models\Cart;
 use App\Models\Order;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Session;
 
 use Stripe;
@@ -46,6 +48,8 @@ class OrderController extends Controller
             $order->delivery_status = 'processing';
 
             $order->save();
+
+                Mail::to($request->user())->send(new MailNotify($order));
 
             $cart_id = $cart->id;
             $deleteCart = Cart::find($cart_id);

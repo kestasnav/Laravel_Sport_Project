@@ -36,13 +36,17 @@ return [
     'mailers' => [
         'smtp' => [
             'transport' => 'smtp',
-            'host' => env('MAIL_HOST', 'smtp.mailgun.org'),
+            'host' => env('MAIL_HOST', 'smtp.gmail.com'),
             'port' => env('MAIL_PORT', 587),
-            'encryption' => env('MAIL_ENCRYPTION', 'tls'),
+            'encryption' => env('MAIL_ENCRYPTION', 'ssl'),
             'username' => env('MAIL_USERNAME'),
             'password' => env('MAIL_PASSWORD'),
             'timeout' => null,
-            'local_domain' => env('MAIL_EHLO_DOMAIN'),
+
+
+            'auth_mode'  => null,
+            'verify_peer'       => false,
+            'verify_peer_name' => false,
         ],
 
         'ses' => [
@@ -50,11 +54,13 @@ return [
         ],
 
         'mailgun' => [
-            'transport' => 'mailgun',
+            'domain' => env('MAILGUN_DOMAIN'),
+            'secret' => env('MAILGUN_SECRET'),
         ],
 
         'postmark' => [
             'transport' => 'postmark',
+            'message_stream_id' => env('POSTMARK_MESSAGE_STREAM_ID'),
         ],
 
         'sendmail' => [
@@ -74,6 +80,7 @@ return [
         'failover' => [
             'transport' => 'failover',
             'mailers' => [
+                'mailgun',
                 'smtp',
                 'log',
             ],
@@ -92,13 +99,13 @@ return [
     */
 
     'from' => [
-        'address' => env('MAIL_FROM_ADDRESS', 'hello@example.com'),
-        'name' => env('MAIL_FROM_NAME', 'Example'),
+        'address' => env('MAIL_FROM_ADDRESS', 'lewis.rashard@gmail.com'),
+        'name' => env('MAIL_FROM_NAME', 'Sport Project'),
     ],
 
     /*
     |--------------------------------------------------------------------------
-    | Markdown Mail Settings
+    | Markdown MailNotify Settings
     |--------------------------------------------------------------------------
     |
     | If you are using Markdown based email rendering, you may configure your
