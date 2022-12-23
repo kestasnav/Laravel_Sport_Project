@@ -51,7 +51,7 @@
 
                     <li><a class="nav-link" href="{{ route('products') }}">{{__('Produktai')}}</a></li>
 
-
+                    <li><a class="nav-link" href="{{ route('orders.index') }}">{{__('Užsakymai')}}</a></li>
 
                     </li>
 

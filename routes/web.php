@@ -34,6 +34,7 @@ Route::resource('basketball', BasketballController::class);
 Route::resource('football', FootballController::class);
 Route::resource('comments', CommentController::class);
 Route::resource('products', ProductController::class);
+Route::resource('orders', OrderController::class);
 
 
 Route::get('latest',[PostController::class, 'index'])->name('posts.newest');
@@ -89,7 +90,7 @@ Route::post('/stripez/{totalPriceDiscount}', [OrderController::class,'stripePost
 
 Route::get('/send/{id}', [MailController::class, 'index']);
 
-
+Route::post('/ordersdelivery/{id}', [OrderController::class, 'delivery'])->name('orders.delivery');
 
 
 Auth::routes();

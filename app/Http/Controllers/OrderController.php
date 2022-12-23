@@ -62,5 +62,20 @@ class OrderController extends Controller
         return view('products.order_number', compact('orderis'));
     }
 
+    public function index() {
+        $orders = Order::all();
+        return view('admin.orders', compact('orders'));
+    }
+
+    public function delivery($id) {
+        $order = Order::find($id);
+        $order->delivery_status = 'Delivered';
+        $order->save();
+        return redirect()->back()->with('message','Delivery status changed to delivered');
+    }
+
+    public function destroy(){
+
+    }
 
 }

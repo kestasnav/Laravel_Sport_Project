@@ -93,6 +93,12 @@
     "Jūsų krepšelis kol kas tuščias.": "Your cart is currently empty.",
     "Jūsų užsakymas": "Your order",
     "vykdomas.": "in progress.",
-    "Tęsti apsipirkimą": "Continue shopping"
+    "Tęsti apsipirkimą": "Continue shopping",
+    "Užsakymo Nr.": "Order Nr.",
+    "Produktas": "Product",
+    "Užsakovas": "Customer",
+    "Apmokėjimo statusas": "Payment status",
+    "Pristatymo statusas": "Delivery status",
+    "Pristatytas": "Delivered"
 
 }
