@@ -98,7 +98,10 @@
     "Produktas": "Product",
     "Užsakovas": "Customer",
     "Apmokėjimo statusas": "Payment status",
-    "Pristatymo statusas": "Delivery status",
-    "Pristatytas": "Delivered"
+    "Užsakymo statusas": "Delivery status",
+    "Pristatytas": "Delivered",
+    "Užsakymai": "Orders",
+    "Tel. Nr.": "Phone",
+    "Paruoštas": "Completed"
 
 }

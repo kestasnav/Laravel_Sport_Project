@@ -21,7 +21,7 @@
                                 <th class="text-center">{{ __('Produktas') }}</th>
                                 <th class="text-center">{{ __('Užsakovas') }}</th>
                                 <th class="text-center">{{ __('Apmokėjimo statusas') }}</th>
-                                <th class="text-center">{{ __('Pristatymo statusas') }}</th>
+                                <th class="text-center">{{ __('Užsakymo statusas') }}</th>
                                 <th class="text-center">{{ __('Veiksmai') }}</th>
 
                             </tr>
@@ -31,11 +31,15 @@
 
                                 @foreach($orders as $order)
 
-                                    <td class="text-center"> {{ $order->order_number}}  </td>
+                                    <td class="text-center">
+                                        <a class="text-black" href="{{route('orders.show',$order->id)}}">
+                                            {{ $order->order_number}} <i class="fa-solid fa-chevron-right text-primary"></i>
+                                        </a>
+                                    </td>
                                     <td class="text-center"> {{ $order->product->title}}  </td>
                                     <td class="text-center">{{ $order->user->name}} {{ $order->user->surname}}</td>
                                     <td class="text-center">  {{ $order->payment_status}}  </td>
-                                    <td class="text-center">  {{ $order->delivery_status}}  </td>
+                                    <td class="text-center">  {{ $order->order_status}}  </td>
 
                                     <td class="text-center">
 
@@ -49,6 +53,13 @@
                                                     @csrf
                                                     @method('DELETE')
                                                     <button onclick="return confirm('Are You Sure To Delete This')" class="dropdown-item border-bottom"><i class="fa-solid fa-trash"></i> {{ __('Trinti') }}</button>
+                                                </form>
+                                            </li>
+                                            <li>
+                                                <form  action="{{ route('orders.complete', $order->id) }}" method="post">
+                                                    @csrf
+                                                    @method('POST')
+                                                    <button onclick="return confirm('Are You Sure To Change This Status')" class="dropdown-item border-bottom"><i class="fa-solid fa-check"></i> {{ __('Paruoštas') }}</button>
                                                 </form>
                                             </li>
                                             <li>

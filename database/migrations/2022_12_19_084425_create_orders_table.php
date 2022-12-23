@@ -23,7 +23,7 @@ return new class extends Migration
 
 
             $table->string('payment_status')->nullable();
-            $table->string('delivery_status')->nullable();
+            $table->string('order_status')->nullable();
 
             $table->timestamps();
 

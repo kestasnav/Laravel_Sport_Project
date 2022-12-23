@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Mail\MailNotify;
 use App\Models\Cart;
 use App\Models\Order;
+use App\Models\Product;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Mail;
@@ -67,15 +68,33 @@ class OrderController extends Controller
         return view('admin.orders', compact('orders'));
     }
 
-    public function delivery($id) {
-        $order = Order::find($id);
-        $order->delivery_status = 'Delivered';
-        $order->save();
-        return redirect()->back()->with('message','Delivery status changed to delivered');
+    public function show(Order $order){
+        return view('orders.order_details', compact('order'));
     }
 
-    public function destroy(){
+    public function complete($id) {
+        $order = Order::find($id);
+        $order->order_status = 'Completed';
+        $order->save();
+        $orderProductID = $order->product_id;
+        $product = Product::find($orderProductID);
+        $product->quantity = $product->quantity - $order->quantity;
+        $product->save();
 
+        return redirect()->back()->with('message','Order status changed to completed.');
+    }
+
+    public function delivery($id) {
+        $order = Order::find($id);
+        $order->order_status = 'Delivered';
+        $order->save();
+        return redirect()->back()->with('message','Order status changed to delivered.');
+    }
+
+    public function destroy($id){
+        $order = Order::find($id);
+        $order->delete();
+        return redirect()->back()->with('message','Order deleted successfully.');
     }
 
 }
