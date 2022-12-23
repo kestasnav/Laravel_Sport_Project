@@ -3,6 +3,7 @@
 <li> Straipsnių redagavimas, ištrinimas, pridėjimas, paslėpimas nuo vartotojų.
 <li> Komentarų trynimas.
 <li> Produktų ir jų kategorijų kūrimas, redagavimas, ištrinimas.
+<li> Užsakymų trinimas, statusų keitimas.
 <li> Super administratorius gali keisti vartotojų roles į administratorių ir paprastą vartotoją.
 <li> Vartotojas gali rašyti komentarus, ištrinti savo parašytą komentarą, 'like`inti' ir 'atlike`inti' komentarus.
 <li> Vartotojas gali redaguoti savo profilį.
@@ -35,6 +36,8 @@
 # ![screencapture-localhost-Laravel-sport-public-products-2-edit-2022-12-12-10_44_29](https://user-images.githubusercontent.com/107037107/207000673-efe68c08-46ce-411e-a893-adb2da880d42.png)
 # Profile update:
 # ![screencapture-localhost-Laravel-sport-public-profilis-1-2022-12-13-10_13_31](https://user-images.githubusercontent.com/107037107/207261919-800d86d9-589e-4c63-986b-5e234b9d9290.png)
+# Orders:
+# ![screencapture-localhost-Laravel-sport-public-orders-2022-12-23-10_51_25](https://user-images.githubusercontent.com/107037107/209304818-e1ea17f8-203c-4732-8738-5812f1745efc.png)
 # All posts (logged out) in lithuanian language:
 # ![screencapture-localhost-Laravel-sport-public-2022-12-14-10_19_12](https://user-images.githubusercontent.com/107037107/207542889-5d7cc2d1-35e0-495c-aded-7fd3c5c735fe.png)
 # One post (logged in):
