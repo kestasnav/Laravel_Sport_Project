@@ -12,6 +12,7 @@
 <li> Po apmokėto užsakymo išsiunčiamas el. laiškas su užsakymo informacija.
 <li> Po įvykdyto užsakymo, iš produktų lentelės nuo produkto nusirašo kiekis, kuris buvo užsakytas.
 <li> Kitos funkcijos:
+<li> Privaloma patvirtinti el. paštą po registracijos.
 <li> Rūšiuoti naujienas pagal naujumą ir skaitomumą.
 <li> Komentarai išrikiuoti pagal populiarumą (like`ų skaičių).
 <li> Atlikti paiešką pagal raktinį žodį straipsnio pavadinime, bei pačiame straipsnyje.
@@ -45,6 +46,8 @@
 # ![screencapture-localhost-Laravel-sport-public-posts-8-2022-12-14-10_23_28](https://user-images.githubusercontent.com/107037107/207543690-639f68e9-fc0b-4071-a122-8015491be3e7.png)
 # One post (logged out) in lt:
 # ![screencapture-localhost-Laravel-sport-public-posts-8-2022-12-14-10_21_05](https://user-images.githubusercontent.com/107037107/207543259-ebff275c-b702-465e-aa1e-2efdd69eba3c.png)
+# Email verification:
+# ![screencapture-localhost-Laravel-sport-public-email-verify-2022-12-27-11_40_20](https://user-images.githubusercontent.com/107037107/209648241-5f3ce371-a2f4-42ed-9b23-45daa1ebecc3.png)
 # E-Shop all products :
 # ![Screenshot 2022-12-19 133632](https://user-images.githubusercontent.com/107037107/208417517-2b4db5ce-23b1-4cf9-886f-adf72081129b.png)
 # E-Shop One product details :
