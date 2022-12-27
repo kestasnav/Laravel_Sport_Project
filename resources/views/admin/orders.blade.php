@@ -20,6 +20,7 @@
                                 <th class="text-center">{{ __('Užsakymo Nr.') }}</th>
                                 <th class="text-center">{{ __('Produktas') }}</th>
                                 <th class="text-center">{{ __('Užsakovas') }}</th>
+                                <th class="text-center">{{ __('Kiekis') }}</th>
                                 <th class="text-center">{{ __('Apmokėjimo statusas') }}</th>
                                 <th class="text-center">{{ __('Užsakymo statusas') }}</th>
                                 <th class="text-center">{{ __('Veiksmai') }}</th>
@@ -38,6 +39,7 @@
                                     </td>
                                     <td class="text-center"> {{ $order->product->title}}  </td>
                                     <td class="text-center">{{ $order->user->name}} {{ $order->user->surname}}</td>
+                                    <td class="text-center">{{ $order->quantity}} </td>
                                     <td class="text-center">  {{ $order->payment_status}}  </td>
                                     <td class="text-center">  {{ $order->order_status}}  </td>
 
@@ -52,23 +54,29 @@
                                                 <form  action="{{ route('orders.destroy', $order->id) }}" method="post">
                                                     @csrf
                                                     @method('DELETE')
-                                                    <button onclick="return confirm('Are You Sure To Delete This')" class="dropdown-item border-bottom"><i class="fa-solid fa-trash"></i> {{ __('Trinti') }}</button>
+                                                    <button onclick="return confirm('Are You Sure To Delete This')" class="dropdown-item border-bottom">
+                                                        <i class="fa-solid fa-trash"></i> {{ __('Trinti') }}</button>
                                                 </form>
                                             </li>
+                                            @if($order->order_status == 'processing')
                                             <li>
                                                 <form  action="{{ route('orders.complete', $order->id) }}" method="post">
                                                     @csrf
                                                     @method('POST')
-                                                    <button onclick="return confirm('Are You Sure To Change This Status')" class="dropdown-item border-bottom"><i class="fa-solid fa-check"></i> {{ __('Paruoštas') }}</button>
+                                                    <button onclick="return confirm('Are You Sure To Change This Status')" class="dropdown-item border-bottom">
+                                                        <i class="fa-solid fa-check"></i> {{ __('Paruoštas') }}</button>
                                                 </form>
                                             </li>
+                                            @elseif($order->order_status == 'Completed')
                                             <li>
                                                 <form  action="{{ route('orders.delivery', $order->id) }}" method="post">
                                                     @csrf
                                                     @method('POST')
-                                                    <button onclick="return confirm('Are You Sure To Change This Status')" class="dropdown-item border-bottom"><i class="fas fa-shipping-fast"></i> {{ __('Pristatytas') }}</button>
+                                                    <button onclick="return confirm('Are You Sure To Change This Status')" class="dropdown-item border-bottom">
+                                                        <i class="fas fa-shipping-fast"></i> {{ __('Pristatytas') }}</button>
                                                 </form>
                                             </li>
+                                                @endif
                                         </ul>
 
                                     </td>

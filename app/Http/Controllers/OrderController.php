@@ -46,7 +46,7 @@ class OrderController extends Controller
             $orderis = $order->order_number = time();
 
             $order->payment_status = 'Paid';
-            $order->delivery_status = 'processing';
+            $order->order_status = 'processing';
 
             $order->save();
 
