@@ -10,6 +10,7 @@
 <li> Vartotojas gali įsidėti prekes į krepšelį.
 <li> Vartotojas gali atlikti apmokėjimą kreditine kortele už prekes (įdiegta Stripe payment sistema).
 <li> Po apmokėto užsakymo išsiunčiamas el. laiškas su užsakymo informacija.
+<li> Po įvykdyto užsakymo, iš produktų lentelės nuo produkto nusirašo kiekis, kuris buvo užsakytas.
 <li> Kitos funkcijos:
 <li> Rūšiuoti naujienas pagal naujumą ir skaitomumą.
 <li> Komentarai išrikiuoti pagal populiarumą (like`ų skaičių).
@@ -37,7 +38,7 @@
 # Profile update:
 # ![screencapture-localhost-Laravel-sport-public-profilis-1-2022-12-13-10_13_31](https://user-images.githubusercontent.com/107037107/207261919-800d86d9-589e-4c63-986b-5e234b9d9290.png)
 # Orders:
-# ![screencapture-localhost-Laravel-sport-public-orders-2022-12-23-10_51_25](https://user-images.githubusercontent.com/107037107/209304818-e1ea17f8-203c-4732-8738-5812f1745efc.png)
+# ![screencapture-localhost-Laravel-sport-public-orders-2022-12-23-13_01_47](https://user-images.githubusercontent.com/107037107/209325122-be862feb-42b8-45ab-b02b-fa2a56947c1b.png)
 # All posts (logged out) in lithuanian language:
 # ![screencapture-localhost-Laravel-sport-public-2022-12-14-10_19_12](https://user-images.githubusercontent.com/107037107/207542889-5d7cc2d1-35e0-495c-aded-7fd3c5c735fe.png)
 # One post (logged in):
