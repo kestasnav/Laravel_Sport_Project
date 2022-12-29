@@ -94,6 +94,8 @@ Route::post('/orderscompleted/{id}', [OrderController::class, 'complete'])->name
 
 Route::post('/ordersdelivery/{id}', [OrderController::class, 'delivery'])->name('orders.delivery');
 
+Route::get('scraper', [BasketballController::class, 'scraper'])->name('scraper');
+
 
 Auth::routes([
     'verify'=>true

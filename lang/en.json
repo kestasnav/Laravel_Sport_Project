@@ -103,6 +103,13 @@
     "Pristatytas": "Delivered",
     "Užsakymai": "Orders",
     "Tel. Nr.": "Phone",
-    "Paruoštas": "Completed"
+    "Paruoštas": "Completed",
+    "Patvirtinkite Savo El. Paštą": "Verify Your Email Address",
+    "Nauja patvirtinimo nuoroda nusiųsta į jūsų el. paštą.": "A fresh verification link has been sent to your email address.",
+    "Prieš tęsiant, pasitikrinte savo el. pašte esančią patvirtinimo nuorodą.": "Before proceeding, please check your email for a verification link.",
+    "Jeigu negavote el. laiško,": "If you did not receive the email,",
+    "spauskite čia": "click here",
+    "Ir atsiųsime naują.": "To request another.",
+    "Artimiausios rungtynės": "Upcoming games"
 
 }

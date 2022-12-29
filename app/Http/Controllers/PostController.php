@@ -12,6 +12,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Carbon;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Cookie;
+use Illuminate\Support\Facades\Http;
 use Illuminate\Support\Str;
 
 class PostController extends Controller
@@ -75,14 +76,13 @@ class PostController extends Controller
         $posts=Post::where('subcategory_id', 3)->where('type','unhide')->findPosts($find)->latest()->paginate();
         $postai=Post::where('subcategory_id', 3)->where('type','unhide')->latest()->paginate();
         $mostRead=Post::where('subcategory_id', 3)->where('type','unhide')->orderBy('reads', 'desc')->latest()->paginate(5);
-        $fixtures=Fixture::all();
-
-//        $date=Fixture::pluck('date')->addHours(7);
-//            $datez= Carbon::parse($request->date)->addHours(7);
-
+        $data= Http::get('https://cdn.nba.com/static/json/staticData/scheduleLeagueV2_9.json');
+        date_default_timezone_set('America/New_York');
+        $todays_date = date('Y-m-d') . "T00:00:00Z";
 
 
-        return view('posts.index',['posts'=>$posts, 'postai'=>$postai, 'mostRead'=>$mostRead, 'fixtures'=>$fixtures]);
+
+        return view('posts.index',['posts'=>$posts, 'postai'=>$postai, 'mostRead'=>$mostRead, 'data'=>$data, 'todays_date'=>$todays_date]);
     }
 
     public function football(Request $request)

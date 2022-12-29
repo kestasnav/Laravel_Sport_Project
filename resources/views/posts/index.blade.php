@@ -53,23 +53,22 @@
         </div>
 
         <div class="col-md-4 d-none d-sm-block">
-            @if(isset($fixtures))
+            @if(isset($data))
                 <div class="row">
                     <h5><b>{{__('Artimiausios rungtynės')}}</b></h5>
-                @foreach($fixtures as $fixture)
+                    @foreach ($data['leagueSchedule']['gameDates'] as $games)
+                        @foreach ($games['games'] as $game)
 
-                            <div class="">
+
+                            @if ($todays_date === $game['gameDateEst'])
+
                                 <div><b>
-                                             {{ $fixture->date }}
-
+                                        {{ date("Y-m-d H:i:s", strtotime($game['gameDateTimeEst']." +12 hours")) }}
                                     </b></div>
-                                <div> {{$fixture->home_team}} - {{$fixture->away_team}} </div>
-
-                                <div class="border-bottom"><i>Odds: {{$fixture->home_odds}} - {{$fixture->away_odds}}</i></div>
-
-                            </div>
-
-                @endforeach
+                                <div> {{  $game['homeTeam']['teamName'] }} -  {{  $game['awayTeam']['teamName'] }} </div>
+                            @endif
+                        @endforeach
+                    @endforeach
                 </div>
             @else
             <img id="morebutton-pics" alt="Reklama" src="{{ asset('storage/images/'.'reklamas.jpg')}}" style=" width:100% ;height: 200px;">
