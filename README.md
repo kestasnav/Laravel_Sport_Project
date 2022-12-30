@@ -18,6 +18,7 @@
 <li> Atlikti paiešką pagal raktinį žodį straipsnio pavadinime, bei pačiame straipsnyje.
 <li> Straipsniai suskirstyti į kategorijas ( krepšinis, futbolas ), bei subkategorijas ( eurolyga, nba, pasaulio čempionatas, anglijos premier lyga ir kt.)
 <li> Puslapio meniu punktai turi dvikalbiškumą (LT, EN).
+<li> Iš API gaunami NBA tvarkaraščio duomenys.
 
 
  <hr>
@@ -40,8 +41,8 @@
 # ![screencapture-localhost-Laravel-sport-public-profilis-1-2022-12-13-10_13_31](https://user-images.githubusercontent.com/107037107/207261919-800d86d9-589e-4c63-986b-5e234b9d9290.png)
 # Orders:
 # ![screencapture-localhost-Laravel-sport-public-orders-2022-12-23-13_01_47](https://user-images.githubusercontent.com/107037107/209325122-be862feb-42b8-45ab-b02b-fa2a56947c1b.png)
-# All posts (logged out) in lithuanian language:
-# ![screencapture-localhost-Laravel-sport-public-2022-12-14-10_19_12](https://user-images.githubusercontent.com/107037107/207542889-5d7cc2d1-35e0-495c-aded-7fd3c5c735fe.png)
+# All posts in lithuanian language:
+# ![screencapture-localhost-Laravel-sport-public-2022-12-30-14_46_20](https://user-images.githubusercontent.com/107037107/210071753-38821b48-a412-4bc5-a2ae-4023a1b9f09f.png)
 # One post (logged in):
 # ![screencapture-localhost-Laravel-sport-public-posts-8-2022-12-14-10_23_28](https://user-images.githubusercontent.com/107037107/207543690-639f68e9-fc0b-4071-a122-8015491be3e7.png)
 # One post (logged out) in lt:
@@ -64,3 +65,5 @@
 # ![screencapture-localhost-Laravel-sport-public-2022-11-17-14_38_16](https://user-images.githubusercontent.com/107037107/202448632-014339c7-48db-4ff9-a51e-86a310529803.png)
 # Responsive one post:
 # ![screencapture-localhost-Laravel-sport-public-posts-8-2022-12-19-13_40_25](https://user-images.githubusercontent.com/107037107/208418173-9796f21a-ea1e-4d19-a85c-c7254e5612d5.png)
+# NBA posts and schedule( from API ):
+# ![screencapture-localhost-Laravel-sport-public-nba-2022-12-29-12_38_48](https://user-images.githubusercontent.com/107037107/209939875-fa102c88-9a52-4cb9-a238-3fe8a956d222.png)
