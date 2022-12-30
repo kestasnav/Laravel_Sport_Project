@@ -97,4 +97,9 @@ class OrderController extends Controller
         return redirect()->back()->with('message','Order deleted successfully.');
     }
 
+    public function myOrders() {
+        $orders = Order::where('user_id','=',Auth::user()->id,)->get();
+        return view('orders.user_orders',compact('orders'));
+    }
+
 }

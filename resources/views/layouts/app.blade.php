@@ -46,32 +46,57 @@
                                 {{__('Krepšinis')}}
                             </a>
                             <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="{{ route('basketball') }}">{{__('Visos krepšinio naujienos')}}</a></li>
+                                <li><a class="dropdown-item" href="{{ route('basketball') }}"><i class="fa-solid fa-basketball"></i> {{__('Visos krepšinio naujienos')}}</a></li>
 
-                                <li><a class="dropdown-item" href="{{ route('euroleague') }}">{{__('Eurolyga')}}</a></li>
+                                <li><a class="dropdown-item" href="{{ route('euroleague') }}">
+                                        <img class="logos1" src="https://2img.net/h/www.webdesign.org/img_articles/16849/euroleague.jpg">
+                                        {{__('Eurolyga')}}</a></li>
 
-                                        <li><a class="dropdown-item" href="{{ route('nba') }}">NBA</a></li>
+                                        <li><a class="dropdown-item" href="{{ route('nba') }}">
+                                                <img class="logos1" src="https://raw.githubusercontent.com/detain/svg-logos/master/svg/nba-6.svg">
+                                                 NBA</a></li>
 
-                                <li><a class="dropdown-item"  href="{{ route('lkl') }}">LKL</a></li>
+                                <li><a class="dropdown-item"  href="{{ route('lkl') }}">
+                                        <img class="logos1" src="https://lietuvai.lt/w/thumb.php?f=LKL_logo.svg&width=200">
+                                        LKL</a></li>
                             </ul>
                         </li>
+
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                 {{__('Futbolas')}}
                             </a>
                             <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="{{ route('football') }}">{{__('Visos futbolo naujienos')}}</a></li>
+                                <li><a class="dropdown-item" href="{{ route('football') }}"><i class="fa-regular fa-futbol"></i> {{__('Visos futbolo naujienos')}}</a></li>
 
-                                <li><a class="dropdown-item" href="{{ route('wc2022') }}">{{__('Pasaulio čempionatas 2022')}}</a></li>
-                                <li><a class="dropdown-item" href="{{ route('premier') }}">{{__('Anglijos Premier lyga')}}</a></li>
-                                <li><a class="dropdown-item" href="{{ route('lithuania') }}">{{__('Lietuvos futbolas')}}</a></li>
+                                <li><a class="dropdown-item" href="{{ route('wc2022') }}">
+                                        <img class="logos1" src="https://cdn.cdnlogo.com/logos/f/95/fifa-world-cup-2022.svg">
+                                        {{__('Pasaulio čempionatas 2022')}}</a></li>
+                                <li><a class="dropdown-item" href="{{ route('premier') }}">
+                                        <img class="logos1" src="https://cdn.staticaly.com/img/2.bp.blogspot.com/-wwKihMONlqI/V8j2VMBCXHI/AAAAAAAAKcs/6alqAxZHL9UTGaKwTNYrQXFWbroiq4DiQCLcB/w991/2016-17-premier-league-sleeve-patch-2.jpg">
+                                        {{__('Anglijos Premier lyga')}}</a></li>
+                                <li><a class="dropdown-item" href="{{ route('lithuania') }}">
+                                        <img class="logos1" src="https://seeklogo.com/images/L/lietuvos-futbolo-federacija-logo-B63328A548-seeklogo.com.gif">
+                                        {{__('Lietuvos futbolas')}}</a></li>
 
-                                <li><a class="dropdown-item"  href="{{ route('champions') }}">{{__('Čempionų lyga')}}</a></li>
+                                <li><a class="dropdown-item"  href="{{ route('champions') }}">
+                                        <img class="logos1" src="https://cdn.cdnlogo.com/logos/u/86/uefa-champions-league.svg">
+                                        {{__('Čempionų lyga')}}</a></li>
                             </ul>
                         </li>
-                        <li><a class="nav-link text-white" href="{{ route('products.index') }}">{{__('El. Parduotuvė')}}</a></li>
-                        <li><a class="nav-link text-white float-end" href="{{ route('cart') }}"><i class="fa fa-shopping-cart" aria-hidden="true"></i>
-                                {{__('Krepšelis')}}</a></li>
+
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                {{__('El. Parduotuvė')}}
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="{{ route('products.index') }}"><i class="fa-solid fa-shop"></i> {{__('El. Parduotuvė')}}</a></li>
+                                <li><a class="dropdown-item" href="{{ route('cart') }}"><i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                                        {{__('Krepšelis')}}</a></li>
+                                <li><a class="dropdown-item" href="{{ route('user.orders') }}"><i class="fa-solid fa-bag-shopping"></i></i>
+                                        {{__('Mano užsakymai')}}</a></li>
+                            </ul>
+                        </li>
 
                     </ul>
 

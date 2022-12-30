@@ -4,25 +4,41 @@
 <div class="container">
 
 
-<div class="">
-    <h5 ><b>{{__('Artimiausios rungtynės')}}</b></h5>
-    <div class="">
-    @foreach ($data['leagueSchedule']['gameDates'] as $games)
-    @foreach ($games['games'] as $game)
+
+    <h5 ><b>{{__('Turnyrinė lentelė')}}</b></h5>
 
 
-            @if ($todays_date === $game['gameDateEst'])
+            <table class="table" id="myTable">
+                <thead>
 
-            <div><b>
-                    {{ date("Y-m-d H:i:s", strtotime($game['gameDateTimeEst']." +12 hours")) }}
-                </b></div>
-            <div> {{  $game['homeTeam']['teamName'] }} -  {{  $game['awayTeam']['teamName'] }} </div>
-            @endif
-            @endforeach
-            @endforeach
 
-        </div>
 
-</div>
+
+
+                <tr>
+
+                    <th class="text-center">Pozicija </th>
+                    <th class="text-center">Komanda </th>
+                    <th class="text-center">Pozicija </th>
+                    <th class="text-center">Pozicija </th>
+                    <th class="text-center">Pozicija </th>
+                    <th class="text-center">Pozicija </th>
+                </tr>
+                </thead>
+
+                <tbody>
+                @foreach ($data2 as $key2 => $val2)
+                <tr>
+
+                        <th class="text-center">{{ $key2 }}</th>
+
+                </tr>
+                </tbody>
+
+
+                @endforeach
+            </table>
+
+
 </div>
 @endsection

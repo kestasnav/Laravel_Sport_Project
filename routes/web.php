@@ -88,6 +88,8 @@ Route::get('/stripe/{totalPriceDiscount}', [OrderController::class, 'stripe']);
 
 Route::post('/stripez/{totalPriceDiscount}', [OrderController::class,'stripePost'])->name('stripe.post');
 
+Route::get('/userorders', [OrderController::class, 'myOrders'])->name('user.orders');
+
 Route::get('/send/{id}', [MailController::class, 'index']);
 
 Route::post('/orderscompleted/{id}', [OrderController::class, 'complete'])->name('orders.complete');
