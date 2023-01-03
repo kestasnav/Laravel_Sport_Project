@@ -27,7 +27,7 @@
     <div id="app">
         <nav class="navbar navbar-expand-md navbar-light shadow-sm navbackground">
             <div class="container">
-                <a class="navbar-brand" href="{{ url('/') }}">
+                <a class="navbar-brand" href="{{ route('posts.index') }}">
 {{--                    {{ config('app.name', 'Laravel') }}--}}
                     <img src="{{ asset('storage/images/'.'logo2.png')}}" style=" width: 100px; height: 70px;">
 

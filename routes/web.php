@@ -5,6 +5,7 @@ use App\Http\Controllers\BasketballController;
 use App\Http\Controllers\CartController;
 use App\Http\Controllers\CommentController;
 use App\Http\Controllers\FootballController;
+use App\Http\Controllers\HomeController;
 use App\Http\Controllers\LanguageController;
 use App\Http\Controllers\LikeController;
 use App\Http\Controllers\MailController;
@@ -27,7 +28,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 
-Route::get('/',[PostController::class, 'index'])->name('home');
+Route::get('/',[HomeController::class, 'index'])->name('home');
 
 Route::resource('posts', PostController::class);
 Route::resource('basketball', BasketballController::class);

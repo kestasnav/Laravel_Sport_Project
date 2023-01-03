@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class HomeController extends Controller
 {
@@ -13,7 +14,7 @@ class HomeController extends Controller
      */
     public function __construct()
     {
-        $this->middleware('auth');
+       // $this->middleware('auth');
     }
 
     /**
@@ -23,6 +24,14 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+        if(Auth::user()) {
+            if (Auth::user()->email_verified_at != null) {
+                return redirect()->route('posts.index');
+            } else {
+                return view('auth.verify');
+            }
+        } else {
+            return redirect()->route('posts.index');
+        }
     }
 }
