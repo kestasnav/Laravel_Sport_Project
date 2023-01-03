@@ -27,44 +27,44 @@ use Illuminate\Support\Facades\Route;
 */
 
 
-Route::get('/',[PostController::class, 'index'])->name('home')->middleware('verified');
+Route::get('/',[PostController::class, 'index'])->name('home');
 
-Route::resource('posts', PostController::class)->middleware('verified');;
-Route::resource('basketball', BasketballController::class)->middleware('verified');;
-Route::resource('football', FootballController::class)->middleware('verified');;
-Route::resource('comments', CommentController::class)->middleware('verified');;
-Route::resource('products', ProductController::class)->middleware('verified');;
+Route::resource('posts', PostController::class);
+Route::resource('basketball', BasketballController::class);
+Route::resource('football', FootballController::class);
+Route::resource('comments', CommentController::class)->middleware('verified');
+Route::resource('products', ProductController::class);
 Route::resource('orders', OrderController::class)->middleware('verified');;
 
 
-Route::get('latest',[PostController::class, 'index'])->name('posts.newest')->middleware('verified');;
-Route::get('mostread', [PostController::class, 'mostReadPosts'])->name('posts.mostread')->middleware('verified');;
+Route::get('latest',[PostController::class, 'index'])->name('posts.newest');
+Route::get('mostread', [PostController::class, 'mostReadPosts'])->name('posts.mostread');
 
-Route::get('euroleague',[PostController::class, 'euroleague'])->name('euroleague')->middleware('verified');;
-Route::get('nba',[PostController::class, 'nba'])->name('nba')->middleware('verified');;
-Route::get('lkl',[PostController::class, 'lkl'])->name('lkl')->middleware('verified');;
-Route::get('basketball',[PostController::class, 'basketball'])->name('basketball')->middleware('verified');;
+Route::get('euroleague',[PostController::class, 'euroleague'])->name('euroleague');
+Route::get('nba',[PostController::class, 'nba'])->name('nba');
+Route::get('lkl',[PostController::class, 'lkl'])->name('lkl');
+Route::get('basketball',[PostController::class, 'basketball'])->name('basketball');
 
-Route::get('football',[PostController::class, 'football'])->name('football')->middleware('verified');;
-Route::get('premierleague',[PostController::class, 'premier'])->name('premier')->middleware('verified');;
-Route::get('lithuania',[PostController::class, 'lithuania'])->name('lithuania')->middleware('verified');;
-Route::get('championsleague',[PostController::class, 'champions'])->name('champions')->middleware('verified');;
-Route::get('wc2022',[PostController::class, 'wc2022'])->name('wc2022')->middleware('verified');;
+Route::get('football',[PostController::class, 'football'])->name('football');
+Route::get('premierleague',[PostController::class, 'premier'])->name('premier');
+Route::get('lithuania',[PostController::class, 'lithuania'])->name('lithuania');
+Route::get('championsleague',[PostController::class, 'champions'])->name('champions');
+Route::get('wc2022',[PostController::class, 'wc2022'])->name('wc2022');
 
 Route::get('/profilis/{name}',[UserController::class, 'profileEdit'])
-    ->name('profileEdit')->middleware('verified');;
+    ->name('profileEdit')->middleware('verified');
 
 Route::put('/profilis/{name}',[UserController::class, 'profileUpdate'])
-    ->name('profileUpdate')->middleware('verified');;
+    ->name('profileUpdate')->middleware('verified');
 
 Route::get('language/{lang}', [LanguageController::class, 'setLanguage'])->name('setLanguage');
 
-Route::post('posts/search',[PostController::class, 'findPost'])->name('find.post')->middleware('verified');;
+Route::post('posts/search',[PostController::class, 'findPost'])->name('find.post');
 
-Route::put('like/{comment}', [LikeController::class, 'like'])->name('like');
-Route::delete('unlike/{comment}', [LikeController::class, 'unlike'])->name('unlike');
+Route::put('like/{comment}', [LikeController::class, 'like'])->name('like')->middleware('verified');
+Route::delete('unlike/{comment}', [LikeController::class, 'unlike'])->name('unlike')->middleware('verified');
 
-Route::get('admin', [AdminController::class, 'posts'])->name('admin')->middleware('can:admin_user');
+Route::get('admin', [AdminController::class, 'posts'])->name('admin')->middleware('can:admin_user','verified');
 
 Route::get('admin/posts', [AdminController::class, 'posts'])->name('admin.posts')->middleware('can:admin_user');
 Route::get('admin/users', [AdminController::class, 'users'])->name('admin.users')->middleware('can:admin_user');
@@ -88,7 +88,7 @@ Route::get('/stripe/{totalPriceDiscount}', [OrderController::class, 'stripe']);
 
 Route::post('/stripez/{totalPriceDiscount}', [OrderController::class,'stripePost'])->name('stripe.post');
 
-Route::get('/userorders', [OrderController::class, 'myOrders'])->name('user.orders');
+Route::get('/userorders', [OrderController::class, 'myOrders'])->name('user.orders')->middleware('verified');
 
 Route::get('/send/{id}', [MailController::class, 'index']);
 

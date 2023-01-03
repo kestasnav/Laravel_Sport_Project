@@ -13,6 +13,10 @@
                 <div class="card-header"> {{ Auth::user()->name }} {{ Auth::user()->surname }} {{ __('Užsakymai') }} </div>
 
                 <div class="card-body">
+                    @if ($orders->where('user_id', Auth::user()->id)->isEmpty())
+
+                        <h5>{{ __('Jūsų užsakymų kol kas nėra.') }}</h5>
+                    @else
                     <div class="table-responsive-md">
                         <table class="table" id="myTable">
                             <thead>
@@ -57,7 +61,7 @@
                             </tbody>
                         </table>
                     </div>
-
+                @endif
                 </div>
             </div>
         </div>
