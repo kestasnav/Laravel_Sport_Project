@@ -20,28 +20,27 @@ class OrderController extends Controller
         return view('products.stripe', compact('totalPriceDiscount'));
     }
 
-    public function stripePost(Request $request, $totalPriceDiscount)
+    public function stripePost(Request $request)
     {
-        Stripe\Stripe::setApiKey(env('STRIPE_SECRET'));
-
-        Stripe\Charge::create ([
-            "amount" => $totalPriceDiscount * 100,
-            "currency" => "eur",
-            "source" => $request->stripeToken,
-            "description" => "Thanks."
-        ]);
 
         $user = Auth::user();
         $userid = $user->id;
 
         $carts = Cart::where('user_id', '=',$userid)->get();
 
+        $totalAmount = 0;
+
         foreach ($carts as $cart) {
             $order = new Order();
-
+            $procuct = Product::find($cart->product_id);
             $order->user_id = $cart->user_id;
             $order->quantity = $cart->quantity;
             $order->product_id = $cart->product_id;
+             if($procuct->discount_price == null) {
+                 $order->amount = $procuct->price * $cart->quantity;
+            } else {
+                 $order->amount = $procuct->discount_price * $cart->quantity;;
+             }
 
             $orderis = $order->order_number = time();
 
@@ -56,7 +55,18 @@ class OrderController extends Controller
             $deleteCart = Cart::find($cart_id);
             $deleteCart->delete();
 
+            $totalAmount = $totalAmount + $order->amount;
+
         }
+
+        Stripe\Stripe::setApiKey(env('STRIPE_SECRET'));
+
+        Stripe\Charge::create ([
+            "amount" => $totalAmount * 100,
+            "currency" => "eur",
+            "source" => $request->stripeToken,
+            "description" => "Thanks."
+        ]);
 
         Session::flash('success', 'Payment successfull!');
 
