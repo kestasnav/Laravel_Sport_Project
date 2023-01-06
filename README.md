@@ -54,7 +54,7 @@
 # E-Shop One product details :
 # ![screencapture-localhost-Laravel-sport-public-products-1-2022-12-09-11_19_46](https://user-images.githubusercontent.com/107037107/206668525-01a83e53-7104-4ed5-b69d-04725b394c73.png)
 # E-Shop cart:
-# ![screencapture-localhost-Laravel-sport-public-cart-2022-12-19-13_38_27](https://user-images.githubusercontent.com/107037107/208417841-5b2b603c-4b70-42ce-8f5f-40b1dd883c91.png)
+# ![screencapture-localhost-Laravel-sport-public-cart-2023-01-06-11_48_36](https://user-images.githubusercontent.com/107037107/210975703-fd7f7b7d-c283-4f33-90aa-c160b08810f8.png)
 # E-Shop payment:
 # ![screencapture-localhost-Laravel-sport-public-stripe-276-2022-12-19-13_42_46](https://user-images.githubusercontent.com/107037107/208427510-c391d0a3-a026-4ca3-bd15-ee945c89c91a.png)
 # Redirect after payment:
