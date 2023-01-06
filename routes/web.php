@@ -99,6 +99,10 @@ Route::post('/ordersdelivery/{id}', [OrderController::class, 'delivery'])->name(
 
 Route::get('scraper', [BasketballController::class, 'scraper'])->name('scraper');
 
+Route::get('minus/{id}', [CartController::class, 'minus'])->name('minus');
+
+Route::get('plus/{id}', [CartController::class, 'plus'])->name('plus');
+
 
 Auth::routes([
     'verify'=>true

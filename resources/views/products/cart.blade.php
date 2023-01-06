@@ -35,7 +35,13 @@
                                 @foreach($carts as $cart)
                                     <tr>
                                     <td class="text-center"> {{ $cart->product->title }}  </td>
-                                    <td class="text-center"> {{ $cart->quantity }}  </td>
+                                    <td class="text-center">
+                                        <a class="text-black w-25" href="{{url('minus',$cart->id)}}"><i class="fa-solid fa-minus"></i></a>
+                                        {{ $cart->quantity }}
+                                        @if($cart->product->quantity != $cart->quantity)
+                                        <a class="text-black w-25" href="{{url('plus',$cart->id)}}"><i class="fa-solid fa-plus"></i></a>
+                                            @endif
+                                    </td>
                                     <td class="text-center">
                                         @if($cart->product->discount_price == null)
                                         {{ $total = $cart->product->price * $cart->quantity }} EU

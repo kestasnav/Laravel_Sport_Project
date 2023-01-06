@@ -26,6 +26,7 @@
                                 <th class="text-center">{{ __('Produktas') }}</th>
 
                                 <th class="text-center">{{ __('Kiekis') }}</th>
+                                <th class="text-center">{{ __('Kaina') }}</th>
 
                                 <th class="text-center">{{ __('Užsakymo statusas') }}</th>
 
@@ -50,6 +51,7 @@
                                     </td>
 
                                     <td class="text-center">{{ $order->quantity}} </td>
+                                    <td class="text-center">{{ $order->amount}} </td>
 
                                     <td class="text-center">  {{ $order->order_status}}  </td>
 
