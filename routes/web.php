@@ -13,6 +13,7 @@ use App\Http\Controllers\OrderController;
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\ProductcategoryController;
 use App\Http\Controllers\ProductController;
+use App\Http\Controllers\StandingController;
 use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 
@@ -102,6 +103,8 @@ Route::get('scraper', [BasketballController::class, 'scraper'])->name('scraper')
 Route::get('minus/{id}', [CartController::class, 'minus'])->name('minus');
 
 Route::get('plus/{id}', [CartController::class, 'plus'])->name('plus');
+
+Route::get('standings', [StandingController::class, 'standings']);
 
 
 Auth::routes([

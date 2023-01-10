@@ -18,6 +18,7 @@
                     <div class="mx-5 mb-2"> {{ __('Straipsnio autorius:') }} <b>{{ $post->user->name}} {{ $post->user->surname}}</b></div>
                     <div class="mx-auto">
                         <img class="img-fluid" src="{{ route('images',$post->img)}}" style=" width: 500px; height: 350px;">
+                        <div class="text-center phototext">{{$post->photoauthor}} {{ __('nuotr.') }}</div>
 
                     </div>
                     <div class="mx-3 mt-3"><p>{!! $post->post  !!} </p></div>

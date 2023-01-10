@@ -13,8 +13,16 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::table('orders', function (Blueprint $table) {
-            $table->bigInteger('amount')->nullable();
+        Schema::create('teams', function (Blueprint $table) {
+            $table->id();
+            $table->bigInteger('teamID')->nullable();
+            $table->string('name')->nullable();
+            $table->string('city')->nullable();
+            $table->string('code')->nullable();
+            $table->string('img')->nullable();
+            $table->timestamps();
+
+
         });
     }
 
@@ -25,8 +33,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::table('orders', function (Blueprint $table) {
-            //
-        });
+        Schema::dropIfExists('teams');
     }
 };

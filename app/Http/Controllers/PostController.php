@@ -7,7 +7,9 @@ use App\Models\Comment;
 use App\Models\Fixture;
 use App\Models\Like;
 use App\Models\Post;
+use App\Models\Standing;
 use App\Models\Subcategory;
+use App\Models\Team;
 use Illuminate\Http\Request;
 use Illuminate\Support\Carbon;
 use Illuminate\Support\Facades\Auth;
@@ -80,9 +82,18 @@ class PostController extends Controller
         date_default_timezone_set('America/New_York');
         $todays_date = date('Y-m-d') . "T00:00:00Z";
 
+       // $data3= Http::get('https://cdn.nba.com/static/json/staticData/scheduleLeagueV2_9.json');
+        date_default_timezone_set('America/New_York');
+        $yesterday = date('Y-m-d',strtotime("yesterday")) . "T00:00:00Z";
 
+        $data3 = Standing::all();
 
-        return view('posts.index',['posts'=>$posts, 'postai'=>$postai, 'mostRead'=>$mostRead, 'data'=>$data, 'todays_date'=>$todays_date]);
+        $teams = Team::all();
+
+        return view('posts.index',['posts'=>$posts, 'postai'=>$postai, 'mostRead'=>$mostRead,
+            'data'=>$data, 'todays_date'=>$todays_date, 'data3'=>$data3, 'yesterday'=>$yesterday,
+            'teams'=>$teams
+        ]);
     }
 
     public function football(Request $request)
@@ -161,6 +172,7 @@ class PostController extends Controller
         $post->title=$request->title;
         $post->post=$request->post;
         $post->img=$fotoname;
+        $post->photoauthor = $request->photoauthor;
         $post->user_id=$request->user_id;
         $post->category_id=$request->category_id;
         $post->subcategory_id=$request->subcategory_id;
@@ -232,7 +244,7 @@ class PostController extends Controller
 
         $post->title=$request->title;
         $post->post=$request->post;
-
+        $post->photoauthor = $request->photoauthor;
         $post->user_id=$request->user_id;
         $post->category_id=$request->category_id;
         $post->subcategory_id=$request->subcategory_id;

@@ -5,40 +5,32 @@
 
 
 
-    <h5 ><b>{{__('Turnyrinė lentelė')}}</b></h5>
-
-
-            <table class="table" id="myTable">
-                <thead>
+    <h5 ><b>{{__('Šiandienos rungtynių rezultatai')}}</b></h5>
 
 
 
+    @foreach ($data3 as $game)
+
+            @if ($yesterday === $game->gameDate)
+
+        <div class="border-bottom">
+                <div> {{  $game->homeTeam }}  <b>{{  $game->homeScore }}:{{  $game->awayScore }}</b>  {{  $game->awayTeam }} </div>
+                <div>{{__('Rezultatyviausias žaidėjas:')}}
+                    <b>
+                        <br>
+
+                        {{ $game->player }}
 
 
-                <tr>
-
-                    <th class="text-center">Pozicija </th>
-                    <th class="text-center">Komanda </th>
-                    <th class="text-center">Pozicija </th>
-                    <th class="text-center">Pozicija </th>
-                    <th class="text-center">Pozicija </th>
-                    <th class="text-center">Pozicija </th>
-                </tr>
-                </thead>
-
-                <tbody>
-                @foreach ($data2 as $key2 => $val2)
-                <tr>
-
-                        <th class="text-center">{{ $key2 }}</th>
-
-                </tr>
-                </tbody>
+                    {{ $game->playerScore }}
 
 
-                @endforeach
-            </table>
+                    </b>
 
+            @endif
 
+        @endforeach
+        </div>
+        </div>
 </div>
 @endsection

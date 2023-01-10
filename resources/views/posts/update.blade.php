@@ -28,6 +28,16 @@
                         </div>
 
                         <div class="mb-3">
+                            <label class="form-label">{{ __('Nuotraukos autorius') }}</label>
+                            <input @error('photoauthor') is-invalid @enderror" type="text" name="photoauthor" value="{{$post->photoauthor}}">
+                            @error('photoauthor')
+                            @foreach( $errors->get('photoauthor') as $error)
+                                <div class="alert alert-danger"> {{ $error }} </div>
+                            @endforeach
+                            @enderror
+                        </div>
+
+                        <div class="mb-3">
                             <label for="" class="form-label">{{ __('Kategorija') }}</label>
                             <select class="form-control @error('category_id') is-invalid @enderror" name="category_id" >
                                 <option selected>{{ __('Pasirinkti') }}</option>
