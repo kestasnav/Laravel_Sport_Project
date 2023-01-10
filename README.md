@@ -65,5 +65,5 @@
 # ![screencapture-localhost-Laravel-sport-public-2022-11-17-14_38_16](https://user-images.githubusercontent.com/107037107/202448632-014339c7-48db-4ff9-a51e-86a310529803.png)
 # Responsive one post:
 # ![screencapture-localhost-Laravel-sport-public-posts-8-2022-12-19-13_40_25](https://user-images.githubusercontent.com/107037107/208418173-9796f21a-ea1e-4d19-a85c-c7254e5612d5.png)
-# NBA posts and schedule( from API ):
-# ![screencapture-localhost-Laravel-sport-public-nba-2022-12-29-12_38_48](https://user-images.githubusercontent.com/107037107/209939875-fa102c88-9a52-4cb9-a238-3fe8a956d222.png)
+# NBA posts and results( from API ):
+# ![screencapture-localhost-Laravel-sport-public-nba-2023-01-10-18_11_41](https://user-images.githubusercontent.com/107037107/211603787-7a69754f-e6d2-4647-a029-d92cdf9a5fa9.png)
