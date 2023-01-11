@@ -29,8 +29,6 @@
 # ![screencapture-localhost-Laravel-sport-public-posts-2023-01-11-20_30_43](https://user-images.githubusercontent.com/107037107/211888879-77bdb78d-32f2-438f-af0a-9749ab5153c4.png)
 # Profile update:
 # ![screencapture-localhost-Laravel-sport-public-profilis-1-2022-12-13-10_13_31](https://user-images.githubusercontent.com/107037107/207261919-800d86d9-589e-4c63-986b-5e234b9d9290.png)
-# Orders:
-# ![screencapture-localhost-Laravel-sport-public-orders-2022-12-23-13_01_47](https://user-images.githubusercontent.com/107037107/209325122-be862feb-42b8-45ab-b02b-fa2a56947c1b.png)
 # All posts in lithuanian language:
 # ![screencapture-localhost-Laravel-sport-public-2022-12-30-14_46_20](https://user-images.githubusercontent.com/107037107/210071753-38821b48-a412-4bc5-a2ae-4023a1b9f09f.png)
 # One post (logged in):
