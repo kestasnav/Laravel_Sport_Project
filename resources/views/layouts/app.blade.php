@@ -98,6 +98,10 @@
                             </ul>
                         </li>
 
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="{{ route('nba.standings') }}">{{__('Turnirynė lentelė')}}</a>
+                        </li>
+
                     </ul>
 
                     <!-- Right Side Of Navbar -->

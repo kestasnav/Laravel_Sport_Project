@@ -68,9 +68,9 @@ Route::delete('unlike/{comment}', [LikeController::class, 'unlike'])->name('unli
 
 Route::get('admin', [AdminController::class, 'posts'])->name('admin')->middleware('can:admin_user','verified');
 
-Route::get('admin/posts', [AdminController::class, 'posts'])->name('admin.posts')->middleware('can:admin_user');
-Route::get('admin/users', [AdminController::class, 'users'])->name('admin.users')->middleware('can:admin_user');
-Route::get('admin/comments', [AdminController::class, 'comments'])->name('admin.comments')->middleware('can:admin_user');
+Route::get('posts', [AdminController::class, 'posts'])->name('admin.posts')->middleware('can:admin_user');
+Route::get('users', [AdminController::class, 'users'])->name('admin.users')->middleware('can:admin_user');
+Route::get('comments', [AdminController::class, 'comments'])->name('admin.comments')->middleware('can:admin_user');
 
 Route::delete('destroy/{id}', [AdminController::class, 'destroyUser'])->name('users.destroy')->middleware('can:admin_user');
 
@@ -104,7 +104,9 @@ Route::get('minus/{id}', [CartController::class, 'minus'])->name('minus');
 
 Route::get('plus/{id}', [CartController::class, 'plus'])->name('plus');
 
-Route::get('standings', [StandingController::class, 'standings']);
+Route::get('upload', [StandingController::class, 'standings']);
+
+Route::get('standings', [StandingController::class, 'index'])->name('nba.standings');
 
 
 Auth::routes([

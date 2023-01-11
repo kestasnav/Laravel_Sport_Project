@@ -3,43 +3,19 @@
 namespace App\Http\Controllers;
 
 use App\Models\Standing;
+use App\Models\Team;
 use GuzzleHttp\Client;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Http;
 
 class StandingController extends Controller
 {
-//    public function standings()
-//    {
-//
-//        $data= Http::get('https://cdn.nba.com/static/json/staticData/scheduleLeagueV2_9.json');
-//
-//        foreach ($data['leagueSchedule']['gameDates'] as $games) {
-//            foreach ($games['games'] as $game) {
-//                $input = [
-//
-//                        'gameDate' => $game['gameDateTimeEst'],
-//
-//                        'homeTeam' =>   $game['homeTeam']['teamName'],
-//
-//                        'awayTeam' =>   $game['awayTeam']['teamName'],
-//
-//                        'homeScore' =>   $game['homeTeam']['score'],
-//
-//                        'awayScore' =>    $game['awayTeam']['score'],
-//
-//                        'player' => $game['pointsLeaders'],
-//
-//                ];
-//
-//            }
-//        }
-//      $standings =  Standing::create($input);
-//
-//        $response = json_decode($data->getBody()->getContents());
-//         // dd($standings);
-//
-//    }
+
+    public function index() {
+        $east = Team::where('conference','=','east')->get();
+        $west = Team::where('conference','=','west')->get();
+        return view('teams.standings',compact('east','west'));
+    }
 
     public function standings()
     {

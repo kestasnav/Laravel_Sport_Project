@@ -98,6 +98,7 @@
     "Tęsti apsipirkimą": "Continue shopping",
     "Užsakymo Nr.": "Order Nr.",
     "Produktas": "Product",
+    "Visi produktai": "All products",
     "Užsakovas": "Customer",
     "Apmokėjimo statusas": "Payment status",
     "Užsakymo statusas": "Order status",
@@ -114,6 +115,8 @@
     "Artimiausios rungtynės": "Upcoming games",
     "Mano užsakymai": "My orders",
     "Nuotraukos autorius": "Photo author",
-    "nuotr.": "photo."
+    "nuotr.": "photo.",
+    "Meniu": "Menu",
+    "Profilis": "Profile"
 
 }

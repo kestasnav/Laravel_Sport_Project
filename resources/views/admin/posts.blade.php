@@ -1,4 +1,4 @@
-@extends('layouts.adminlayout')
+@extends('layouts.admin')
 @section('content')
 
     @if(session()->has('message'))
@@ -49,7 +49,7 @@
 
                                 <td class="text-center">
 
-                                    <a class="dropdown-toggle hidden-arrow" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    <a class="" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                         <i class="fas fa-ellipsis-v fa-lg text-black"></i>
                                     </a>
 
