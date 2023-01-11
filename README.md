@@ -26,17 +26,7 @@
 # Toliau pateikiu keletą ekranvaizdžių:
 # Admin dashboard:
 # Posts:
-# ![screencapture-localhost-Laravel-sport-public-admin-posts-2022-11-29-12_00_25](https://user-images.githubusercontent.com/107037107/204499021-892a49c6-9f3c-48d9-a20e-341854f81b50.png)
-# Users:
-# ![screencapture-localhost-Laravel-sport-public-admin-users-2022-12-19-13_31_42](https://user-images.githubusercontent.com/107037107/208416755-a8d2ca00-bf77-4d0f-a5d4-f10a4b875e27.png)
-# Comments:
-# ![Screenshot 2022-12-19 133410](https://user-images.githubusercontent.com/107037107/208417183-374fdb32-f248-4ded-965d-5eae9e487e8d.png)
-# Post update:
-# ![screencapture-localhost-Laravel-sport-public-posts-3-edit-2022-11-17-19_46_32](https://user-images.githubusercontent.com/107037107/202519792-ceaea88c-a13c-43ad-9266-342e7180d529.png)
-# New post:
-# ![screencapture-localhost-Laravel-sport-public-posts-create-2022-11-17-19_51_19](https://user-images.githubusercontent.com/107037107/202520637-7ad3ba75-0a29-4f39-840b-41e6b4123908.png)
-# Product update:
-# ![screencapture-localhost-Laravel-sport-public-products-2-edit-2022-12-12-10_44_29](https://user-images.githubusercontent.com/107037107/207000673-efe68c08-46ce-411e-a893-adb2da880d42.png)
+# ![screencapture-localhost-Laravel-sport-public-posts-2023-01-11-20_30_43](https://user-images.githubusercontent.com/107037107/211888879-77bdb78d-32f2-438f-af0a-9749ab5153c4.png)
 # Profile update:
 # ![screencapture-localhost-Laravel-sport-public-profilis-1-2022-12-13-10_13_31](https://user-images.githubusercontent.com/107037107/207261919-800d86d9-589e-4c63-986b-5e234b9d9290.png)
 # Orders:
