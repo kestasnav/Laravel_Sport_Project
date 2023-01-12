@@ -25,6 +25,8 @@
 
 # Toliau pateikiu keletą ekranvaizdžių:
 # Admin dashboard:
+# Users:
+# ![screencapture-localhost-Laravel-sport-public-users-2023-01-12-14_04_42](https://user-images.githubusercontent.com/107037107/212062184-f6f45efd-eeff-46f6-89d7-b2c673e4acf6.png)
 # Posts:
 # ![Screenshot 2023-01-12 135454](https://user-images.githubusercontent.com/107037107/212060597-8c572f8b-1783-4b2c-964a-452a1f650e35.png)
 # New Post:
