@@ -1,4 +1,4 @@
-@extends('layouts.admin')
+@extends('layouts.admin1')
 @section('content')
 
     @if(session()->has('message'))
@@ -14,80 +14,93 @@
 
                 <div class="card-body">
                     <div class="table-responsive-md">
-                    <table class="table" id="myTable">
-                        <thead>
-                        <tr>
-                            <th class="text-center">{{ __('Vardas') }}</th>
-                            <th class="text-center">{{ __('Pavardė') }}</th>
-                            <th class="text-center">{{ __('El. Paštas') }}</th>
-                            <th class="text-center">{{ __('Rolė') }}</th>
-                            @can('edit_user_role')
-                            <th class="text-center">{{ __('Actions') }}</th>
-                            @endcan
-                        </tr>
-                        </thead>
-                        <tbody>
-                        <tr>
-
-                            @foreach($users as $user)
-
-                                <td class="text-center"> {{ $user->name }}  </td>
-                                <td class="text-center"> {{ $user->surname }}  </td>
-                                <td class="text-center"> {{ $user->email }}  </td>
-                                <td class="text-center"> {{ $user->type }}  </td>
-                                @if($user->type == 'superadmin')
-                                    <td></td>
-                                @else
-                                    @can('edit_user_role')
-                            <td class="text-center">
-
-                                <a class="" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                    <i class="fas fa-ellipsis-v fa-lg text-black"></i>
-                                </a>
-
-                                    <ul class="dropdown-menu">
-
-                                        <li>
-                                            @if($user->type != 'superadmin')
-                                                <form  action="{{ route('users.destroy', $user->id) }}" method="post">
-                                                    @csrf
-                                                    @method('DELETE')
-                                                    <button onclick="return confirm('Are You Sure To Delete This')" class="dropdown-item border-bottom"><i class="fa-solid fa-trash"></i> {{ __('Trinti') }}</button>
-                                                </form>
-                                            @endif
-                                        </li>
-
-                                        <li>
-                                            @if($user->type == 'vartotojas')
-                                                <form action="{{ route('users.role', $user->id) }}" method="post">
-                                                    @csrf
-                                                    @method('PUT')
-                                                    <input type="hidden" value="admin" name="type">
-                                                    <button class="dropdown-item"><i class="fa fa-lock" aria-hidden="true"></i> Add Admin</button>
-                                                </form>
-                                            @elseif($user->type == 'admin')
-                                                <form action="{{ route('users.role', $user->id) }}" method="post">
-                                                    @csrf
-                                                    @method('PUT')
-                                                    <input type="hidden" value="vartotojas" name="type">
-                                                    <button class="dropdown-item"><i class="fa fa-unlock" aria-hidden="true"></i> Remove Admin</button>
-                                                </form>
-                                            @endif
-                                        </li>
-
-                                    </ul>
-
-                            </td>
+                        <table class="table" id="myTable">
+                            <thead>
+                            <tr>
+                                <th class="text-center">{{ __('Vardas') }}</th>
+                                <th class="text-center">{{ __('Pavardė') }}</th>
+                                <th class="text-center">{{ __('El. Paštas') }}</th>
+                                <th class="text-center">{{ __('Rolė') }}</th>
+                                @can('edit_user_role')
+                                    <th class="text-center">{{ __('Actions') }}</th>
                                 @endcan
-                            @endif
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
 
-                        </tr>
+                                @foreach($users as $user)
+
+                                    <td class="text-center"> {{ $user->name }}  </td>
+                                    <td class="text-center"> {{ $user->surname }}  </td>
+                                    <td class="text-center"> {{ $user->email }}  </td>
+                                    <td class="text-center"> {{ $user->type }}  </td>
+                                    @if($user->type == 'superadmin')
+                                        <td></td>
+                                    @else
+                                        @can('edit_user_role')
+                                            <td class="text-center">
+
+                                                <a class="" href="#" role="button" data-bs-toggle="dropdown"
+                                                   aria-expanded="false">
+                                                    <i class="fas fa-ellipsis-v fa-lg text-white"></i>
+                                                </a>
+
+                                                <ul class="dropdown-menu">
+
+                                                    <li>
+                                                        @if($user->type != 'superadmin')
+                                                            <form action="{{ route('users.destroy', $user->id) }}"
+                                                                  method="post">
+                                                                @csrf
+                                                                @method('DELETE')
+                                                                <button onclick="return confirm('Are You Sure To Delete This')"
+                                                                        class="dropdown-item border-bottom"><i
+                                                                            class="fa-solid fa-trash"></i> {{ __('Trinti') }}
+                                                                </button>
+                                                            </form>
+                                                        @endif
+                                                    </li>
+
+                                                    <li>
+                                                        @if($user->type == 'vartotojas')
+                                                            <form action="{{ route('users.role', $user->id) }}"
+                                                                  method="post">
+                                                                @csrf
+                                                                @method('PUT')
+                                                                <input type="hidden" value="admin" name="type">
+                                                                <button class="dropdown-item"><i class="fa fa-lock"
+                                                                                                 aria-hidden="true"></i>
+                                                                    Add Admin
+                                                                </button>
+                                                            </form>
+                                                        @elseif($user->type == 'admin')
+                                                            <form action="{{ route('users.role', $user->id) }}"
+                                                                  method="post">
+                                                                @csrf
+                                                                @method('PUT')
+                                                                <input type="hidden" value="vartotojas" name="type">
+                                                                <button class="dropdown-item"><i class="fa fa-unlock"
+                                                                                                 aria-hidden="true"></i>
+                                                                    Remove Admin
+                                                                </button>
+                                                            </form>
+                                                        @endif
+                                                    </li>
+
+                                                </ul>
+
+                                            </td>
+                                        @endcan
+                                    @endif
+
+                            </tr>
 
 
-                        @endforeach
+                            @endforeach
 
-                        </tbody>
-                    </table>
+                            </tbody>
+                        </table>
                     </div>
 
                 </div>

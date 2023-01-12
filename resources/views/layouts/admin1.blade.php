@@ -1,10 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <base href="/Laravel/sport/public/">
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Nba Project Admin</title>
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.0.0/mdb.min.css" rel="stylesheet" />
+
     <!-- plugins:css -->
     <link rel="stylesheet" href="adminas/assets/vendors/mdi/css/materialdesignicons.min.css">
     <link rel="stylesheet" href="adminas/assets/vendors/css/vendor.bundle.base.css">
@@ -23,7 +27,6 @@
     <link rel="shortcut icon" href="adminas/assets/images/favicon.png" />
 
     <link rel="stylesheet" href="//cdn.datatables.net/1.12.1/css/jquery.dataTables.min.css">
-{{--    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.0.0/mdb.min.css" rel="stylesheet" />--}}
     <script src="https://kit.fontawesome.com/dcbeebf121.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
@@ -117,6 +120,7 @@
                     <span class="menu-title">{{__('Vartotojai')}}</span>
                 </a>
             </li>
+
         </ul>
     </nav>
     <!-- partial -->
@@ -140,7 +144,7 @@
                 </ul>
                 <ul class="navbar-nav navbar-nav-right">
                     <li class="nav-item dropdown border-left">
-                        <a class="nav-link btn btn-success create-new-button" id="createbuttonDropdown" data-toggle="dropdown" aria-expanded="false" href="{{ route('posts.create') }}">
+                        <a class="nav-link btn btn-success create-new-button"  href="{{ route('posts.create') }}">
                             <i class="fa-solid fa-marker"></i> {{__('Pridėti naujieną')}}</a>
                     </li>
 
@@ -152,75 +156,6 @@
                         <a class="nav-link" href="{{ route('setLanguage', 'en') }}">EN</a>
                     </li>
 
-{{--                    <li class="nav-item dropdown border-left">--}}
-{{--                        <a class="nav-link count-indicator dropdown-toggle" id="messageDropdown" href="#" data-toggle="dropdown" aria-expanded="false">--}}
-{{--                            <i class="mdi mdi-email"></i>--}}
-{{--                            <span class="count bg-success"></span>--}}
-{{--                        </a>--}}
-{{--                        <div class="dropdown-menu dropdown-menu-right navbar-dropdown preview-list" aria-labelledby="messageDropdown">--}}
-{{--                            <h6 class="p-3 mb-0">Messages</h6>--}}
-{{--                            <div class="dropdown-divider"></div>--}}
-{{--                            <a class="dropdown-item preview-item">--}}
-{{--                                <div class="preview-thumbnail">--}}
-{{--                                    <img src="assets/images/faces/face4.jpg" alt="image" class="rounded-circle profile-pic">--}}
-{{--                                </div>--}}
-{{--                                <div class="preview-item-content">--}}
-{{--                                    <p class="preview-subject ellipsis mb-1">Mark send you a message</p>--}}
-{{--                                    <p class="text-muted mb-0"> 1 Minutes ago </p>--}}
-{{--                                </div>--}}
-{{--                            </a>--}}
-
-{{--                            <div class="dropdown-divider"></div>--}}
-{{--                            <p class="p-3 mb-0 text-center">4 new messages</p>--}}
-{{--                        </div>--}}
-{{--                    </li>--}}
-{{--                    <li class="nav-item dropdown border-left">--}}
-{{--                        <a class="nav-link count-indicator dropdown-toggle" id="notificationDropdown" href="#" data-toggle="dropdown">--}}
-{{--                            <i class="mdi mdi-bell"></i>--}}
-{{--                            <span class="count bg-danger"></span>--}}
-{{--                        </a>--}}
-{{--                        <div class="dropdown-menu dropdown-menu-right navbar-dropdown preview-list" aria-labelledby="notificationDropdown">--}}
-{{--                            <h6 class="p-3 mb-0">Notifications</h6>--}}
-{{--                            <div class="dropdown-divider"></div>--}}
-{{--                            <a class="dropdown-item preview-item">--}}
-{{--                                <div class="preview-thumbnail">--}}
-{{--                                    <div class="preview-icon bg-dark rounded-circle">--}}
-{{--                                        <i class="mdi mdi-calendar text-success"></i>--}}
-{{--                                    </div>--}}
-{{--                                </div>--}}
-{{--                                <div class="preview-item-content">--}}
-{{--                                    <p class="preview-subject mb-1">Event today</p>--}}
-{{--                                    <p class="text-muted ellipsis mb-0"> Just a reminder that you have an event today </p>--}}
-{{--                                </div>--}}
-{{--                            </a>--}}
-{{--                            <div class="dropdown-divider"></div>--}}
-{{--                            <a class="dropdown-item preview-item">--}}
-{{--                                <div class="preview-thumbnail">--}}
-{{--                                    <div class="preview-icon bg-dark rounded-circle">--}}
-{{--                                        <i class="mdi mdi-settings text-danger"></i>--}}
-{{--                                    </div>--}}
-{{--                                </div>--}}
-{{--                                <div class="preview-item-content">--}}
-{{--                                    <p class="preview-subject mb-1">Settings</p>--}}
-{{--                                    <p class="text-muted ellipsis mb-0"> Update dashboard </p>--}}
-{{--                                </div>--}}
-{{--                            </a>--}}
-{{--                            <div class="dropdown-divider"></div>--}}
-{{--                            <a class="dropdown-item preview-item">--}}
-{{--                                <div class="preview-thumbnail">--}}
-{{--                                    <div class="preview-icon bg-dark rounded-circle">--}}
-{{--                                        <i class="mdi mdi-link-variant text-warning"></i>--}}
-{{--                                    </div>--}}
-{{--                                </div>--}}
-{{--                                <div class="preview-item-content">--}}
-{{--                                    <p class="preview-subject mb-1">Launch Admin</p>--}}
-{{--                                    <p class="text-muted ellipsis mb-0"> New admin wow! </p>--}}
-{{--                                </div>--}}
-{{--                            </a>--}}
-{{--                            <div class="dropdown-divider"></div>--}}
-{{--                            <p class="p-3 mb-0 text-center">See all notifications</p>--}}
-{{--                        </div>--}}
-{{--                    </li>--}}
                     <li class="nav-item dropdown">
                         <a class="nav-link" id="profileDropdown" href="#" data-toggle="dropdown">
                             <div class="navbar-profile">
@@ -273,7 +208,8 @@
         <div class="main-panel">
             <div class="content-wrapper">
                 @yield('content')
-
+            </div>
+        </div>
             <!-- content-wrapper ends -->
             <!-- partial:partials/_footer.html -->
             <footer class="footer">
@@ -309,5 +245,7 @@
 <script src="adminas/assets/js/dashboard.js"></script>
 <!-- End custom js for this page -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="//cdn.datatables.net/1.12.1/js/jquery.dataTables.min.js"></script>
+<script src="https://cdn.tiny.cloud/1/no-api-key/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
 </body>
 </html>

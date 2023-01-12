@@ -1,4 +1,4 @@
-@extends('layouts.adminlayout')
+@extends('layouts.admin1')
 @section('content')
 
     <div class="row">
@@ -11,7 +11,8 @@
 
                         <div class="mb-3">
                             <label class="form-label">{{ __('Pavadinimas') }}</label>
-                            <input class="form-control @error('name') is-invalid @enderror" type="text" name="name" value="{{old('name')}}">
+                            <input class="form-control @error('name') is-invalid @enderror" type="text" name="name"
+                                   value="{{old('name')}}">
                             @error('name')
                             @foreach( $errors->get('title') as $error)
                                 <div class="alert alert-danger"> {{ $error }} </div>
@@ -21,7 +22,8 @@
 
 
                         <button class="btn btn-primary">{{ __('Sukurti') }}</button>
-                        <a class="btn btn-success mx-3 float-end" href="{{ route('productcategories.index') }}">{{ __('Atgal') }}</a>
+                        <a class="btn btn-success mx-3 float-end"
+                           href="{{ route('productcategories.index') }}">{{ __('Atgal') }}</a>
                     </form>
                 </div>
             </div>

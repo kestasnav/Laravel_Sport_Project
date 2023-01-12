@@ -2,37 +2,26 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Category;
 use App\Models\Comment;
 use App\Models\Post;
 use App\Models\Product;
+use App\Models\Subcategory;
 use App\Models\User;
 use Illuminate\Http\Request;
 
 class AdminController extends Controller
 {
 
-
-
-
-
-
-
     public function posts(Request $request)
     {
-
-
             $posts = Post::latest()->paginate();
-
-
             return view('admin.posts', ['posts' => $posts]);
-
     }
 
     public function users(Request $request)
     {
-
         $users=User::paginate();
-
         return view('admin.users',['users'=>$users]);
     }
 
@@ -71,5 +60,7 @@ class AdminController extends Controller
         $products = Product::all();
         return view('admin.products',compact('products'));
     }
+
+
 
 }

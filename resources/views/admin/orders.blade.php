@@ -1,4 +1,4 @@
-@extends('layouts.admin')
+@extends('layouts.admin1')
 @section('content')
 
     @if(session()->has('message'))
@@ -33,8 +33,9 @@
                                 @foreach($orders as $order)
 
                                     <td class="text-center">
-                                        <a class="text-black" href="{{route('orders.show',$order->id)}}">
-                                            {{ $order->order_number}} <i class="fa-solid fa-chevron-right text-primary"></i>
+                                        <a class="" href="{{route('orders.show',$order->id)}}">
+                                            {{ $order->order_number}} <i
+                                                    class="fa-solid fa-chevron-right text-primary"></i>
                                         </a>
                                     </td>
                                     <td class="text-center"> {{ $order->product->title}}  </td>
@@ -45,38 +46,46 @@
 
                                     <td class="text-center">
 
-                                        <a class="" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                            <i class="fas fa-ellipsis-v fa-lg text-black"></i>
+                                        <a class="" href="#" role="button" data-bs-toggle="dropdown"
+                                           aria-expanded="false">
+                                            <i class="fas fa-ellipsis-v fa-lg text-white"></i>
                                         </a>
 
                                         <ul class="dropdown-menu">
                                             <li>
-                                                <form  action="{{ route('orders.destroy', $order->id) }}" method="post">
+                                                <form action="{{ route('orders.destroy', $order->id) }}" method="post">
                                                     @csrf
                                                     @method('DELETE')
-                                                    <button onclick="return confirm('Are You Sure To Delete This')" class="dropdown-item border-bottom">
+                                                    <button onclick="return confirm('Are You Sure To Delete This')"
+                                                            class="dropdown-item border-bottom">
                                                         <i class="fa-solid fa-trash"></i> {{ __('Trinti') }}</button>
                                                 </form>
                                             </li>
                                             @if($order->order_status == 'processing')
-                                            <li>
-                                                <form  action="{{ route('orders.complete', $order->id) }}" method="post">
-                                                    @csrf
-                                                    @method('POST')
-                                                    <button onclick="return confirm('Are You Sure To Change This Status')" class="dropdown-item border-bottom">
-                                                        <i class="fa-solid fa-check"></i> {{ __('Paruoštas') }}</button>
-                                                </form>
-                                            </li>
+                                                <li>
+                                                    <form action="{{ route('orders.complete', $order->id) }}"
+                                                          method="post">
+                                                        @csrf
+                                                        @method('POST')
+                                                        <button onclick="return confirm('Are You Sure To Change This Status')"
+                                                                class="dropdown-item border-bottom">
+                                                            <i class="fa-solid fa-check"></i> {{ __('Paruoštas') }}
+                                                        </button>
+                                                    </form>
+                                                </li>
                                             @elseif($order->order_status == 'Completed')
-                                            <li>
-                                                <form  action="{{ route('orders.delivery', $order->id) }}" method="post">
-                                                    @csrf
-                                                    @method('POST')
-                                                    <button onclick="return confirm('Are You Sure To Change This Status')" class="dropdown-item border-bottom">
-                                                        <i class="fas fa-shipping-fast"></i> {{ __('Pristatytas') }}</button>
-                                                </form>
-                                            </li>
-                                                @endif
+                                                <li>
+                                                    <form action="{{ route('orders.delivery', $order->id) }}"
+                                                          method="post">
+                                                        @csrf
+                                                        @method('POST')
+                                                        <button onclick="return confirm('Are You Sure To Change This Status')"
+                                                                class="dropdown-item border-bottom">
+                                                            <i class="fas fa-shipping-fast"></i> {{ __('Pristatytas') }}
+                                                        </button>
+                                                    </form>
+                                                </li>
+                                            @endif
                                         </ul>
 
                                     </td>
