@@ -26,7 +26,7 @@
 # Toliau pateikiu keletą ekranvaizdžių:
 # Admin dashboard:
 # Posts:
-# ![Screenshot 2023-01-12 120826](https://user-images.githubusercontent.com/107037107/212038681-61212fa3-9574-4ab4-a043-1a2bc03515c5.png)
+# ![Screenshot 2023-01-12 135454](https://user-images.githubusercontent.com/107037107/212060597-8c572f8b-1783-4b2c-964a-452a1f650e35.png)
 # Profile update:
 # ![screencapture-localhost-Laravel-sport-public-profilis-1-2022-12-13-10_13_31](https://user-images.githubusercontent.com/107037107/207261919-800d86d9-589e-4c63-986b-5e234b9d9290.png)
 # All posts in lithuanian language:
