@@ -9,42 +9,49 @@
 
 
 .navbackground, .navfooter {
-    background: rgb(2,0,36);
-    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,104,121,1) 43%, rgba(0,212,255,1) 100%);
+    //background: rgb(2,0,36);
+    //background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,104,121,1) 43%, rgba(0,212,255,1) 100%);
+    //background: #f4f4f4;
+    background: rgb(255,255,255);
+    background: radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(244,244,244,1) 0%);
 }
-.navfooter {
-    box-shadow: 1px -11px 20px 0px rgba(0,0,0,0.75);
-    -webkit-box-shadow: 1px -11px 20px 0px rgba(0,0,0,0.75);
-    -moz-box-shadow: 1px -11px 20px 0px rgba(0,0,0,0.75);
-}
+//.navfooter {
+//    box-shadow: 1px -11px 20px 0px rgba(0,0,0,0.75);
+//    -webkit-box-shadow: 1px -11px 20px 0px rgba(0,0,0,0.75);
+//    -moz-box-shadow: 1px -11px 20px 0px rgba(0,0,0,0.75);
+//}
 
-body {
-    background: rgb(2,0,36);
-    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,104,121,1) 43%, rgba(0,212,255,1) 100%);
-    font-family: 'Sono', sans-serif;
-}
+//body {
+//    background: rgb(2,0,36);
+//    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,104,121,1) 43%, rgba(0,212,255,1) 100%);
+//    font-family: 'Sono', sans-serif;
+//}
 
 .main {
     background: white;
 }
 
-.containerbg {
-    background: rgb(174,238,219);
-    background: radial-gradient(circle, rgba(174,238,219,1) 0%, rgba(255,255,255,1) 100%);
-    box-shadow: -2px 3px 33px 2px rgba(0,0,0,0.75);
-    -webkit-box-shadow: -2px 3px 33px 2px rgba(0,0,0,0.75);
-    -moz-box-shadow: -2px 3px 33px 2px rgba(0,0,0,0.75);
-}
+//.containerbg {
+//    background: rgb(174,238,219);
+//    background: radial-gradient(circle, rgba(174,238,219,1) 0%, rgba(255,255,255,1) 100%);
+//    box-shadow: -2px 3px 33px 2px rgba(0,0,0,0.75);
+//    -webkit-box-shadow: -2px 3px 33px 2px rgba(0,0,0,0.75);
+//    -moz-box-shadow: -2px 3px 33px 2px rgba(0,0,0,0.75);
+//}
+
+//.cardbg {
+//    background: rgb(174,238,219);
+//    background: radial-gradient(circle, rgba(174,238,219,1) 0%, rgba(255,255,255,1) 100%);
+//    box-shadow: -2px 3px 33px 2px rgba(0,0,0,0.75);
+//    -webkit-box-shadow: -2px 3px 33px 2px rgba(0,0,0,0.75);
+//    -moz-box-shadow: -2px 3px 33px 2px rgba(0,0,0,0.75);
+//    height: 380px;
+//}
 
 .cardbg {
-    background: rgb(174,238,219);
-    background: radial-gradient(circle, rgba(174,238,219,1) 0%, rgba(255,255,255,1) 100%);
-    box-shadow: -2px 3px 33px 2px rgba(0,0,0,0.75);
-    -webkit-box-shadow: -2px 3px 33px 2px rgba(0,0,0,0.75);
-    -moz-box-shadow: -2px 3px 33px 2px rgba(0,0,0,0.75);
+    background: white;
     height: 380px;
 }
-
 
 .btn {
     outline: none !important;
@@ -907,7 +914,7 @@ a:focus {
 }
 
 .player {
-    font-size: 0.85em;
+    font-size: 0.75em;
 }
 
 .th_font {

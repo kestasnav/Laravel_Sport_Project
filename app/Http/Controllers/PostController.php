@@ -24,7 +24,7 @@ class PostController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index(Request $request)
+    public function nba(Request $request)
     {
         $find=$request->session()->get('find_post',$request->search);
 
@@ -72,7 +72,7 @@ class PostController extends Controller
 
         return view('posts.index',['posts'=>$posts, 'postai'=>$postai, 'mostRead'=>$mostRead]);
     }
-    public function nba(Request $request)
+    public function index(Request $request)
     {
         $find=$request->session()->get('find_post',$request->search);
         $posts=Post::where('subcategory_id', 3)->where('type','unhide')->findPosts($find)->latest()->paginate();

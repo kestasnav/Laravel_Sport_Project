@@ -1,9 +1,42 @@
 @extends('layouts.app')
 @section('content')
 
-        <div class="d-flex flex-wrap mt-5 mb-4">
+        <div class="d-flex flex-wrap mt-2 mb-4 border-bottom d-flex justify-content-center">
 
-    </div>
+            <div class="row>"
+            @foreach ($data3 as $game)
+
+                @if ($yesterday === $game->gameDate)
+
+
+                        <div>
+                            @foreach($teams as $team)
+                                @if($game->homeTeam == $team->name)
+
+                                <div class="p-1">
+                                    <img class="img-fluid" src="{{ route('images',$team->img)}}" style=" width: 20px; height: 20px;">
+
+                                    {{  $team->code }} {{  $game->homeScore }}
+                                </div>
+                                @endif
+                            @endforeach
+
+                            @foreach($teams as $team)
+
+                                @if($game->awayTeam == $team->name)
+                        <div class="p-1">
+                                    <img class="img-fluid" src="{{ route('images',$team->img)}}" style=" width: 20px; height: 20px;">
+                                    {{$team->code}} {{  $game->awayScore }}
+                        </div>
+                                @endif
+                            @endforeach
+                                <span class="p-1 player">  {{ $game->player }} <b>{{ $game->playerScore }}</b> pts. </span>
+                        </div>
+
+                @endif
+            @endforeach
+        </div>
+
 
     <div class="row mt-1 mb-3 mx-1">
 
@@ -54,45 +87,45 @@
 
         <div class="col-md-4 d-none d-sm-block">
             @if(isset($data3))
-                <h5><b>{{__('Šiandienos rungtynių rezultatai')}}</b></h5>
-                @foreach ($data3 as $game)
+{{--                <h5><b>{{__('Šiandienos rungtynių rezultatai')}}</b></h5>--}}
+{{--                @foreach ($data3 as $game)--}}
 
-                    @if ($yesterday === $game->gameDate)
+{{--                    @if ($yesterday === $game->gameDate)--}}
 
-                <div class="border-bottom">
-                            <div>
-                                @foreach($teams as $team)
-                                    @if($game->homeTeam == $team->name)
+{{--                <div class="border-bottom">--}}
+{{--                            <div>--}}
+{{--                                @foreach($teams as $team)--}}
+{{--                                    @if($game->homeTeam == $team->name)--}}
 
 
-                                        <img class="img-fluid" src="{{ route('images',$team->img)}}" style=" width: 40px; height: 40px;">
+{{--                                        <img class="img-fluid" src="{{ route('images',$team->img)}}" style=" width: 40px; height: 40px;">--}}
 
-                                {{  $game->homeTeam }}
-                                    @endif
-                                        @endforeach
-                                        <b>{{  $game->homeScore }}:{{  $game->awayScore }}</b>
-                                        @foreach($teams as $team)
+{{--                                {{  $game->homeTeam }}--}}
+{{--                                    @endif--}}
+{{--                                        @endforeach--}}
+{{--                                        <b>{{  $game->homeScore }}:{{  $game->awayScore }}</b>--}}
+{{--                                        @foreach($teams as $team)--}}
 
-                                    @if($game->awayTeam == $team->name)
-                                            {{  $game->awayTeam }}
-                                            <img class="img-fluid" src="{{ route('images',$team->img)}}" style=" width: 40px; height: 40px;">
+{{--                                    @if($game->awayTeam == $team->name)--}}
+{{--                                            {{  $game->awayTeam }}--}}
+{{--                                            <img class="img-fluid" src="{{ route('images',$team->img)}}" style=" width: 40px; height: 40px;">--}}
 
-                                    @endif
-                                @endforeach
-                            </div>
-                            <div>{{__('Rezultatyviausias žaidėjas:')}}
-                                <b>
+{{--                                    @endif--}}
+{{--                                @endforeach--}}
+{{--                            </div>--}}
+{{--                            <div>{{__('Rezultatyviausias žaidėjas:')}}--}}
+{{--                                <b>--}}
 
-                                  <span class="player">  {{ $game->player }}
+{{--                                  <span class="player">  {{ $game->player }}--}}
 
-                                    {{ $game->playerScore }}
-                                        pts.
-                                      </span>
-                                </b>
-                            </div>
-                </div>
-                        @endif
-                @endforeach
+{{--                                    {{ $game->playerScore }}--}}
+{{--                                        pts.--}}
+{{--                                      </span>--}}
+{{--                                </b>--}}
+{{--                            </div>--}}
+{{--                </div>--}}
+{{--                        @endif--}}
+{{--                @endforeach--}}
 
 
 
