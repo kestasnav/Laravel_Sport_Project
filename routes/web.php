@@ -42,16 +42,6 @@ Route::resource('orders', OrderController::class)->middleware('verified');;
 Route::get('latest',[PostController::class, 'index'])->name('posts.newest');
 Route::get('mostread', [PostController::class, 'mostReadPosts'])->name('posts.mostread');
 
-Route::get('euroleague',[PostController::class, 'euroleague'])->name('euroleague');
-Route::get('nba',[PostController::class, 'nba'])->name('nba');
-Route::get('lkl',[PostController::class, 'lkl'])->name('lkl');
-Route::get('basketball',[PostController::class, 'basketball'])->name('basketball');
-
-Route::get('football',[PostController::class, 'football'])->name('football');
-Route::get('premierleague',[PostController::class, 'premier'])->name('premier');
-Route::get('lithuania',[PostController::class, 'lithuania'])->name('lithuania');
-Route::get('championsleague',[PostController::class, 'champions'])->name('champions');
-Route::get('wc2022',[PostController::class, 'wc2022'])->name('wc2022');
 
 Route::get('/profilis/{name}',[UserController::class, 'profileEdit'])
     ->name('profileEdit')->middleware('verified');

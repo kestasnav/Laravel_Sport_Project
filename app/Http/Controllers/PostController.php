@@ -24,65 +24,19 @@ class PostController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function nba(Request $request)
+    public function index(Request $request)
     {
         $find=$request->session()->get('find_post',$request->search);
 
         $posts=Post::where('type','unhide')->findPosts($find)->latest()->paginate(6);
         $postai=Post::where('type','unhide')->latest()->paginate(8);
         $mostRead=Post::where('type','unhide')->orderBy('reads', 'desc')->latest()->paginate(5);
-        $skaitomiausi='';
 
-        return view('posts.index',['posts'=>$posts, 'postai'=>$postai, 'mostRead'=>$mostRead, 'skaitomiausi'=>$skaitomiausi]);
-    }
 
-    public function mostReadPosts(Request $request) {
-        $find=$request->session()->get('find_post',$request->search);
-        $posts=Post::where('type','unhide')->findPosts($find)->orderBy('reads', 'desc')->latest()->paginate(10);
-        $postai=Post::where('type','unhide')->latest()->paginate(10);
-        $mostRead=Post::where('type','unhide')->orderBy('reads', 'desc')->latest()->paginate(5);
-        $skaitomiausi='';
-        return view('posts.index',['posts'=>$posts, 'postai'=>$postai, 'mostRead'=>$mostRead,'skaitomiausi'=>$skaitomiausi]);
-    }
-
-    public function basketball(Request $request)
-    {
-        $find=$request->session()->get('find_post',$request->search);
-        $posts=Post::where('category_id', 1)->where('type','unhide')->findPosts($find)->latest()->paginate();
-        $postai=Post::where('category_id', 1)->where('type','unhide')->latest()->paginate();
-        $mostRead=Post::where('category_id', 1)->where('type','unhide')->orderBy('reads', 'desc')->latest()->paginate(5);
-
-        return view('posts.index',['posts'=>$posts, 'postai'=>$postai, 'mostRead'=>$mostRead]);
-    }
-    public function euroleague(Request $request)
-    {
-        $find=$request->session()->get('find_post',$request->search);
-        $posts=Post::where('subcategory_id', 1)->where('type','unhide')->findPosts($find)->latest()->paginate();
-        $postai=Post::where('subcategory_id', 1)->where('type','unhide')->latest()->paginate();
-        $mostRead=Post::where('subcategory_id', 1)->where('type','unhide')->orderBy('reads', 'desc')->latest()->paginate(5);
-
-        return view('posts.index',['posts'=>$posts, 'postai'=>$postai, 'mostRead'=>$mostRead]);
-    }
-    public function lkl(Request $request)
-    {
-        $find=$request->session()->get('find_post',$request->search);
-        $posts=Post::where('subcategory_id', 2)->where('type','unhide')->findPosts($find)->latest()->paginate();
-        $postai=Post::where('subcategory_id', 2)->where('type','unhide')->latest()->paginate();
-        $mostRead=Post::where('subcategory_id', 2)->where('type','unhide')->orderBy('reads', 'desc')->latest()->paginate(5);
-
-        return view('posts.index',['posts'=>$posts, 'postai'=>$postai, 'mostRead'=>$mostRead]);
-    }
-    public function index(Request $request)
-    {
-        $find=$request->session()->get('find_post',$request->search);
-        $posts=Post::where('subcategory_id', 3)->where('type','unhide')->findPosts($find)->latest()->paginate();
-        $postai=Post::where('subcategory_id', 3)->where('type','unhide')->latest()->paginate();
-        $mostRead=Post::where('subcategory_id', 3)->where('type','unhide')->orderBy('reads', 'desc')->latest()->paginate(5);
         $data= Http::get('https://cdn.nba.com/static/json/staticData/scheduleLeagueV2_9.json');
         date_default_timezone_set('America/New_York');
         $todays_date = date('Y-m-d') . "T00:00:00Z";
 
-       // $data3= Http::get('https://cdn.nba.com/static/json/staticData/scheduleLeagueV2_9.json');
         date_default_timezone_set('America/New_York');
         $yesterday = date('Y-m-d',strtotime("yesterday")) . "T00:00:00Z";
 
@@ -94,54 +48,39 @@ class PostController extends Controller
             'data'=>$data, 'todays_date'=>$todays_date, 'data3'=>$data3, 'yesterday'=>$yesterday,
             'teams'=>$teams
         ]);
+
     }
 
-    public function football(Request $request)
-    {
+    public function mostReadPosts(Request $request) {
         $find=$request->session()->get('find_post',$request->search);
-        $posts=Post::where('category_id', 2)->where('type','unhide')->findPosts($find)->latest()->paginate();
-        $postai=Post::where('category_id', 2)->where('type','unhide')->latest()->paginate();
-        $mostRead=Post::where('category_id', 2)->where('type','unhide')->orderBy('reads', 'desc')->latest()->paginate(5);
+        $posts=Post::where('type','unhide')->findPosts($find)->orderBy('reads', 'desc')->latest()->paginate(10);
+        $postai=Post::where('type','unhide')->latest()->paginate(10);
+        $mostRead=Post::where('type','unhide')->orderBy('reads', 'desc')->latest()->paginate(5);
 
-        return view('posts.index',['posts'=>$posts, 'postai'=>$postai, 'mostRead'=>$mostRead]);
+
+        $data= Http::get('https://cdn.nba.com/static/json/staticData/scheduleLeagueV2_9.json');
+        date_default_timezone_set('America/New_York');
+        $todays_date = date('Y-m-d') . "T00:00:00Z";
+
+        date_default_timezone_set('America/New_York');
+        $yesterday = date('Y-m-d',strtotime("yesterday")) . "T00:00:00Z";
+
+        $data3 = Standing::all();
+
+        $teams = Team::all();
+
+        return view('posts.index',['posts'=>$posts, 'postai'=>$postai, 'mostRead'=>$mostRead,
+            'data'=>$data, 'todays_date'=>$todays_date, 'data3'=>$data3, 'yesterday'=>$yesterday,
+            'teams'=>$teams
+        ]);
+
+
     }
 
-    public function premier(Request $request)
-    {
-        $find=$request->session()->get('find_post',$request->search);
-        $posts=Post::where('subcategory_id', 4)->where('type','unhide')->findPosts($find)->latest()->paginate();
-        $postai=Post::where('subcategory_id', 4)->where('type','unhide')->latest()->paginate();
-        $mostRead=Post::where('subcategory_id', 4)->where('type','unhide')->orderBy('reads', 'desc')->latest()->paginate(5);
 
-        return view('posts.index',['posts'=>$posts, 'postai'=>$postai, 'mostRead'=>$mostRead]);
-    }
-    public function lithuania(Request $request)
-    {
-        $find=$request->session()->get('find_post',$request->search);
-        $posts=Post::where('subcategory_id', 5)->where('type','unhide')->findPosts($find)->latest()->paginate();
-        $postai=Post::where('subcategory_id', 5)->where('type','unhide')->latest()->paginate();
-        $mostRead=Post::where('subcategory_id', 5)->where('type','unhide')->orderBy('reads', 'desc')->latest()->paginate(5);
 
-        return view('posts.index',['posts'=>$posts, 'postai'=>$postai, 'mostRead'=>$mostRead]);
-    }
-    public function champions(Request $request)
-    {
-        $find=$request->session()->get('find_post',$request->search);
-        $posts=Post::where('subcategory_id', 6)->where('type','unhide')->findPosts($find)->latest()->paginate();
-        $postai=Post::where('subcategory_id', 6)->where('type','unhide')->latest()->paginate();
-        $mostRead=Post::where('subcategory_id', 6)->where('type','unhide')->orderBy('reads', 'desc')->latest()->paginate(5);
 
-        return view('posts.index',['posts'=>$posts, 'postai'=>$postai, 'mostRead'=>$mostRead]);
-    }
-    public function wc2022(Request $request)
-    {
-        $find=$request->session()->get('find_post',$request->search);
-        $posts=Post::where('subcategory_id', 7)->where('type','unhide')->findPosts($find)->latest()->paginate();
-        $postai=Post::where('subcategory_id', 7)->where('type','unhide')->latest()->paginate();
-        $mostRead=Post::where('subcategory_id', 7)->where('type','unhide')->orderBy('reads', 'desc')->latest()->paginate(5);
 
-        return view('posts.index',['posts'=>$posts, 'postai'=>$postai, 'mostRead'=>$mostRead]);
-    }
 
     /**
      * Show the form for creating a new resource.
