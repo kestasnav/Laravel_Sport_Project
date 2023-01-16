@@ -34,4 +34,4 @@
 # Orders:
 # ![screencapture-localhost-Laravel-sport-public-orders-2023-01-12-14_02_40](https://user-images.githubusercontent.com/107037107/212061763-ef0a7dd4-94dd-4eaf-bb49-dbf4b71da2b7.png)
 # Posts
-# ![screencapture-localhost-Laravel-sport-public-posts-2023-01-16-12_33_37](https://user-images.githubusercontent.com/107037107/212657841-e9a98b01-439a-463d-a75f-ac6cbdf52c4c.png)
+# ![screencapture-localhost-Laravel-sport-public-posts-2023-01-16-12_37_09](https://user-images.githubusercontent.com/107037107/212658482-73b846fd-21e9-4004-a1d9-8858785659ca.png)
