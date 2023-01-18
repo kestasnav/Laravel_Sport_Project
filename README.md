@@ -28,7 +28,7 @@
 # Users:
 # ![screencapture-localhost-Laravel-sport-public-users-2023-01-12-14_04_42](https://user-images.githubusercontent.com/107037107/212062184-f6f45efd-eeff-46f6-89d7-b2c673e4acf6.png)
 # Posts:
-# ![Screenshot 2023-01-12 135454](https://user-images.githubusercontent.com/107037107/212060597-8c572f8b-1783-4b2c-964a-452a1f650e35.png)
+# ![screencapture-localhost-Laravel-sport-public-posts-2023-01-18-15_40_10](https://user-images.githubusercontent.com/107037107/213186509-bdef1358-02e6-463d-a6bb-cff6ecc22862.png)
 # New Post:
 # ![screencapture-localhost-Laravel-sport-public-posts-create-2023-01-12-14_00_05](https://user-images.githubusercontent.com/107037107/212061307-e91918f4-91f5-4592-a348-e5db2acaa17f.png)
 # Orders:
@@ -37,3 +37,7 @@
 # ![screencapture-localhost-Laravel-sport-public-posts-2023-01-16-12_37_09](https://user-images.githubusercontent.com/107037107/212658482-73b846fd-21e9-4004-a1d9-8858785659ca.png)
 # One post:
 # ![screencapture-localhost-Laravel-sport-public-posts-11-2023-01-18-12_24_24](https://user-images.githubusercontent.com/107037107/213147370-79f68cd3-0d34-47e2-9745-7a2900e528b8.png)
+# E-Shop:
+# ![Screenshot 2023-01-18 123254](https://user-images.githubusercontent.com/107037107/213149222-f65e5f93-0e7f-4e3b-8fd5-61d7cb640556.png)
+# E-Shop cart:
+# ![screencapture-localhost-Laravel-sport-public-cart-2023-01-18-14_47_26](https://user-images.githubusercontent.com/107037107/213175444-1e2c5e05-2b82-4e7b-aa8f-8531c38e4bb3.png)
