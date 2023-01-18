@@ -13,7 +13,7 @@
                             <thead>
                             <tr>
 
-                                <th class="th_font">{{ __('Rytų konferencija') }}</th>
+                                <th colspan="2" class="th_font">{{ __('Rytų konferencija') }}</th>
 
                                 <th class="th_font">{{ __('Perg.') }}</th>
                                 <th class="th_font">{{ __('Pral.') }}</th>
@@ -24,16 +24,18 @@
                             <tbody>
                             <tr>
 
+                                <?php $countEast=1; ?>
+                                <?php $countWest=1; ?>
                                 @foreach($east as $east)
 
-
+                                    <td class="td_font">{{$countEast++}}</td>
                                     <td class="td_font">
                                         <img class="img-fluid" src="{{ route('images',$east->img)}}" style=" width: 30px; height: 20px;">
                                         {{ $east->city}} {{ $east->name}}  </td>
 
-                                    <td class="td_font">   </td>
-                                    <td class="td_font">   </td>
-                                    <td class="td_font">   </td>
+                                    <td class="td_font"> {{$east->wins}}  </td>
+                                    <td class="td_font"> {{$east->losses}}  </td>
+                                    <td class="td_font"> {{round($east->wins / ($east->losses + $east->wins), 2) }} %</td>
                             </tr>
 
 
@@ -57,7 +59,7 @@
                             <thead>
                             <tr>
 
-                                <th class="th_font">{{ __('Vakarų konferencija') }}</th>
+                                <th colspan="2" class="th_font">{{ __('Vakarų konferencija') }}</th>
 
                                 <th class="th_font">{{ __('Perg.') }}</th>
                                 <th class="th_font">{{ __('Pral.') }}</th>
@@ -70,14 +72,14 @@
 
                                 @foreach($west as $west)
 
-
+                                    <td class="td_font">{{$countWest++}}</td>
                                     <td class="td_font">
                                         <img class="img-fluid" src="{{ route('images',$west->img)}}" style=" width: 30px; height: 20px;">
                                         {{ $west->city}} {{ $west->name}}  </td>
 
-                                    <td class="td_font">   </td>
-                                    <td class="td_font">   </td>
-                                    <td class="td_font">   </td>
+                                    <td class="td_font">{{$west->wins}}  </td>
+                                    <td class="td_font"> {{$west->losses}}  </td>
+                                    <td class="td_font"> {{round($west->wins / ($west->losses + $west->wins), 2) }} %  </td>
                             </tr>
 
 

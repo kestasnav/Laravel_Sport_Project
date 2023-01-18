@@ -20,10 +20,4 @@ $(document).ready( function () {
     $('#myTable').DataTable();
 } );
 
-function cycle() {
-    var $el = $('#morebutton-pics');
 
-    $el.fadeOut(1000, function() {
-        $el.fadeIn(1000, cycle);  // loop in the second callback
-    });
-}
