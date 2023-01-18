@@ -1,22 +1,22 @@
 @extends('layouts.app')
 @section('content')
 
-        <div class="d-flex flex-wrap mt-2 mb-4 border-bottom d-flex justify-content-center">
+        <div class="d-flex flex-wrap justify-content-center mt-2 mb-4 border-bottom">
 
-            <div class="row>"
+
             @foreach ($data3 as $game)
 
                 @if ($yesterday === $game->gameDate)
 
 
-                        <div>
+                        <div class="brdr">
                             @foreach($teams as $team)
                                 @if($game->homeTeam == $team->name)
 
                                 <div class="p-1">
                                     <img class="img-fluid" src="{{ route('images',$team->img)}}" style=" width: 20px; height: 20px;">
 
-                                    {{  $team->code }} {{  $game->homeScore }}
+                                 <span class="mx-1"> {{  $team->code }}</span> <span class="float-end"> {{  $game->homeScore }} </span>
                                 </div>
                                 @endif
                             @endforeach
@@ -26,7 +26,7 @@
                                 @if($game->awayTeam == $team->name)
                         <div class="p-1">
                                     <img class="img-fluid" src="{{ route('images',$team->img)}}" style=" width: 20px; height: 20px;">
-                                    {{$team->code}} {{  $game->awayScore }}
+                            <span class="mx-1"> {{$team->code}} </span> <span class="float-end">{{  $game->awayScore }} </span>
                         </div>
                                 @endif
                             @endforeach

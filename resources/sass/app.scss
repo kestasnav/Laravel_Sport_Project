@@ -58,8 +58,7 @@
 }
 
 .commentbutton {
-    background: rgb(2,0,36);
-    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,104,121,1) 43%, rgba(0,212,255,1) 100%);
+    border: 1px solid black;
 }
 
 #morebutton-pics {
@@ -932,4 +931,26 @@ a:focus {
 
 .upcomingTeams {
     font-size: 0.75em;
+}
+
+.brdr {
+    width: 130px;
+    border-right: 1px solid #f4f4f4;
+    border-left: 1px solid #f4f4f4;
+}
+
+.commentface {
+    width: 30px;
+    height: 30px;
+    border-radius: 50px;
+}
+
+.commenttime {
+    font-size: 0.7em;
+    display: flex;
+    align-items: center;
+}
+
+.commentcount {
+    font-size: 0.8em;
 }

@@ -11,7 +11,7 @@
 
             <div class="col-md-12">
 
-                <div class="card mt-1 mb-1 position-relative">
+                <div class="card border-0 mt-1 mb-1 position-relative">
 
                     <div class="mx-3 mt-1 mb-1"><b><h1>{{ $post->title}}</h1></b></div>
                     <div class="mx-5 mt-1 mb-1">{{ $post->created_at}} </div>
@@ -34,7 +34,7 @@
                         <input type="hidden" name="user_id" value="{{Auth::user()->id}}">
                         <input type="hidden" name="post_id" value="{{$post->id}}">
                         <textarea rows="6" class="form-control" type="text" name="comment" placeholder="{{ __('Komentaras (ne daugiau 160 simbolių)') }}"></textarea>
-                        <button class="mx-1 mt-2 btn btn-link px-1 py-1 border-0 text-decoration-none text-white commentbutton"><i class="fa-regular fa-comment"></i> {{ __('Komentuoti') }}</button>
+                        <button class="mx-1 mt-2 btn btn-light px-1 py-1 text-decoration-none text-black commentbutton"><i class="fa-regular fa-comment"></i> {{ __('Komentuoti') }}</button>
                     </div>
                 </form>
                     @else
@@ -48,16 +48,27 @@
                         @endif
 
                         @foreach($comments as $comment)
-                         <div class="d-flex">
-                          <h6 class="mx-2"><b> {{$comment->user->name}} {{$comment->user->surname}} </b></h6>
-                            <h6>{{$comment->created_at}}</h6>
+                         <div class="d-flex commenttime">
+                          <span><b>
+                                    <span>
+                                      @if($comment->user->photo != null)
+                                          <img class="img-fluid commentface" src="{{ route('images',$comment->user->photo)}}" alt="">
+                                      @else
+                                          <img class="img-fluid commentface" src="{{ route('images','face.jpg')}}" alt="">
+                                      @endif
+
+                                  {{$comment->user->name}} {{$comment->user->surname}} </b></span>
+
+                            <span class="mx-1">{{$comment->created_at}}</span>
+                             </span>
                          </div>
-                            <div class="mb-3">
+                            <div class="mb-1 ">
 
-                           <p class="mb-0"> {{$comment->comment}}</p>
+                           <p class="mb-0 mt-1"> {{$comment->comment}}</p>
 
-                                <div class="d-flex">
+                                <div class="d-flex border-bottom">
 
+                                    <p class="mx-1 mb-0 text-primary"><b class="commentcount">@if($comment->likes->count()>0)+ {{$comment->likes->count()}}@endif</b></p>
 
                                     @if(Auth::user() != null && !$comment->likedBy(auth()->user()))
                                     <form action="{{ route('like', $comment->id) }}" method="post">
@@ -65,7 +76,7 @@
                                         @method('PUT')
 
                                         <input type="hidden" name="post_id" value="{{$comment->id}}">
-                                        <button class="mx-1 mt-0 btn btn-link px-0 py-0 "><i class="fa-regular fa-thumbs-up mt-1"></i>
+                                        <button class=" mt-0 btn btn-link px-0 py-0 "><i class="fa-regular fa-thumbs-up mx-1 "></i>
                                         </button>
                                     </form>
                                     @elseif(Auth::user() != null)
@@ -74,7 +85,7 @@
                                         @method('DELETE')
 
                                         <input type="hidden" name="post_id" value="{{$comment->id}}">
-                                        <button class="mx-1 mt-0 btn btn-link px-0 py-0"><i class="fa-regular fa-thumbs-down mx-2 mt-1"></i></i>
+                                        <button class=" mt-0 btn btn-link px-0 py-0"><i class="fa-regular fa-thumbs-down mx-1 "></i>
                                         </button>
                                     </form>
                                     @endif
@@ -84,11 +95,10 @@
                                 <form action="{{ route('comments.destroy', $comment->id) }}" method="post">
                                     @csrf
                                     @method('DELETE')
-                                    <button class="mx-1 mt-0 btn btn-link px-0 py-0 text-danger"><i class="fa-solid fa-trash"></i>
+                                    <button class="mt-0 btn btn-link px-0 py-0 text-danger"><i class="fa-solid fa-trash"></i>
                                     </button>
                                 </form>
                                     @endif
-                                        <p class="mx-1 text-primary"><b>@if($comment->likes->count()>0)+ {{$comment->likes->count()}}@endif</b></p>
                                 </div>
                     </div>
                         @endforeach
