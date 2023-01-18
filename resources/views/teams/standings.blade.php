@@ -13,7 +13,7 @@
                             <thead>
                             <tr>
 
-                                <th colspan="2" class="th_font">{{ __('Rytų konferencija') }}</th>
+                                <th colspan="2" class="th_font">{{ __('Rytų Konferencija') }}</th>
 
                                 <th class="th_font">{{ __('Perg.') }}</th>
                                 <th class="th_font">{{ __('Pral.') }}</th>
@@ -59,7 +59,7 @@
                             <thead>
                             <tr>
 
-                                <th colspan="2" class="th_font">{{ __('Vakarų konferencija') }}</th>
+                                <th colspan="2" class="th_font">{{ __('Vakarų Konferencija') }}</th>
 
                                 <th class="th_font">{{ __('Perg.') }}</th>
                                 <th class="th_font">{{ __('Pral.') }}</th>

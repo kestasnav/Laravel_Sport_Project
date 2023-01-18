@@ -1,10 +1,10 @@
 <?php
 
 use App\Http\Controllers\AdminController;
-use App\Http\Controllers\BasketballController;
+
 use App\Http\Controllers\CartController;
 use App\Http\Controllers\CommentController;
-use App\Http\Controllers\FootballController;
+
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\LanguageController;
 use App\Http\Controllers\LikeController;
@@ -32,8 +32,6 @@ use Illuminate\Support\Facades\Route;
 Route::get('/',[HomeController::class, 'index'])->name('home');
 
 Route::resource('posts', PostController::class);
-Route::resource('basketball', BasketballController::class);
-Route::resource('football', FootballController::class);
 Route::resource('comments', CommentController::class)->middleware('verified');
 Route::resource('products', ProductController::class);
 Route::resource('orders', OrderController::class)->middleware('verified');;
@@ -90,7 +88,6 @@ Route::post('/orderscompleted/{id}', [OrderController::class, 'complete'])->name
 
 Route::post('/ordersdelivery/{id}', [OrderController::class, 'delivery'])->name('orders.delivery');
 
-Route::get('scraper', [BasketballController::class, 'scraper'])->name('scraper');
 
 Route::get('minus/{id}', [CartController::class, 'minus'])->name('minus');
 
