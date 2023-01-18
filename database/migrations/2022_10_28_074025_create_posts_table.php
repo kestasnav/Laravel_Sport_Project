@@ -17,10 +17,10 @@ return new class extends Migration
             $table->id();
             $table->timestamps();
             $table->string('title',255)->nullable()->default('null');
-            $table->string('post',1000)->nullable()->default('null');
+            $table->longText('post')->nullable()->default('null');
             $table->string('delete',32)->nullable()->default('null');
             $table->string('img',100)->nullable()->default('logo.png');
-            $table->unsignedBigInteger('subcategory_id');
+            $table->string('photoauthor');
             $table->unsignedBigInteger('user_id');
 
             $table->foreign('user_id')->references('id')->on('users')->onUpdate('cascade')->onDelete('cascade');;

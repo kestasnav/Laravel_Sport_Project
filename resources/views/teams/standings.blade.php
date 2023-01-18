@@ -35,7 +35,7 @@
 
                                     <td class="td_font"> {{$east->wins}}  </td>
                                     <td class="td_font"> {{$east->losses}}  </td>
-                                    <td class="td_font"> {{round($east->wins / ($east->losses + $east->wins), 2) }} %</td>
+                                    <td class="td_font"> {{substr($east->percent, 0, 4) }} %</td>
                             </tr>
 
 
@@ -79,7 +79,7 @@
 
                                     <td class="td_font">{{$west->wins}}  </td>
                                     <td class="td_font"> {{$west->losses}}  </td>
-                                    <td class="td_font"> {{round($west->wins / ($west->losses + $west->wins), 2) }} %  </td>
+                                    <td class="td_font"> {{substr($west->percent, 0, 4) }} %  </td>
                             </tr>
 
 

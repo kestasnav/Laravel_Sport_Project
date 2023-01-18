@@ -19,6 +19,8 @@ return new class extends Migration
             $table->string('surname');
             $table->string('type')->nullable()->default('vartotojas');
             $table->string('email')->unique();
+            $table->string('phone')->nullable();
+            $table->string('photo')->default('face.jpg');
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
             $table->rememberToken();

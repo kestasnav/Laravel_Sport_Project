@@ -41,39 +41,6 @@
                                 @enderror
                             </div>
 
-                            <div class="mb-3">
-                                <label for="" class="form-label text-white">{{ __('Kategorija') }}</label>
-                                <select class="form-control @error('category_id') is-invalid @enderror"
-                                        name="category_id">
-                                    <option selected>{{ __('Pasirinkti') }}</option>
-                                    @foreach($categories as $category)
-                                        <option value="{{$category->id}}"
-                                                @selected($post->category_id==$category->id) )> {{$category->name}} </option>
-                                    @endforeach
-                                </select>
-                                @error('category_id')
-                                @foreach( $errors->get('category_id') as $error)
-                                    <div class="alert alert-danger"> {{ $error }} </div>
-                                @endforeach
-                                @enderror
-                            </div>
-
-                            <div class="mb-3">
-                                <label for="" class="form-label text-white">{{ __('Subkategorija') }}</label>
-                                <select class="form-control @error('subcategory_id') is-invalid @enderror"
-                                        name="subcategory_id">
-                                    <option selected>{{ __('Pasirinkti') }}</option>
-                                    @foreach($subcategories as $subcategory)
-                                        <option value="{{$subcategory->id}}"
-                                                @selected($post->subcategory_id==$subcategory->id) )> {{$subcategory->name}} </option>
-                                    @endforeach
-                                </select>
-                                @error('subcategory_id')
-                                @foreach( $errors->get('subcategory_id') as $error)
-                                    <div class="alert alert-danger"> {{ $error }} </div>
-                                @endforeach
-                                @enderror
-                            </div>
 
                             <button class="btn btn-primary">{{ __('Atnaujinti') }}</button>
 

@@ -89,9 +89,8 @@ class PostController extends Controller
      */
     public function create()
     {
-        $categories=Category::all();
-        $subcategories=Subcategory::all();
-        return view('posts.create',['categories'=>$categories, 'subcategories'=>$subcategories]);
+
+        return view('posts.create');
     }
 
     /**
@@ -106,16 +105,13 @@ class PostController extends Controller
 
         $foto=$request->file('img');
 
-        $fotoname=$request->category_id.'_'.$request->subcategory_id.'_'.rand().'.'.$foto->extension();
+        $fotoname=rand().'.'.$foto->extension();
 
         $post->title=$request->title;
         $post->post=$request->post;
         $post->img=$fotoname;
         $post->photoauthor = $request->photoauthor;
         $post->user_id=$request->user_id;
-        $post->category_id=$request->category_id;
-        $post->subcategory_id=$request->subcategory_id;
-
 
         $foto->storeAs('images',$fotoname);
         $post->save();
@@ -159,9 +155,8 @@ class PostController extends Controller
      */
     public function edit(Post $post)
     {
-        $categories=Category::all();
-        $subcategories=Subcategory::all();
-        return view("posts.update",['post'=>$post,'categories'=>$categories, 'subcategories'=>$subcategories]);
+
+        return view("posts.update",['post'=>$post]);
     }
 
     /**
@@ -176,7 +171,7 @@ class PostController extends Controller
         if($request->file('img')!=null) {
             $foto = $request->file('img');
 
-            $fotoname = $request->category_id . '_' . $request->subcategory_id . '_' . rand() . '.' . $foto->extension();
+            $fotoname = rand() . '.' . $foto->extension();
             $foto->storeAs('images',$fotoname);
             $post->img=$fotoname;
         }
@@ -185,10 +180,6 @@ class PostController extends Controller
         $post->post=$request->post;
         $post->photoauthor = $request->photoauthor;
         $post->user_id=$request->user_id;
-        $post->category_id=$request->category_id;
-        $post->subcategory_id=$request->subcategory_id;
-
-
 
         $post->save();
 

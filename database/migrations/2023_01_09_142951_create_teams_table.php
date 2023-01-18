@@ -20,6 +20,11 @@ return new class extends Migration
             $table->string('city')->nullable();
             $table->string('code')->nullable();
             $table->string('img')->nullable();
+            $table->string('conference');
+            $table->string('division');
+            $table->bigInteger('wins')->default(0);
+            $table->bigInteger('losses')->default(0);
+            $table->bigInteger('percent')->default(0);
             $table->timestamps();
 
 
