@@ -6,7 +6,7 @@
             <div class="card">
                 <div class="card-header">{{ __('Profilio redagavimas') }}</div>
                 <div class="card-body">
-                    <form action="{{ route('profileUpdate', Auth::user()->id) }}" method="post">
+                    <form action="{{ route('profileUpdate', Auth::user()->id) }}" method="post" enctype="multipart/form-data">
                         @csrf
                         @method('PUT')
                         <div class="mb-3">
@@ -35,6 +35,18 @@
                                 <div class="alert alert-danger"> {{ $error }} </div>
                             @endforeach
                             @enderror
+                        </div>
+                        @if(Auth::user()->photo != null)
+                            <div class="mb-3">
+                                <label class="form-label">{{ __('Dabartinė nuotrauka') }}</label>
+                                <div>
+                            <img class="img-fluid commentface" src="{{ route('images',Auth::user()->photo)}}" alt="">
+                                </div>
+                            </div>
+                            @endif
+                        <div class="mb-3">
+                            <label class="form-label">{{ __('Nuotrauka') }}</label>
+                            <input class="form-control" type="file" name="img">
                         </div>
 
                         <div class="mb-3">

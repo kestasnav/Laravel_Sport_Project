@@ -22,6 +22,14 @@ class UserController extends Controller
 
         $student->email = $request->email;
 
+        if($request->file('img')!=null) {
+            $foto = $request->file('img');
+
+            $fotoname = rand() . '.' . $foto->extension();
+            $foto->storeAs('images',$fotoname);
+            $student->photo = $fotoname;
+        }
+
 
         if($request->password == null) {
 
