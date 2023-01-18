@@ -7,6 +7,7 @@ use App\Models\Team;
 use GuzzleHttp\Client;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Http;
+use Illuminate\Support\Str;
 
 class StandingController extends Controller
 {
@@ -29,19 +30,19 @@ class StandingController extends Controller
 
                 $standings = new Standing();
 
-              //  $standings->gameDate = date("Y-m-d H:i:s", strtotime($game['gameDateTimeEst']." +12 hours"));
                 $standings->gameDate = $game['gameDateEst'];
                 $standings->homeTeam =   $game['homeTeam']['teamName'];
                 $standings->awayTeam =   $game['awayTeam']['teamName'];
                 $standings->homeScore =  $game['homeTeam']['score'];
                 $standings->awayScore =    $game['awayTeam']['score'];
                 foreach ($game['pointsLeaders'] as $player) {
-                    $standings->player =  $player['firstName'] . $player['lastName'];
+                    $standings->player = substr( $player['firstName'],0,1).'. '. $player['lastName'];
                     $standings->playerScore = $player['points'];
                 }
                 $standings->save();
 
             }
         }
+           return redirect()->route('posts.index');
     }
 }

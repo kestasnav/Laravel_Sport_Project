@@ -30,7 +30,7 @@
                                             <input class="p-2" type="number" name="quantity" value="1" min="1" max="{{$product->quantity}}" style="width: 50px;">
                                         </div>
                                         <div class="col-md-4">
-                                            <input class="option2 rounded-5 p-2" value="Add to Cart" type="submit">
+                                            <input class="option2 rounded-5 p-2" value="{{__('Į krepšelį')}}" type="submit">
                                         </div>
 
                                     </div>

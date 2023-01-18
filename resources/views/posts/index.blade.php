@@ -72,7 +72,7 @@
                                      </h5>
                             </div>
 
-                            <h6 class="mx-3 mb-3">{{ $post->created_at }}</h6>
+                            <h6 class="mx-3 mb-3">{{ $post->created_at->diffForHumans() }}</h6>
 
 
                         </div>
@@ -99,7 +99,7 @@
                             @if ($todays_date === $game['gameDateEst'])
 
                                 <div><b>
-                                        <span class="upcomingDate">  {{ date("Y-m-d H:i:s", strtotime($game['gameDateTimeEst']." +12 hours")) }} </span>
+                                        <span class="upcomingDate">  {{ date("Y-m-d H:i:s", strtotime($game['gameDateTimeEst']." +7 hours")) }} </span>
                                     </b></div>
                                 <div>
                                     <span class="upcomingTeams">
@@ -111,18 +111,32 @@
                     @endforeach
                 </div>
 
-            <h5 class="mt-3"><b>{{__('Populiariausios naujienos')}}</b></h5>
-            @foreach($mostRead as $post)
-                </p> <b>{{$post->created_at}}</b> <a class="text-decoration-none text-black"
-                                                     href="{{ route('posts.show', $post->id) }}">{{ $post->title}}
-            </a> </p>
-            @endforeach
             <h5 class="mt-3"><b>{{__('Naujausios naujienos')}}</b></h5>
             @foreach($postai as $post)
-                </p> <b>{{$post->created_at}}</b> <a class="text-decoration-none text-black"
-                                                     href="{{ route('posts.show', $post->id) }}">{{ $post->title}}
+                <div class="border-bottom">
+                 <b class="commenttime">{{$post->created_at->diffForHumans()}}</b>
+                <p class="mb-1">
+            <a class="text-decoration-none text-black" href="{{ route('posts.show', $post->id) }}">{{ $post->title}}
             </a> </p>
+                </div>
                 @endforeach
+
+            <h5 class="mt-3"><b>{{__('Populiariausios naujienos')}}</b></h5>
+            @foreach($mostRead as $post)
+                <div class="d-block border-bottom mb-0 mt-0">
+                    <div class="d-flex">
+
+                        <a class="text-decoration-none text-black th_font"
+                           href="{{ route('posts.show', $post->id) }}">
+                            {{ $post->title}}
+                        </a>
+
+                    </div>
+                    <div class="d-flex justify-content-end">
+                        <span class="commenttime">{{$post->created_at}}</span>
+                    </div>
+                </div>
+            @endforeach
 
         </div>
 

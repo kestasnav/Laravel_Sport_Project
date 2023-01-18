@@ -41,6 +41,7 @@ Route::resource('orders', OrderController::class)->middleware('verified');;
 
 Route::get('latest',[PostController::class, 'index'])->name('posts.newest');
 Route::get('mostread', [PostController::class, 'mostReadPosts'])->name('posts.mostread');
+Route::get('news',[PostController::class, 'news'])->name('posts.news');
 
 
 Route::get('/profilis/{name}',[UserController::class, 'profileEdit'])

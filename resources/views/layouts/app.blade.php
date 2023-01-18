@@ -57,7 +57,7 @@
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link text-black" href="{{ route('posts.index') }}">{{__('Naujienos')}}</a>
+                            <a class="nav-link text-black" href="{{ route('posts.news') }}">{{__('Naujienos')}}</a>
                         </li>
 
                         <li class="nav-item">

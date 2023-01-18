@@ -29,15 +29,13 @@ class PostController extends Controller
         $find=$request->session()->get('find_post',$request->search);
 
         $posts=Post::where('type','unhide')->findPosts($find)->latest()->paginate(6);
-        $postai=Post::where('type','unhide')->latest()->paginate(8);
+        $postai=Post::where('type','unhide')->latest()->paginate(5);
         $mostRead=Post::where('type','unhide')->orderBy('reads', 'desc')->latest()->paginate(5);
 
-
         $data= Http::get('https://cdn.nba.com/static/json/staticData/scheduleLeagueV2_9.json');
-        date_default_timezone_set('America/New_York');
+        //date_default_timezone_set('America/New_York');
         $todays_date = date('Y-m-d') . "T00:00:00Z";
 
-        date_default_timezone_set('America/New_York');
         $yesterday = date('Y-m-d',strtotime("yesterday")) . "T00:00:00Z";
 
         $data3 = Standing::all();
@@ -59,10 +57,9 @@ class PostController extends Controller
 
 
         $data= Http::get('https://cdn.nba.com/static/json/staticData/scheduleLeagueV2_9.json');
-        date_default_timezone_set('America/New_York');
+
         $todays_date = date('Y-m-d') . "T00:00:00Z";
 
-        date_default_timezone_set('America/New_York');
         $yesterday = date('Y-m-d',strtotime("yesterday")) . "T00:00:00Z";
 
         $data3 = Standing::all();
@@ -77,10 +74,13 @@ class PostController extends Controller
 
     }
 
+    public function news()
+    {
+        $postai=Post::where('type','unhide')->latest()->paginate(10);
+        $mostRead=Post::where('type','unhide')->orderBy('reads', 'desc')->latest()->paginate(20);
 
-
-
-
+        return view('posts.news',['postai'=>$postai, 'mostRead'=>$mostRead]);
+    }
 
     /**
      * Show the form for creating a new resource.
