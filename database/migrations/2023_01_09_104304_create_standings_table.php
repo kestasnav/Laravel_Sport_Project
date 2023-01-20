@@ -16,6 +16,7 @@ return new class extends Migration
         Schema::create('standings', function (Blueprint $table) {
             $table->id();
 
+            $table->json('gameID')->nullable()->collation('utf8mb4_general_ci');
             $table->json('gameDate')->nullable()->collation('utf8mb4_general_ci');
             $table->json('homeTeam')->nullable()->collation('utf8mb4_general_ci');
             $table->json('awayTeam')->nullable()->collation('utf8mb4_general_ci');

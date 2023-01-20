@@ -95,6 +95,8 @@ Route::get('plus/{id}', [CartController::class, 'plus'])->name('plus');
 
 Route::get('upload', [StandingController::class, 'standings']);
 
+Route::get('update', [StandingController::class, 'standingsUpdate']);
+
 Route::get('standings', [StandingController::class, 'index'])->name('nba.standings');
 
 

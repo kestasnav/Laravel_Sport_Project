@@ -10,8 +10,10 @@ class Standing extends Model
 {
     use HasFactory;
 
-    protected $fillable = [
+    public $primaryKey = 'gameID';
 
+    protected $fillable = [
+        'gameID',
         'gameDate',
         'homeTeam',
         'awayTeam',
