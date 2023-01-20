@@ -9,7 +9,7 @@
                 @if ($yesterday === $game->gameDate)
 
 
-                        <div class="brdr">
+                        <div class="scores">
                             @foreach($teams as $team)
                                 @if($game->homeTeam == $team->name)
 
@@ -30,7 +30,17 @@
                         </div>
                                 @endif
                             @endforeach
-                                <span class="p-1 player">  {{ $game->player }} <b>{{ $game->playerScore }}</b> pts. </span>
+                                <span class="p-1 player">
+                                    @if($game->player == 'S. Gilgeous-Alexander' )
+                                        S. Alexander
+                                    @elseif($game->player == 'G. Antetokounmpo')
+                                        Giannis A.
+                                    @elseif($game->player == 'T. Hardaway Jr.')
+                                        T. Hardaway
+                                    @else
+                                        {{$game->player}}
+                                    @endif
+                                    <b>{{ $game->playerScore }}</b> pts. </span>
                         </div>
 
                 @endif
@@ -50,13 +60,44 @@
                                              href="{{ route('posts.mostread') }}">{{__('Skaitomiausios')}}</a></li>
             </ul>
 
+            @if($topPost != null)
+
+            <div class="row">
+                @foreach($topPost as $post)
+                    <div class="col-md-12">
+                <div class="card border-0 bg bg-white mt-2 mb-2 cardbg">
+
+                    <div class="mx-auto mt-3">
+                        <a class="text-decoration-none text-black"
+                           href="{{ route('posts.show', $post->id) }}">
+                            <img class="img-fluid" src="{{ route('images',$post->img)}}" style=" width: 700px; height: 250px;">
+                        </a>
+                    </div>
+
+                    <div class="mx-auto mt-3 mb-3">
+                        <h5 class="mx-5">
+                            <a class="text-decoration-none text-black"
+                               href="{{ route('posts.show', $post->id) }}">{{ $post->title}}
+                            </a>
+                        </h5>
+                    </div>
+
+                    <h6 class="mx-3 mb-3">{{ $post->created_at->diffForHumans() }}</h6>
+
+                </div>
+                </div>
+                @endforeach
+            </div>
+
+
+        @endif
             <div class="row">
 
                 @foreach($posts as $post)
 
                     <div class="col-md-6">
 
-                        <div class="card border-0 bg bg-white mt-2 mb-2 position-relative cardbg">
+                        <div class="card border-0 bg bg-white mt-2 mb-2 cardbg">
 
                             <div class="mx-auto mt-3">
                                 <a class="text-decoration-none text-black"

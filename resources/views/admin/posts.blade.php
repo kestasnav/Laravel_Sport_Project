@@ -36,13 +36,15 @@
                                 @foreach($posts as $post)
 
                                     <td class="text-center"> {{ $post->created_at }}  </td>
-                                    <td class="text-center"> {{ $post->title }}  </td>
+                                    <td class="d-flex flex-wrap"> {{ substr($post->title,0,70) }}...  </td>
                                     <td class="text-center"> {{ $post->user->name }} {{ $post->user->surname }}  </td>
                                     <td class="text-center">
                                         @if($post->type == 'unhide')
                                             {{ __('Nepaslėptas') }}
-                                        @else
+                                        @elseif($post->type == 'unhide')
                                             <b>{{ __('Paslėptas') }}</b>
+                                        @elseif($post->type == 'top')
+                                            TOP
                                         @endif
                                     </td>
                                     <td class="text-center"> {{ $post->comments->count() }}  </td>
@@ -88,6 +90,25 @@
                                                         <input type="hidden" value="unhide" name="type">
                                                         <button class="dropdown-item border-bottom"><i
                                                                 class="fa fa-plus" aria-hidden="true"></i> Unhide post
+                                                        </button>
+                                                    </form>
+                                                    @endif
+                                                @if($post->type == 'unhide' || $post->type == 'hide')
+                                                    <form action="{{ route('hide.post', $post->id) }}" method="post">
+                                                        @csrf
+                                                        @method('PUT')
+                                                        <input type="hidden" value="top" name="type">
+                                                        <button class="dropdown-item border-bottom">
+                                                            <i class="fa-sharp fa-solid fa-circle-up"></i> Top post
+                                                        </button>
+                                                    </form>
+                                                @elseif($post->type == 'top')
+                                                    <form action="{{ route('hide.post', $post->id) }}" method="post">
+                                                        @csrf
+                                                        @method('PUT')
+                                                        <input type="hidden" value="unhide" name="type">
+                                                        <button class="dropdown-item border-bottom">
+                                                            <i class="fa-solid fa-circle-down"></i> Remove Top
                                                         </button>
                                                     </form>
                                                 @endif
