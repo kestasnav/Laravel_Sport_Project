@@ -1,6 +1,6 @@
 # Įgyvendintos funkcijos:
 
-<li> Straipsnių redagavimas, ištrinimas, pridėjimas, paslėpimas nuo vartotojų.
+<li> Straipsnių redagavimas, ištrinimas, pridėjimas, paslėpimas nuo vartotojų, TOP naujienos nustatymas.
 <li> Komentarų trynimas.
 <li> Produktų ir jų kategorijų kūrimas, redagavimas, ištrinimas.
 <li> Užsakymų trinimas, statusų keitimas.
@@ -16,10 +16,10 @@
 <li> Rūšiuoti naujienas pagal naujumą ir skaitomumą.
 <li> Komentarai išrikiuoti pagal populiarumą (like`ų skaičių).
 <li> Atlikti paiešką pagal raktinį žodį straipsnio pavadinime, bei pačiame straipsnyje.
-<li> Straipsniai suskirstyti į kategorijas ( krepšinis, futbolas ), bei subkategorijas ( eurolyga, nba, pasaulio čempionatas, anglijos premier lyga ir kt.)
 <li> Puslapio meniu punktai turi dvikalbiškumą (LT, EN).
-<li> Iš API gaunami NBA tvarkaraščio duomenys.
-
+<li> Iš API gaunami duomenys, kurie išsaugomi į duombazę.
+<li> Kasdien atnaujinami rezultatai, bei turnyrinė lentelė.
+<li> Galima filtruoti tvarkaraštį pagal komandą.
 
  <hr>
 
