@@ -99,6 +99,12 @@ Route::get('update', [StandingController::class, 'standingsUpdate']);
 
 Route::get('standings', [StandingController::class, 'index'])->name('nba.standings');
 
+Route::get('results', [StandingController::class, 'results'])->name('nba.results');
+
+Route::get('schedule', [StandingController::class, 'schedule'])->name('nba.schedule');
+
+Route::post('teamschedule/{team}', [StandingController::class, 'teamSchedule'])->name('team.schedule');
+
 
 Auth::routes([
     'verify'=>true

@@ -4,8 +4,12 @@ namespace App\Http\Controllers;
 
 use App\Models\Standing;
 use App\Models\Team;
+use Carbon\Carbon;
+use DateTime;
 use GuzzleHttp\Client;
 use Illuminate\Http\Request;
+
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Http;
 use Illuminate\Support\Str;
 
@@ -132,4 +136,30 @@ class StandingController extends Controller
         }
         return redirect()->route('posts.index');
     }
+
+    public function results() {
+        $results = Standing::orderBy('gameDate','DESC')->get();
+        $teams = Team::all();
+        $yesterday = date('Y-m-d',strtotime("yesterday")) . "T00:00:00Z";
+        $tomorrow =   date('Y-m-d',strtotime("+1 day")) . "T00:00:00Z";
+
+        return view('teams.results', compact('results','teams','yesterday','tomorrow',));
+    }
+
+        public function schedule() {
+            $data = Http::get('https://cdn.nba.com/static/json/staticData/scheduleLeagueV2_9.json');
+            $teams = Team::all();
+            $tomorrow =   date('Y-m-d',strtotime("+1 day")) . "T00:00:00Z";
+
+            return view('teams.schedule', compact('data','teams','tomorrow',));
+        }
+
+        public function teamSchedule($team, Request $request) {
+            $data = Http::get('https://cdn.nba.com/static/json/staticData/scheduleLeagueV2_9.json');
+            $filter_team = $request->team;
+
+            return view('teams.teamschedule', compact('data','filter_team'));
+        }
+
+
 }

@@ -65,7 +65,11 @@
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link text-black" href="{{ route('nba.standings') }}">{{__('Rezultatai')}}</a>
+                            <a class="nav-link text-black" href="{{ route('nba.results') }}">{{__('Rezultatai')}}</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link text-black" href="{{ route('nba.schedule') }}">{{__('Tvarkaraštis')}}</a>
                         </li>
 
                     </ul>

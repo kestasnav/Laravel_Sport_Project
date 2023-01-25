@@ -141,7 +141,7 @@
                             @if ($todays_date === $game['gameDateEst'])
 
                                 <div><b>
-                                        <span class="upcomingDate">  {{ date("Y-m-d H:i:s", strtotime($game['gameDateTimeEst']." +7 hours")) }} </span>
+                                        <span class="upcomingDate">  {{ date("H:i:s", strtotime($game['gameDateTimeEst']." +7 hours")) }} </span>
                                     </b></div>
                                 <div>
                                     <span class="upcomingTeams">
