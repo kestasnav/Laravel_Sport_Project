@@ -1,6 +1,6 @@
 # Įgyvendintos funkcijos:
 
-<li> Straipsnių redagavimas, ištrinimas, pridėjimas, paslėpimas nuo vartotojų.
+<li> Straipsnių redagavimas, ištrinimas, pridėjimas, paslėpimas nuo vartotojų, TOP naujienos nustatymas.
 <li> Komentarų trynimas.
 <li> Produktų ir jų kategorijų kūrimas, redagavimas, ištrinimas.
 <li> Užsakymų trinimas, statusų keitimas.
@@ -16,10 +16,10 @@
 <li> Rūšiuoti naujienas pagal naujumą ir skaitomumą.
 <li> Komentarai išrikiuoti pagal populiarumą (like`ų skaičių).
 <li> Atlikti paiešką pagal raktinį žodį straipsnio pavadinime, bei pačiame straipsnyje.
-<li> Straipsniai suskirstyti į kategorijas ( krepšinis, futbolas ), bei subkategorijas ( eurolyga, nba, pasaulio čempionatas, anglijos premier lyga ir kt.)
 <li> Puslapio meniu punktai turi dvikalbiškumą (LT, EN).
-<li> Iš API gaunami NBA tvarkaraščio duomenys.
-
+<li> Iš API gaunami duomenys, kurie išsaugomi į duombazę.
+<li> Kasdien atnaujinami rezultatai, bei turnyrinė lentelė.
+<li> Galima filtruoti tvarkaraštį pagal komandą.
 
  <hr>
 
@@ -39,6 +39,8 @@
 # ![screencapture-localhost-Laravel-sport-public-posts-11-2023-01-18-12_24_24](https://user-images.githubusercontent.com/107037107/213147370-79f68cd3-0d34-47e2-9745-7a2900e528b8.png)
 # Standings:
 # ![screencapture-localhost-Laravel-sport-public-standings-2023-01-18-18_23_44](https://user-images.githubusercontent.com/107037107/213234850-d62e3548-ae68-4948-b784-7193c5ef721a.png)
+# Schedule:
+# ![Screenshot 2023-01-25 142713](https://user-images.githubusercontent.com/107037107/214563338-9c72a740-5211-4f24-8d44-9a2c5eb2de32.png)
 # E-Shop:
 # ![Screenshot 2023-01-18 123254](https://user-images.githubusercontent.com/107037107/213149222-f65e5f93-0e7f-4e3b-8fd5-61d7cb640556.png)
 # E-Shop cart:
