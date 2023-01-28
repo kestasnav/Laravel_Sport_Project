@@ -30,9 +30,10 @@
 
                                     <td class="td_font">{{$countEast++}}</td>
                                     <td class="td_font">
+                                        <a href="{{route('nba.team',$east->name)}}">
                                         <img class="img-fluid" src="{{ route('images',$east->img)}}" style=" width: 30px; height: 20px;">
                                         {{ $east->city}} {{ $east->name}}  </td>
-
+                            </a>
                                     <td class="td_font"> {{$east->wins}}  </td>
                                     <td class="td_font"> {{$east->losses}}  </td>
                                     <td class="td_font"> {{substr($east->percent, 0, 4) }} %</td>
@@ -74,9 +75,11 @@
 
                                     <td class="td_font">{{$countWest++}}</td>
                                     <td class="td_font">
+                                        <a href="{{route('nba.team',$west->name)}}">
+
                                         <img class="img-fluid" src="{{ route('images',$west->img)}}" style=" width: 30px; height: 20px;">
                                         {{ $west->city}} {{ $west->name}}  </td>
-
+                                        </a>
                                     <td class="td_font">{{$west->wins}}  </td>
                                     <td class="td_font"> {{$west->losses}}  </td>
                                     <td class="td_font"> {{substr($west->percent, 0, 4) }} %  </td>

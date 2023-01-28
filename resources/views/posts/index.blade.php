@@ -14,9 +14,11 @@
                                 @if($game->homeTeam == $team->name)
 
                                 <div class="p-1">
+                                    <a class="text-black" href="{{route('nba.team',$team->name)}}">
                                     <img class="img-fluid" src="{{ route('images',$team->img)}}" style=" width: 20px; height: 20px;">
 
                                  <span class="mx-1"> {{  $team->code }}</span> <span class="float-end"> {{  $game->homeScore }} </span>
+                                    </a>
                                 </div>
                                 @endif
                             @endforeach
@@ -25,8 +27,10 @@
 
                                 @if($game->awayTeam == $team->name)
                         <div class="p-1">
+                            <a class="text-black" href="{{route('nba.team',$team->name)}}">
                                     <img class="img-fluid" src="{{ route('images',$team->img)}}" style=" width: 20px; height: 20px;">
                             <span class="mx-1"> {{$team->code}} </span> <span class="float-end">{{  $game->awayScore }} </span>
+                            </a>
                         </div>
                                 @endif
                             @endforeach
@@ -145,7 +149,12 @@
                                     </b></div>
                                 <div>
                                     <span class="upcomingTeams">
-                                    {{  $game['homeTeam']['teamCity'] }} {{  $game['homeTeam']['teamName'] }} -  {{  $game['awayTeam']['teamCity'] }} {{  $game['awayTeam']['teamName'] }}
+                                       <a class="text-black" href="{{route('nba.team',$game['homeTeam']['teamName'])}}">
+                                    {{  $game['homeTeam']['teamCity'] }} {{  $game['homeTeam']['teamName'] }} </a>
+                                        -
+                                        <a class="text-black" href="{{route('nba.team',$game['awayTeam']['teamName'])}}">
+                                        {{  $game['awayTeam']['teamCity'] }} {{  $game['awayTeam']['teamName'] }}
+                                        </a>
                                 </span>
                                 </div>
                             @endif

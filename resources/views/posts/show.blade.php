@@ -15,7 +15,8 @@
 
                     <div class="mx-3 mt-1 mb-1"><b><h1>{{ $post->title}}</h1></b></div>
                     <div class="mx-5 mt-1 mb-1">{{ $post->created_at}} </div>
-                    <div class="mx-5 mb-2"> {{ __('Straipsnio autorius:') }} <b>{{ $post->user->name}} {{ $post->user->surname}}</b></div>
+                    <div class="mx-5 mb-2"> {{ __('Straipsnio autorius:') }} <b>{{ $post->user->name}} {{ $post->user->surname}}</b>
+                    </div>
                     <div class="mx-auto">
                         <img class="img-fluid" src="{{ route('images',$post->img)}}" style=" width: 500px; height: 350px;">
                         <div class="text-center phototext">{{$post->photoauthor}} {{ __('nuotr.') }}</div>

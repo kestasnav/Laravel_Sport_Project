@@ -146,20 +146,30 @@ class StandingController extends Controller
         return view('teams.results', compact('results','teams','yesterday','tomorrow',));
     }
 
-        public function schedule() {
+        public function schedule(Request $request) {
+            $data = Http::get('https://cdn.nba.com/static/json/staticData/scheduleLeagueV2_9.json');
+            $teams = Team::all();
+            $tomorrow =   date('Y-m-d',strtotime("today")) . "T00:00:00Z";
+            $filter_team = $request->team;
+            return view('teams.schedule', compact('data','teams','tomorrow','filter_team'));
+        }
+
+        public function teamSchedule( Request $request) {
             $data = Http::get('https://cdn.nba.com/static/json/staticData/scheduleLeagueV2_9.json');
             $teams = Team::all();
             $tomorrow =   date('Y-m-d',strtotime("+1 day")) . "T00:00:00Z";
-
-            return view('teams.schedule', compact('data','teams','tomorrow',));
-        }
-
-        public function teamSchedule($team, Request $request) {
-            $data = Http::get('https://cdn.nba.com/static/json/staticData/scheduleLeagueV2_9.json');
             $filter_team = $request->team;
 
-            return view('teams.teamschedule', compact('data','filter_team'));
+            return view('teams.schedule', compact('data','filter_team','teams','filter_team','tomorrow'));
         }
+
+    public function oneTeam($team) {
+        $homeresults = Standing::where('homeTeam',$team)->orderBy('gameDate','DESC')->get();
+        $awayresults = Standing::where('awayTeam',$team)->orderBy('gameDate','DESC')->get();
+        $teams = Team::all();
+
+        return view('teams.oneteam', compact('homeresults','awayresults','teams'));
+    }
 
 
 }

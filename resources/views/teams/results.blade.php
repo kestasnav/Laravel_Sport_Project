@@ -25,9 +25,11 @@
                     @if($game->homeTeam == $team->name)
 
                                 <td>
+                                    <a class="text-black" href="{{route('nba.team',$team->name)}}">
                             <img class="img-fluid" src="{{ route('images',$team->img)}}" style=" width: 20px; height: 20px;">
 
                             <span class="mx-1 results"> {{  $team->city }} {{  $team->name }}</span>
+                                    </a>
                                 </td>
                     @endif
 
@@ -38,9 +40,10 @@
                     @if($game->awayTeam == $team->name)
                             <td>
 
-
+                                <a class="text-black" href="{{route('nba.team',$team->name)}}">
                             <img class="img-fluid" src="{{ route('images',$team->img)}}" style=" width: 20px; height: 20px;">
                                 <span class="mx-1 results"> {{  $team->city }} {{  $team->name }} </span>
+                                </a>
                             </td>
                     @endif
                 @endforeach
@@ -80,9 +83,11 @@
                             @if($game->homeTeam == $team->name)
 
                                 <td>
+                                    <a class="text-black" href="{{route('nba.team',$team->name)}}">
                                     <img class="img-fluid" src="{{ route('images',$team->img)}}" style=" width: 20px; height: 20px;">
 
                                     <span class="mx-1 results"> {{  $team->city }} {{  $team->name }}</span>
+                                    </a>
                                 </td>
                             @endif
 
@@ -92,8 +97,10 @@
 
                             @if($game->awayTeam == $team->name)
                                 <td>
+                                    <a class="text-black" href="{{route('nba.team',$team->name)}}">
                                     <img class="img-fluid" src="{{ route('images',$team->img)}}" style=" width: 20px; height: 20px;">
                                     <span class="mx-1 results"> {{  $team->city }} {{  $team->name }} </span>
+                                    </a>
                                 </td>
                             @endif
                         @endforeach
