@@ -5,7 +5,7 @@
 
         <div class="col-md-6 table-responsive-md">
 
-            <table class="table">
+            <table class="table" id="dtHorizontalExample">
                 <thead>
                 <th colspan="4">{{ __('Namų rezultatai') }} </th>
                 </thead>
@@ -24,10 +24,11 @@
                                 @if($game->homeTeam == $team->name)
 
                                     <td>
-
+                                        <a class="text-black" href="{{route('nba.team',$team->name)}}">
                                         <img class="img-fluid" src="{{ route('images',$team->img)}}" style=" width: 20px; height: 20px;">
 
-                                        <span class="mx-1 results"> {{  $team->city }} {{  $team->name }}</span>
+                                        <span class=" results"> {{  $team->city }} {{  $team->name }}</span>
+                                        </a>
                                     </td>
                                 @endif
 
@@ -37,10 +38,10 @@
                                         @if($game->awayTeam == $team->name)
 
                                             <td>
-                                                <a class="text-black" href="{{route('nba.team',$team->name)}}">
+                                                <a class="text-black mx-3" href="{{route('nba.team',$team->name)}}">
                                                 <img class="img-fluid" src="{{ route('images',$team->img)}}" style=" width: 20px; height: 20px;">
 
-                                                <span class="mx-1 results"> {{  $team->city }} {{  $team->name }}</span>
+                                                <span class=" results"> {{  $team->city }} {{  $team->name }}</span>
                                                 </a>
                                             </td>
                                         @endif
@@ -59,7 +60,7 @@
 
     <div class="col-md-6 table-responsive-md">
 
-        <table class="table">
+        <table class="table" id="dtHorizontalExample">
             <thead>
             <th colspan="4">{{ __('Išvykos rezultatai') }} </th>
             </thead>
@@ -92,9 +93,10 @@
                                 @if($gamez->awayTeam == $team->name)
                                     <td>
 
-
+                                        <a class="text-black mx-2" href="{{route('nba.team',$team->name)}}">
                                         <img class="img-fluid" src="{{ route('images',$team->img)}}" style=" width: 20px; height: 20px;">
                                         <span class="mx-1 results"> {{  $team->city }} {{  $team->name }} </span>
+                                        </a>
                                     </td>
                                 @endif
                             @endforeach
@@ -111,6 +113,6 @@
         </div>
 </div>
 
-    </div>
+
 
 @endsection
