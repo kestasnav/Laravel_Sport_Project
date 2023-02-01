@@ -21,7 +21,9 @@
 
                         @if($game['homeTeam']['teamName'] == $team->name)
                                     <span class="mx-1">
+                                        <a class="text-black" href="{{route('nba.team',$game['homeTeam']['teamName'])}}">
                                   <img class="img-fluid" src="{{ route('images',$team->img)}}" style=" width: 20px; height: 20px;">  {{  $game['homeTeam']['teamCity'] }} {{  $game['homeTeam']['teamName'] }}
+                                        </a>
                                     </span>
                                         @endif
 
@@ -33,9 +35,10 @@
 
                                             @if($game['awayTeam']['teamName'] == $team->name)
                             <span class="mx-1">
+                                <a class="text-black" href="{{route('nba.team',$game['awayTeam']['teamName'])}}">
                                         <img class="img-fluid" src="{{ route('images',$team->img)}}" style=" width: 20px; height: 20px;">
                                         {{  $game['awayTeam']['teamCity'] }} {{  $game['awayTeam']['teamName'] }}
-
+                                </a>
                                 </span>
                 </div>
                         @endif
@@ -78,13 +81,28 @@
 
                     <span> <i> {{date("Y-m-d H:i:s", strtotime($game['gameDateTimeEst']." +7 hours"))}} </i>
                         </span>
-                    <span class="mx-2 border-bottom"> <b>{{$game['homeTeam']['teamName'] }}</b> vs {{$game['awayTeam']['teamName']}} </span>
 
+                    <span class="mx-2 border-bottom">
+                        <a class="text-black" href="{{route('nba.team',$game['homeTeam']['teamName'])}}">
+                        <b>{{$game['homeTeam']['teamName'] }}</b>
+                        </a>
+                        vs
+                        <a class="text-black" href="{{route('nba.team',$game['awayTeam']['teamName'])}}">
+                             {{$game['awayTeam']['teamName']}} </span>
+                        </a>
                 @elseif ($game['awayTeam']['teamName'] === $filter_team && $game['awayTeam']['score'] == 0)
 
                     <span> <i> {{date("Y-m-d H:i:s", strtotime($game['gameDateTimeEst']." +7 hours"))}} </i>
                     </span>
-                    <span class="mx-2 border-bottom">   {{$game['homeTeam']['teamName'] }} vs <b>{{$game['awayTeam']['teamName']}}</b> </span>
+
+                    <span class="mx-2 border-bottom">
+                        <a class="text-black" href="{{route('nba.team',$game['homeTeam']['teamName'])}}">
+                        {{$game['homeTeam']['teamName'] }}
+                        </a>
+                        vs
+                        <a class="text-black" href="{{route('nba.team',$game['awayTeam']['teamName'])}}">
+                             <b>{{$game['awayTeam']['teamName']}}</b> </span>
+                    </a>
                 @endif
 
             @endforeach
