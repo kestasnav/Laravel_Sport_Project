@@ -133,7 +133,7 @@
 
         <div class="col-md-4 d-none d-sm-block">
 
-            <img class="mb-2" id="morebutton-pics" alt="Reklama" src="{{ asset('storage/images/'.'reklamas.jpg')}}" style=" width:100% ;height: 200px;">
+            <img class="mb-2" id="morebutton-pics" alt="Reklama" src="{{ route('images','reklamas.jpg')}}" style=" width:100% ;height: 200px;">
 
 
             <div class="row">

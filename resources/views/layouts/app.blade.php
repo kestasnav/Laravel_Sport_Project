@@ -1,6 +1,8 @@
 <!doctype html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 <head>
+    <base href="/Laravel/sport/sport/public/">
+
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -29,7 +31,7 @@
             <div class="container">
                 <a class="navbar-brand" href="{{ route('posts.index') }}">
 {{--                    {{ config('app.name', 'Laravel') }}--}}
-                    <img src="{{ asset('storage/images/'.'logo2.png')}}" style=" width: 100px; height: 70px;">
+                    <img src="{{ route('images','logo2.png')}}" style=" width: 100px; height: 70px;">
 
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">

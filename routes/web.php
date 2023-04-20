@@ -97,6 +97,8 @@ Route::get('upload', [StandingController::class, 'standings']);
 
 Route::get('update', [StandingController::class, 'standingsUpdate']);
 
+Route::get('playoffs', [StandingController::class, 'playoffs']);
+
 Route::get('standings', [StandingController::class, 'index'])->name('nba.standings');
 
 Route::get('results', [StandingController::class, 'results'])->name('nba.results');

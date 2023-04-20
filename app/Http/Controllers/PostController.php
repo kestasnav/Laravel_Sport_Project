@@ -52,6 +52,8 @@ class PostController extends Controller
 
     public function mostReadPosts(Request $request) {
         $find=$request->session()->get('find_post',$request->search);
+        $topPost = Post::where('type','top')->get();
+
         $posts=Post::where('type','unhide')->findPosts($find)->orderBy('reads', 'desc')->latest()->paginate(10);
         $postai=Post::where('type','unhide')->latest()->paginate(10);
         $mostRead=Post::where('type','unhide')->orderBy('reads', 'desc')->latest()->paginate(5);
@@ -69,7 +71,7 @@ class PostController extends Controller
 
         return view('posts.index',['posts'=>$posts, 'postai'=>$postai, 'mostRead'=>$mostRead,
             'data'=>$data, 'todays_date'=>$todays_date, 'data3'=>$data3, 'yesterday'=>$yesterday,
-            'teams'=>$teams
+            'teams'=>$teams, 'topPost'=>$topPost
         ]);
 
 
